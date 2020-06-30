@@ -1,0 +1,1061 @@
+/* font cdn을 통해서 가져 오기 */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+/* 모든 태그의 기본 margin, padding 속정을 제거하여 준다. */
+* {
+    margin:0px;
+    padding:0px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.1;
+}
+
+/* a태그의 경우 기본적으로 밑줄과 색이 있는 데 이를 초기화해준다.*/
+a {
+    text-decoration: none;
+    color:black;
+}
+
+/* ul이 기본적으로 가지고 있는 style을 제거 하여 준다.*/
+ul {
+    list-style: none;
+}
+
+/*
+새롭게 추가 되는 속성들
+1.calc
+calc는 %와 px이 같이 공존 할 때 사용하면 유용한 위한 속성이다.
+예를 들어 왼쪽 width:50px; 짜리 그림을 두고 오른쪽에 다른 화면을 넣고 싶을 때 오른쪽 width속성에 calc(100% - 50px)을 주면 된다.
+
+2. flex
+flex는 display 속성으로 화면 배치를 쉽게 해주는 속성이다.
+지금 까지는 inline-block혹은 float 이용하여 가로로 배치 하였는 데, 이는 과거 flex가 많이 지원되지 않을 때 사용하던 방식이다.
+단 flex는 인터넷익스플로러 9이하에는 사용이 불가능하고 ie10에서는 다르게 사용하여야 한다.
+
+3.box-sizing
+box-sizing은 width와 height을 지정 할 때 어디 까지 계산 할 지 정하는 옵션이다.
+기본적으로 width라 함은 padding과 border의 값을 빼고 계산한다.
+그런데 box-sizing:border-box를 하게 되면 padding값과 border값을 자동 계산하여 width와 height를 계산한다.
+
+4.hovers
+hover는 css의사 클래스라 하며 :hover를 붙인 속성에 마우스를 올렸을 때 동작을 나타낸다.
+이외에 :link, :visited, :active가 있지만 거의 사용 되지 않는다.
+
+5.positions
+position은 항목을 배치하는 방법을 이야기한다. 기본적으로 주지 않으면 기본값은 static이고 absolute와 relative, fixed가 주로
+사용된다.
+
+6. 다중클래스
+css에서 클래스가 1개 뿐 아니라 2개 이상 있을 때 선택 된 속성이 적용 되는 것을 말함
+ex).font12.active라고 정의한다면
+<p class="font12 active"></p> 일 때만 속성이 적용 됨
+<p class="font12"></p> 적용 x
+<p class="active"></p> 적용 x
+
+
+7. 자식 선택자 >
+바로 아래에 있는 태그를 선택한다.
+ul > li라고 한다면 ul 밑(자식) li태그를 가리킨다.
+
+8. vertical-align
+inline-block 혹으 table-cell 요소의 세로 배치를 위해 사용한다.
+block속성에 경우 작동하지 않으며 오로지 inline-block에서만 작동 된다.
+속성에는 top,bottom,middle..... 등이 있다.
+이름 처럼 top에 경우 최상단 middle에 경우 가운데 bottom에 경우 최하단에 배치 된다.
+*/
+
+
+/*
+공통 header와 footer
+    1.header
+    header
+        img-wrap
+        menu-con
+
+의 구조로 되어있다.
+header에 padding으로 공간을 확보한 후 display flex로 한 후 justify-content: space-between; 속성을 사용하여 좌우 공간을 똑같이 만들어 좌우로 배치하였다.
+
+    2.footer
+    footer
+        p
+    footer에 padding과 border로 디자인을 한 후 p태그에 font설정을 추가하였다.
+*/
+
+/*
+구조
+1) about me
+    content
+        i-font
+            i-right-con
+                text-con
+                    left-text-con
+                    right-text-con
+
+위와 같은 구조를 가지고 있다.
+i-font에 width값을 주어 크기를 지정 했고 i-font외에 크기를 i-right-con이 가지게 하기 위해 calc를 이용하여 width값을 주었다.
+마찬 가지로 text-con 안에서 left-text-con에 width값을 주어 배치하였고 그 값에 나머지 넓이를 right-text-con이 가지게 하기 위해 calc를 사용 하였다.
+
+
+2) blog
+    blog-wrap
+        profile-con
+        blog-content
+            talent-wrap
+            inner-content
+
+블로그에 경우 calc를 이용하여 구성한 것이 아닌 flex를 이용하여 구성하였다.
+blog-wrap에게 flex값을 주었다.
+profile-con에 width값을 주어 크기를 정하였고 blog-content가 나머지 공간을 가지게 하기 위해 flex:1의 값을 주어 나머지 공간을 가지도록 ui를 구성하였다.
+
+3) photo
+    picture-wrap
+        picture-con
+        picture-con
+        picture-con
+        picture-con
+photo같은 경우 flex를 이용하여 ui를 구성하였다.
+picture-wrap에 flex를 주었고 justify-content: space-between; 를 주어 아래 속성들의 좌우 간격을 동일 하게 맞추어 주었다.
+또한 flex-wrap: wrap; 을 통해 picture-wrap에 크기가 넘어가는 요소는 아래로 떨어지게 설정하여 picture-con이 추가 될 때 마다 아래로 떨어지도록 ui를 구성 하였다.
+
+*/
+
+
+/* 전체 ui의 크기를 잡아 주고 가운데 정렬을 해주는 컨테이너*/
+body {
+    background-color: #fffcf8;
+}
+
+.container {
+    padding-top: 50px;
+    /* 가운데 정렬 */
+    /* margin-top: 0; margin-bottom: 0; margin-right: auto; margin-top: auto; 의 축약형이다. */
+    margin:0 auto;
+}
+
+
+/* 1. header */
+/* 위아래 공간을 padding으로 확보하고 header 밑에 공간을 margin으로 여백을 조정 하였다. */
+/* menu와 img를 좌우에 배치 하기 위해 flex display로 하고 justify-content: space-between; 를 사용하였다. */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top:15px;
+    padding-bottom: 15px;
+
+    margin-bottom: 72px;
+}
+
+/* menu 세로 요소를 가운데 정렬을 위해 flex를 주고 align-items: center; 를 주었다. */
+.menu-con {
+    display: flex;
+    align-items: center;
+}
+
+.menu > li {
+    /* 폰트 설정 */
+    font-size: 14px;
+    color:#282828;
+    font-weight: lighter;
+
+    /* 가로 배치를 위해 inline-block으로 하였고 오른쪽 공간을 위해 margin-right로 공간 확보를 하였다. */
+    display: inline-block;
+    margin-right: 36px;
+}
+
+/* 메뉴 밑 li태그에 마우스를 올렸을 때 변화를 위한 클래스 */
+.menu > li:hover {
+    /* 폰트 설정 */
+    color:#282828;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* menu 자식 중 li에 active가 달려 있다면 아래와 같은 속성을 부여 하기 위함  */
+.menu > li.active {
+    /* 폰트 설정 */
+    color:#282828;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* 1). about me */
+
+/* 이미지의 가로 배치를 위해 inline-block 설정 */
+.img-con {
+    display: inline-block;
+}
+
+/* 이미지의 크기를  지정 하고 가운데 정렬을 한다. */
+.cal-img {
+    width:18px;
+    height:16px;
+
+    /* 가운데 정렬을 위해 vertical 사용 */
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-right: 8px;
+}
+
+/* img-wrap 안에 요소 내에 속성들을 세로 가운데 정렬을 위함 */
+.img-wrap {
+    display:flex;
+    justify-content: center;
+}
+
+/* 2. content */
+/* i-font width값을 주어 크기 고정*/
+.i-font {
+    /* 폰트 설정*/
+    font-size: 48px;
+    font-weight: 200;
+
+    /* 크기 설정 후 배치를 위해 inline-block 설정*/
+    /* I가 맨 위에 있기 때문에 vertical-align: top; 속성을 하였다. */
+    width:50px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+/* i-font 오른쪽에 나머지 공간을 가지게 하기 위해 calc를 사용하였다.*/
+/* inline-block에 경우 widt값 보다 2에서 5정도 더 큰 값을 가지게 된다. 그 이유는 html에 엔터 또한 공간으로 인식하기 떄문 */
+.i-right-con {
+    /* 가로 배치를 위해 inline-block 설정*/
+    display: inline-block;
+
+    /* 공간 크기를 확보하기 위해 calc사용*/
+    width:calc(100% - 55px)
+}
+
+/* 텍스트에 공통 공간을 위함 */
+.text-con {
+    margin-bottom:30px;
+}
+
+/* 폰트 설정 */
+.img-right-text {
+    font-size: 18px;
+    font-weight: bold;
+    display:inline-block;;
+}
+
+.left-text-con {
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+    font-weight: 200;
+    margin-right: 105px;
+}
+
+/* 폰트 설정 */
+.left-text {
+    font-size:48px;
+    font-weight: lighter;
+}
+
+/* 공통 영역 아래 마진 설정*/
+/* 또한 hover 시 나타나는 영역들이 absolute이기 때문에 기준점을 잡기 위해 relative 부여 */
+.hover-wrap {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* 아래 여백이 없는 hover-wrap을 위해 */
+.hover-wrap.last{
+    margin-bottom: 0;
+}
+
+/* 오른쪽 width 설정 */
+/* 아래 아래 여백 및 border 설정 */
+.right-text-con {
+    display: inline-block;
+    width:calc(100% - 195px);
+    padding-bottom:30px;
+    border-bottom:18px solid #F1D5CA;
+}
+
+/* 폰트 설정*/
+.right-text {
+    font-size:48px;
+    font-weight: 900;
+    display: inline-block;
+    position: relative;
+}
+
+/* 오른쪽 github 이미지 설정 */
+/* 배경에 경우 padding 에 마지막에 생기기 떄문에 오른쪽 padding 설정 */
+.git-icon {
+    display:inline-block;
+    margin-left: 13px;
+}
+
+.git-icon > img {
+    height: 52px;
+}
+
+/* hover-wrap 아래  right-text 클래스가 있다면 아래 속성 부여*/
+/* 만약 부모에 hover-wrap가 없다면 아래 속성을 부여 하지 않음 */
+.hover-wrap .right-text {
+    vertical-align: top;
+}
+
+/* not like 위에 배경 설정 */
+/* 크기 설정 후 글자 위에 설정 */
+.del-back {
+    width: 102px;
+    height: 18px;
+    background-color: rgba(40, 40, 40, 0.8);
+    position: absolute;
+    right:0;
+    top:20px;
+}
+
+/* 아래 라인이 있는 경우 라인을 생기게 하기 위함 */
+.right-text.bottom-line {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+/* change 클래스가 있는 right-text에 마우스를 올렸을 시 변화 설정 */
+.right-text.change:hover {
+    color:#ff9300;
+}
+/* change 클래스가 있는 right-text에 마우스를 올렸을 시 변화 설정 */
+.right-text.bottom-line:hover {
+    color:#ff9300;
+    border-bottom: 1px solid #ff9300;
+}
+/* change 클래스가 있는 right-text에 마우스를 올렸을 시 변화 설정 */
+.right-text.change:hover .inner-text {
+    color:#ff9300;
+}
+/* change 클래스가 있는 right-text에 마우스를 올렸을 시 변화 설정 */
+.right-text.change:hover .hover-show-text {
+    display: inline;
+
+}
+
+/* 마우스를 올리지 않은 경우 .hover-show-text가 보이지 않아야 하기 때문에 dispaly none 속성으로 화면에서 보이지 않게 함 */
+
+.hover-wrap .right-text:hover + .hover-con .hover-show-text {
+    display: block;
+}
+
+.hover-wrap .right-text:hover #click {
+    color:#ff9300;
+}
+
+.bottom-line-x-change {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.hover-wrap .hover-show-text {
+    display: none;
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* 마우스 클릭 시 보이기 위한 클래스  */
+.hover-wrap .hover-show-text.active {
+    display: block;
+}
+
+.hover-con {
+    display: inline-block;
+    vertical-align: top;
+
+    margin-left:12px;
+}
+
+/* logo의 모양을 설정 하기 위함 */
+/* padding값을 주어 크기를 지정하여 준 후 배경색을 설정한다. */
+/* border-radius 50%를 주어 원형 모양으로 설정한다. */
+.logo-con {
+    display: none;
+    padding: 55px 49px;
+    background-color: #F1B57C;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* logo의 크기를 정하여 준다. */
+.logo-con > img {
+    width: 28px;
+    height: 16px;
+}
+
+/* hover-wrap에 hover 시 logo 이미지를 보여 주기 위한 설정*/
+/* position absolute를 주어 요소 위에 배치 되도록 설정 */
+.right-text:hover + .hover-con .logo-con {
+    display: inline-block;
+    position: absolute;
+    top:-38px;
+}
+
+/* hover-wrap에 마우스 오버 시 sns 이미지들을 안보이게 하기 위함 */
+.right-text:hover + .hover-con .sns-con {
+    display: none;
+}
+
+/* hover-show-text의 폰트 설정 */
+.hover-show-text ul li {
+    font-size:36px;
+    color:#ff9300;
+    margin-bottom: 6px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+/* 클릭 시 색변화를 위한 클래스 */
+.click-change {
+    color:#ff9300;
+}
+
+/* active-wrap에 마우스를 오버 하지 않았을 시 폰트가 보이지 않게 하기 위함 */
+.active-wrap .hover-show-text {
+    display: none;
+}
+
+/* active-wrap의 마우스 오버 시 폰트가 보이기 위한 설정 */
+
+/* 폰트 설정*/
+.inner-text {
+    color: #c8c8c8;
+    font-style: italic;
+    font-weight: 200;
+}
+
+/* 이미지 가로 배치를 위해 inlin-block 설정 */
+.sns-con ul > li {
+    display: inline-block;
+}
+
+/* 이미지 크기를 지정 */
+.sns-con ul > li img {
+    width:24px;
+    height:24px;
+}
+
+/* hover-wrap에 마우스 오버 시 arr-con을 보이게 하고 */
+/* absolute 설정을 하여 요소위에 띄워준다. */
+/* 위치가 아래쪽에 있게 하기 위해 bottom 0 설정을 한다. */
+.right-text:hover + .hover-con .arr-con {
+    display: inline-block;
+    position: absolute;
+    bottom:0;
+}
+
+/* 마우스 오버를 하지 않았을 경우 보이지 않게 하기 위해 none 설정 */
+.arr-con {
+    display: none;
+}
+
+/* 화살표 안에 폰트 설정 */
+.arr-con p {
+    /* 폰트 설정 */
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 900;
+    color:#c8c8c8;
+
+    /* 폰트를 넣을 위치 지정 */
+    position: absolute;
+    top: 65%;
+    right: -49px;
+}
+
+/* 오른쪽 arrow 사진의 크기 설정을 위함  */
+.arr-con > img {
+    width:210px;
+    height: 210px;
+}
+
+.active-btn {
+    /* 가로 배치를 위해 inline-block 설정ㄴ */
+    display: inline-block;
+    /* 크기 지정 */
+    width: 58px;
+    height: 38px;
+    /* 화면에 보여 질 이미지 설정 */
+    background-image: url("../img/btn-down.png");
+    /* background-image에 경우 공간이 남는다면 반복 되기 때문에 반복을 없애준다. */
+    background-repeat: no-repeat;
+    /* 배경의 가로 세로 정렬을 위함 */
+    background-position: center center;
+    /* 배경 이미지의 크기 설정 */
+    background-size: 22px 14px;
+    vertical-align: bottom;
+}
+
+/* 클릭 시 이미지 변경을 위한 클래스 */
+.hover-wrap .right-text:hover .active-btn{
+    background-image: url("../img/btn-up.png");
+}
+
+.active-btn.active {
+    background-image: url("../img/btn-up.png");
+}
+
+
+/* ul에 기본적으로 설정 된 속성을 제거 하고 왼쪽 공간을 확보 하기 위해 padding-left값 설정  */
+.hover-ul {
+    list-style: none;
+    padding-left:295px;
+    padding-top: 10px;
+}
+
+/* footer */
+/* footer의 위 아래 공간을 확보 한 후 안에 폰트 가운데 정렬을 해준다. */
+footer {
+    text-align: center;
+    padding-top:25px;
+    padding-bottom:25px;
+
+    /* 그림자 설정*/
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* footer 안에 폰트 설정 */
+footer .footer-text {
+    font-size:12px;
+    color: #919191;
+}
+
+/* blog */
+
+/* blog-wrap에 flex를 주어 가로 방향으로 요소를 배치한다. */
+/* flex를 줄 시 아래 요소는 dispaly 속성에 영향을 받지 않고 무조건 가로 정렬이 된다. */
+.blog-wrap {
+    max-width: 990px;
+    display: flex;
+    padding-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 가로 길이 셋팅 후 오른 쪽 여백을 설정하여 준다. */
+.profile-con {
+    width:220px;
+    margin-right:26px;
+}
+
+/* 로고의 모양을 잡아 주기 위한 설정 */
+.logo-square {
+    /* padding 값으로 크기를 설정 한 후 배경색을 검은색으로 한다 */
+    width: 220px;
+    height: 200px;
+    /* 그림을 가운데 정렬 후 아래 공간을 확보한다. */
+    text-align: center;
+    margin-bottom: 24px;
+    background-image: url("../img/proFace.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+/* 이미지의 크기 설정을 한다. */
+
+h1 {
+    /* 폰트 설정 */
+    font-size:36px;
+    font-weight: bold;
+
+    /* margin-bottom을 통해 글자 간격을 준다.*/
+    margin-bottom: 8px;
+}
+
+/* 아래 경계선 설정과 공간 확보를 위함 */
+.name-con {
+    padding-bottom: 25px;
+    border-bottom: 3px solid #F1B57C;
+
+    text-align: center;
+}
+
+.sub-name {
+    /* 폰트 설정*/
+    font-size:14px;
+    color: #7c7c7c;
+    font-weight: bold;
+
+    /* 아래 공간 확보 */
+    margin-bottom: 8px;
+}
+
+/* flex:1을 설정 하면 남은 공간을 모두 가지게 된다. */
+/* flex:1은 flex-grow: 1; flex-shrink: 1; flex-basis: 0%; 축약형이다. */
+.blog-content {
+    flex:1;
+}
+
+/* flex 설정 */
+.inner-content {
+    display: flex;
+}
+
+/* 왼쪽 콘텐츠의 크기를 설정 하기 위함 */
+/* 그 후 오른 쪽 여백을 설정한다. */
+.left-content {
+    width:220px;
+    margin-right:26px;
+}
+
+/* 왼쪽 공간 이외에 공간 모두를 가지기 위한 설정이다. */
+.right-content {
+    flex: 1;
+}
+
+/* phone 안에 공간 확보와 경계선 처리를 위함 */
+.phone-con {
+    padding-top:20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #F1B57C;
+}
+
+/* 폰트 설정 */
+.desc-font {
+    font-size:13px;
+    line-height: 20px;
+    color:#282828;
+    font-weight: 400;
+}
+
+.desc-font.mb12 {
+    margin-bottom: 12px;
+}
+
+/* 위아래 공간 확보와 경계선 처리를 위함 */
+.sns-wrap {
+    padding-top:20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #F1B57C;
+    display: flex;
+}
+
+.sns-wrap .sns-con:last-child {
+    margin-bottom: 0;
+}
+/* sns에 들어간 이미지의 크기 및 공간을 확보해준다.*/
+.sns-img {
+    /* 가로 세로 공간 설정 및 오른쪽 마진 설정*/
+    width:24px;
+    height:24px;
+    margin-right:12px;
+
+    /* 가로 배치를 위한 inline-block*/
+    display: inline-block;
+}
+
+/* 텍스트 설정*/
+.sns-text {
+    font-size: 11px;
+    color: #282828;
+    font-weight: 600;
+    /*가로 배치를 위함*/
+    display: inline-block;
+}
+
+h2 {
+    /* 폰트 설정  */
+    font-size:20px;
+    color:#282828;
+
+    /* margin-bottom을 통해 글자 간격을 준다.*/
+    margin-bottom: 16px;
+}
+
+/* padding값으로 위 아래 공간 설정 후 경계선 처리 */
+.talent-wrap {
+    padding-top:30px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #F1B57C;
+    border-top: 3px solid #F1B57C;
+
+    /* 아래 공간 처리 */
+    margin-bottom: 30px;
+    display: flex;
+}
+
+/* 가로 배치를 위해 inline-block 설정 후 오른쪽 여백 설정 */
+.talent-con {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+/* 마지막 con의 오른쪽 여백을 0으로 주기 위함 */
+.talent-con.last {
+    margin-right: 0;
+}
+
+/* 이미지 크기 설정 후 아래 여백 설정 */
+.about-img-con > img {
+    width:220px;
+    height:136px;
+    margin-bottom: 6px;
+}
+
+/* 공통 공간 설정 */
+.ability-wrap {
+    margin-bottom: 8px;
+}
+
+/* 폰트 설정 및 왼쪽 크기 설정 */
+/* 오른쪽 여백 설정 및 가로 배치를 위해 inline-block */
+.ability-text {
+    /* 폰트 설정 */
+    font-size: 13px;
+    font-weight: 600;
+    /* 배치 및 크기 설정 */
+    display: inline-block;
+    width: 130px;
+    margin-right: 15px;
+}
+
+/* 가로 배치를 위해 inline-block 설정 */
+.ability-circle-con {
+    display: inline-block;
+}
+
+.ability-circle-con ul > li {
+    /* 크기 설정 */
+    width: 8px;
+    height: 8px;
+    /* 가로 배치를 위함 */
+    display: inline-block;
+    /* 경계선 설정  */
+    border:1px solid #F1B57C;
+    /* 원형 설정 */
+    border-radius: 50%;
+    /* 오른쪽 여백 설정 */
+    margin-right: 15px;
+}
+
+/* 마지막에 경우 오른쪽 여백이 없기 떄문에 여백을 없애는 처리 */
+.ability-circle-con ul > li.last {
+    margin-right: 0;
+}
+
+/* 검은색 색칠 된 모습을 위해 */
+.ability-circle-con ul > li.active {
+    background-color: #F1B57C;
+}
+
+/* 원형 모양을 위함 */
+.ability-text-con ul {
+    list-style: disc;
+}
+
+/* 오른쪽 여백 설정 */
+.ability-text-con ul {
+    padding-left: 20px;
+}
+
+/* 폰트 설정 및 여백 설정 */
+.ability-text-con ul > li {
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+h5 {
+    font-size: 13px;
+    line-height: 12px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    margin-bottom: 9px;
+    border-bottom: solid 1px #c8c8c8;
+}
+
+/* 아래 여백 설정 */
+.exp-wrap .exp-con {
+    margin-bottom: 30px;
+}
+
+/* 마지막 요소 아래 여백 제거 */
+.exp-wrap .exp-con:last-child {
+    margin-bottom: 0;
+}
+
+/* 일반적으로 자식의 크기가 부모의 크기가 된다. 하지만 만약 자식 속성이 float 속성이라면 부모는 자식의 위치의 영향을 받지 않게 된다.*/
+/* 그걸 방지하게 해주는 것이 overflow:hidden 혹은 overflow:auto; 속성을 부모에게 주어 자식의 높이를 알게 해주는 방법이다. */
+.exp-title-con {
+    overflow:hidden;
+    margin-bottom: 8px;
+}
+
+/* 폰트 설정 및 왼쪽에 배치 되었기 떄문에 float을 주어 왼쪽에 배치 하였다.*/
+.exp-title-con .exp-title {
+    font-size: 15px;
+    font-weight: 700;
+    float:left;
+}
+
+/* 폰트 설정 및 오른쪽 배치 */
+.exp-title-con .exp-date {
+    font-size: 13px;
+    font-weight: 700;
+    float:right;
+}
+
+/* 폰트의 중간 공통 영역 아래 영역을 준다. */
+.exp-inner {
+    margin-bottom: 20px;
+}
+
+/* 마지막 요소에 경우 아래 여백이 없기 떄문에 0을 준다. */
+.exp-con .exp-inner:last-child {
+    margin-bottom: 0;
+}
+
+/* 폰트 설정 */
+.exp-inner .exp-font {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 2px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+/* 폰트 중 왼쪽 여백이 있는 폰트 설정 */
+.exp-inner .exp-font.skill {
+    padding-left: 20px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp-inner .exp-font.skill .show-detail {
+    color: rgb(26, 13, 171);
+}
+
+/* 폰트 설정 */
+.edu-font {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+
+/* 중간의 border 추가 */
+.edu-font.edu-border {
+    padding-bottom: 15px;
+    border-bottom: solid 1px #7c7c7c;
+    margin-bottom: 15px;
+}
+
+/* photo 설정 */
+
+/* flex 설정을 한 후 사진에 여백이 생길 시 모두 같은 여백 설정을 위해 space-between 처리 */
+.picture-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* 아래 여백 설정*/
+    margin-top:36px;
+}
+
+/* dim이 absolute 배치를 위해 position relative 설정 후 아래 여백 설정 */
+.picture-con {
+    height: 240px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+/* 마우스 오버 시 dim을 보이게 하기 위해 설정 */
+.picture-con:hover .picture-dim {
+    display: block;
+}
+
+/* 그림 위에 검은색 배경을 위한 설정*/
+/* 마우스 오버를 하지 않았을 경우 보이지 않게 하기 위해 none 설정 */
+.picture-dim {
+    display: none;
+
+    /* 크기 설정 */
+    width: 240px;
+    height:240px;
+
+    /* 위치 설정*/
+    position: absolute;
+    top:0;
+    left:0;
+
+    /* 배경 색 지정 */
+    background-color: rgba(0,0,0,0.5);
+
+    /* 공간 설정*/
+    padding:20px;
+    box-sizing: border-box;
+
+}
+
+/* 검은 배경 안에 폰트 설정 */
+.dim-text {
+    font-size: 30px;
+    line-height: 34px;
+    color: white;
+    font-style: italic;
+    font-weight: 800;
+}
+
+/* 이미지 크기 설정 */
+.picture-con > img {
+    width:240px;
+    height:240px;
+}
+
+/* paging 좌우 여백 설정 및 가운데 정렬 */
+.paging-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 65px;
+    margin-bottom: 85px;
+}
+
+/* 페이징 ul 배치를 위해 inline-block 설정 및 좌우 여백 설정 */
+/* 가운데 정렬을 위해 vertical-align:middle 설정 */
+.paging-ul {
+    display:inline-block;;
+    margin-right: 59px;
+    margin-left: 59px;
+    vertical-align: middle;
+}
+
+/* 아래 글자 가로 정렬을 위해 inline-block 설정 및 여백 설정*/
+.paging-ul > li {
+    display:inline-block;
+    margin-right: 44px;
+}
+
+/* 마지막 여백은 0을 주어야 하기 때문에 이중 클래스 처리 */
+.paging-ul > li.last {
+    margin-right: 0;
+}
+
+/* 폰트 설정*/
+.paging-ul > li > a {
+    display:inline-block;;
+    font-weight: 900;
+    font-size: 30px;
+    color:#ebebeb;
+
+}
+
+/* li에 active가 있을 시 폰트 색 설정 */
+.paging-ul > li.active > a {
+    color:#F1B57C;
+}
+
+/* 마우스 오버 시 색 변경 설정*/
+.paging-ul > li:hover > a {
+    color:#F1B57C;
+}
+
+.paging-con .btn {
+    display:inline-block;
+
+    background-size: 16px 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* 배치 및 가운데 정렬을 위함 */
+.left-btn {
+    padding:10px 8px;
+    background-image: url('../img/btn-prev-page-off.png');
+}
+
+/* 버튼 이미지 및 hover 시에 이미지 변경을 위함 */
+.left-btn:hover {
+    background-image: url('../img/btn-prev-page-on.png');
+}
+
+.left-btn.first {
+    background-size: 28px 20px;
+    padding:10px 14px;
+    background-image: url('../img/btn-left-double.png');
+    margin-right: 14px;
+}
+
+.left-btn.first:hover {
+    background-image: url('../img/btn-prev-endpage-on.png');
+}
+
+/* 배치 및 가운데 정렬을 위함 */
+.right-btn {
+    padding:10px 8px;
+    background-image: url('../img/btn-next-page-off.png');
+    margin-right: 14px;
+}
+
+.right-btn:hover {
+    background-image: url('../img/btn-next-page-on.png');
+}
+
+.right-btn.end {
+    background-size: 28px 20px;
+    padding:10px 14px;
+    background-image: url('../img/btn-next-endpage-off.png');
+    margin-right: 0;
+}
+
+.right-btn.end:hover {
+    background-image: url('../img/btn-next-endpage-on.png');
+}
+
+
+@media all and (max-width:768px) {
+    .blog-wrap {
+        padding-left: 15px;
+        padding-right: 15px;
+        flex-direction: column;
+    }
+    .logo-square {
+        width: 100%;
+        height: 300px;
+    }
+    .profile-con {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .exp-title-con .exp-title {
+        font-size: 13px;
+    }
+    .exp-inner .exp-font, .exp-title-con .exp-date {
+        font-size: 11px;
+    }
+    .talent-wrap {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .ability-text {
+        font-size: 12px;
+        width: 80px;
+        margin-right: 0;
+    }
+    .ability-circle-con ul > li {
+        width: 4px;
+        height: 4px;
+        margin-right: 2px;
+    }
+    .name-con {
+        border-bottom: none;
+        padding:0;
+    }
+    .phone-con {
+        border-bottom: none;
+        text-align: center;
+    }
+    .sns-wrap {
+        border-bottom: none;
+        justify-content: center;
+        padding:0;
+    }
+}
