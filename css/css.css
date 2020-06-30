@@ -535,7 +535,7 @@ footer .footer-text {
 /* 가로 길이 셋팅 후 오른 쪽 여백을 설정하여 준다. */
 .profile-con {
     width:220px;
-    margin-right:26px;
+    margin-right:40px;
 }
 
 /* 로고의 모양을 잡아 주기 위한 설정 */
@@ -1006,8 +1006,16 @@ h5 {
     background-image: url('../img/btn-next-endpage-on.png');
 }
 
+p.detail-intro {
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.5;
+}
 
 @media all and (max-width:768px) {
+    p.detail-intro {
+        text-align: center;
+    }
     .blog-wrap {
         padding-left: 15px;
         padding-right: 15px;
