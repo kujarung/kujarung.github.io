@@ -218,9 +218,16 @@
   color: #FFD700 !important;
 }
 
-
 .white {
   color: white !important;
+}
+
+.op8-white {
+  color: rgba(255,255,255, 0.8);
+}
+
+.op2-white {
+  color: rgba(255,255,255, 0.2);
 }
 
 /* icon */
@@ -257,8 +264,23 @@
   opacity: 1;
 }
 
+.icon-txt-con .icon-txt.type2.samll {
+  font-size: 14px;
+}
+
 .icon-txt-con .icon {
   padding-left: 0;
+}
+
+.icon-txt-con .icon.circle-icon {
+  width: 34px;
+  height: 34px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  background-position: center center;
+  background-size: 20px 16px;
+  background-repeat: no-repeat;
+  
 }
 
 .icon-list ul li {
@@ -271,7 +293,7 @@
   margin-bottom: 10px;
   padding-left: 14px;
 }
-
+ƒ
 .icon-list ul li:last-child {
   margin-bottom: 0;
 }
@@ -984,6 +1006,50 @@
   background: #3240FF;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0891882);
   border-radius: 18px;
-  padding: 14px 14px 32px 14px;
+  padding: 14px 14px 22px 14px;
   margin-bottom: 20px;
+}
+
+#lineGrapOrder {
+  height: 150px; 
+  width: 100%; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 18px;
+}
+
+.sheet-list ul li {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border: 1px solid #F1F1F1;
+  box-sizing: border-box;
+  border-radius: 29px;
+  padding: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.sheet-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.sheet-list ul li p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.circle-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #fbfbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.circle-num p {
+  font-size: 16px;
+  color: #3240ff;
 }

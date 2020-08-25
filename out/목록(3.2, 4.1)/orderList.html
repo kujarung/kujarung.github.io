@@ -74,27 +74,33 @@
       </div>
       <div class="empty"></div>
     </div> 
-    <div class="list-content-con">
-      <div class="color-grap-wrap">
+    <div class="list-content-con pb30">
+      <div class="color-grap-wrap mb16">
         <div class="color-grap-con">
-          <div class="">
-
+          <div class='icon-txt-con mb16'>
+            <i class="icon circle-icon" style="background-image: url('../img/open-book.png');"></i>
+            <div class="icon-txt type2 white small">
+              1권
+            </div>
+          </div>  
+          <div class="mb21">
+            <p class="white mb10">
+              합이 9까지인 덧셈
+            </p>
+            <h6 class="small op8-white">
+              숫자 쓰기 능력을 토대로 더하기 1~4의 덧셈 연습으로 
+              덧셈의 기본 개념을 익히는 것을 목표로 학습합니다.
+            </h6>
           </div>
-          <div class="">
-            <div class="">
+          <div class="grap-wrap">
+            <div class="open-txt active" id="isOpen">
               <p>
-                합이 9까지인 덧셈
-              </p>
-              <p>
-                숫자 쓰기 능력을 토대로 더하기 1~4의 덧셈 연습으로 
-                덧셈의 기본 개념을 익히는 것을 목표로 학습합니다.
+                단원별 학습 통계 그래프 보기 
               </p>
             </div>
-          </div>
-          <div class="">
-            <div id="lineGrap" style="height: 200px; width: 100%; background-color: rgba(255, 255, 255, 0.1); border-radius: 18px;">
-
-            </div>
+            <div class="grap">
+              <div id="lineGrapOrder"></div>
+            </div>            
           </div>
         </div>
         <div class="btn-wrap">
@@ -106,9 +112,38 @@
           </div>
         </div>
       </div>
-      <div class="">
+      <div class="sheet-list">
         <ul>
-          <li></li>
+          <li>
+            <div class="circle-num">
+              <p>
+                1
+              </p>
+            </div>
+            <p class="">
+              수를 가르고 모으기
+            </p>
+          </li>
+          <li>
+            <div class="circle-num">
+              <p>
+                2
+              </p>
+            </div>
+            <p class="">
+              수를 가르고 모으기
+            </p>
+          </li>
+          <li>
+            <div class="circle-num">
+              <p>
+                3
+              </p>
+            </div>
+            <p class="">
+              수를 가르고 모으기
+            </p>
+          </li>                    
         </ul>
       </div>
     </div>
@@ -116,8 +151,13 @@
 </body>
 
 <script>
-  const myChart = echarts.init( document.getElementById('lineGrap') );
+  const myChart = echarts.init( document.getElementById('lineGrapOrder') );
   const option = {
+    height: 80,
+    grid: {
+      left: 40,
+      top: 30,
+    },      
     title : {
       width: 200,
       show: false,
@@ -125,13 +165,13 @@
     color: ['#FFD700','rgba(255,255,255,0.2)',],
     legend: {
       data: ['나의 점수', '전체 평균'],
-      bottom: 0,
-      right: 0,
+      bottom: 5,
+      right: 10,
       textStyle : {
         fontSize : 11,
         color: 'white'
       },
-      icon : "circle"
+      icon : "pin"
     },
     xAxis: {
       axisTick : {

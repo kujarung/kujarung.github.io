@@ -60,3 +60,7 @@ select::-ms-expand {
 	display: none;
 }
 
+input { 
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
