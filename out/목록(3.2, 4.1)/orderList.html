@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>통계</title>
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="../style/btn.css">
+  <link rel="stylesheet" href="../style/utils.css">
+  <link rel="stylesheet" href="../style/reset.css">
+  <script src="../js/index.js"></script>
+  
+  <!-- 차트 js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+
+</head>
+<body>
+  <!-- 클릭 시 나타나는 drawer -->
+  <div class="drawer-con" id="drawerCon">
+    <div class="drawer">
+      <div class="drawer-top">
+        <div class="profile-con">
+          <div class="x-btn-con" id="xBtn"></div>
+          <div class="profil-img-con">
+            <img src="../img/profile.svg" alt="profile">
+          </div>
+        </div>
+        <h5 class="mb57">
+          안녕하세요! <br>
+          로그인을 해주세요
+        </h5>
+        <div class="common-btn mb20">
+          <input type="text" class="btn btn-style1" value="로그인" readonly>
+        </div>
+      </div>
+      <div class="drawer-bottom">
+        <ul>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/study.svg');">학습</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/card.svg');">맴버쉽</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/mil.svg');">마일리지</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/setting.svg');">셋팅</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/desk.svg');">노느니 연산수학</p>
+            </a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </div>  
+  <div class="main-content">
+    <div class="header">
+      <div class="left-gnb">
+        <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu">
+      </div>
+      <div class="header-txt">
+        목록
+      </div>
+      <div class="empty"></div>
+    </div> 
+    <div class="list-content-con">
+      <div class="color-grap-wrap">
+        <div class="color-grap-con">
+          <div class="">
+
+          </div>
+          <div class="">
+            <div class="">
+              <p>
+                합이 9까지인 덧셈
+              </p>
+              <p>
+                숫자 쓰기 능력을 토대로 더하기 1~4의 덧셈 연습으로 
+                덧셈의 기본 개념을 익히는 것을 목표로 학습합니다.
+              </p>
+            </div>
+          </div>
+          <div class="">
+            <div id="lineGrap" style="height: 200px; width: 100%; background-color: rgba(255, 255, 255, 0.1); border-radius: 18px;">
+
+            </div>
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <div class="common-btn wi140">
+            <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="학습통계 보기">
+          </div>
+          <div class="common-btn wi140">
+            <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="평균점수로 보기">
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const myChart = echarts.init( document.getElementById('lineGrap') );
+  const option = {
+    title : {
+      width: 200,
+      show: false,
+    },
+    color: ['#FFD700','rgba(255,255,255,0.2)',],
+    legend: {
+      data: ['나의 점수', '전체 평균'],
+      bottom: 0,
+      right: 0,
+      textStyle : {
+        fontSize : 11,
+        color: 'white'
+      },
+      icon : "circle"
+    },
+    xAxis: {
+      axisTick : {
+        show : false
+      },      
+      type: 'category',
+      data: ['', '', '', '', '', '', ''],
+      splitLine: {
+        show: false
+      },
+      axisLine : {
+        lineStyle : {
+          color: 'white'
+        }
+      }
+    },
+    yAxis: {
+      position: "left",
+      type: 'value',
+      min: 0,
+      max: 100,
+      interval: 50,    
+      splitLine: {
+        show: false
+      },   
+      nameTextStyle : {
+        fontWeight : 'bold'
+      },
+      axisTick : {
+        show : false
+      },      
+      axisLine : {
+        show: false,
+        lineStyle : {
+          color: 'white'
+        }
+      }, 
+      axisLabel: {
+        formatter: '{value}점',
+        fontSize: 10,
+        padding: [0,0,10,0]
+      },      
+    },
+    series: [
+      {
+        lineStyle : {
+          width: 5,
+        },
+        name: '나의 점수',
+        type: 'line',
+        data: [80, 20, 10, 50, 90, 50, 50],
+        showSymbol: false,
+      },
+      {
+        lineStyle : {
+          width: 5,
+        },        
+        name: '전체 평균',
+        type: 'line',
+        data: [80, 30, 80, 80, 10, 20, 80],
+        showSymbol: false,
+      }     
+    ]
+};
+myChart.setOption(option);
+</script>
+</html>

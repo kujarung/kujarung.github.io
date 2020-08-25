@@ -973,3 +973,17 @@
   padding-bottom: 14px;
   margin-bottom: 20px;
 }
+
+/*  */
+.list-content-con {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.color-grap-con {
+  background: #3240FF;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0891882);
+  border-radius: 18px;
+  padding: 14px 14px 32px 14px;
+  margin-bottom: 20px;
+}
