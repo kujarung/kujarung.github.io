@@ -58,16 +58,24 @@ h6.small {
 }
 
 /* etc-utils */
+.he32 {
+  height: 32px !important;
+}
+
+.wi84 {
+  width: 84px !important;
+}
+
 .wi140 {
-  width: 140px;
+  width: 140px !important;
 }
 
 .wi150 {
-  width:150px;
+  width:150px !important;
 }
 
 .wi170 {
-  width:170px;
+  width:170px !important;
 }
 
 .d-flex {

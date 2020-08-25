@@ -135,17 +135,6 @@
   margin-left: 16px;
 }
 
-.x-btn-con {
-  position: absolute;
-  right: 20px;
-  top:0;
-  width: 16px;
-  height: 16px;
-  background-image: url('../../img/xBtn.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .profile-con {
   position: relative;
   margin-bottom: 12px;
@@ -345,20 +334,7 @@
   background-color: #4956fe;
 }
 
-.close-btn-con {
-  text-align: right;
-  margin-top: 10px;
-}
 
-.close-btn-con.type2 img {
-  width: 25px;
-  height: 25px;
-}
-
-.close-btn-con img {
-  width: 40px;
-  height: 40px;
-}
 
 /* 도움말 */
 .workbook-con {
@@ -1002,6 +978,17 @@
   padding-right: 20px;
 }
 
+.list-content-con.type2 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.list-content-con.type2 .color-grap-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
 .color-grap-con {
   background: #3240FF;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0891882);
@@ -1052,4 +1039,151 @@
 .circle-num p {
   font-size: 16px;
   color: #3240ff;
+}
+
+.study-list-con {
+  border-top: 8px solid #F2F2F2;
+  padding-top: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.legend-con {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+
+.legend-con .deep {
+  margin-left: 14px;
+}
+
+.legend-con .deep:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #ffd700;
+  position: absolute;
+  left: 0;
+}
+
+.width-circle:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.width-circle {
+  position: relative;
+  padding-left: 10px;
+}
+
+.width-circle.deep:after {
+  background-color: #6b75ff;
+}
+
+.width-circle.princi:after { 
+  background-color: #ffd700;
+}
+
+.study-list ul li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.study-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.study-list .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 48px;
+  background-color: #fbfbfb;
+  border-radius: 10px;
+  position: relative;
+}
+
+.study-list .title.free:after {
+  content: "FREE";
+  position: absolute;
+  bottom: 3px;
+  width: 40px;
+  height: 13px;
+  background-color: #3240FF;
+  color: white;
+  text-align: center;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.study-list .title p {
+  font-size: 14px;
+}
+
+.right-box {
+  width: calc(100% - 72px);
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.right-box .item {
+  width: calc(33.33% - 6px);
+  height: 100%;
+  box-sizing: border-box;
+  margin-right: 10px;
+  background: #FFFFFF;
+  border: 1px solid #F2F2F2;
+  box-sizing: border-box;
+  border-radius: 10px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.right-box .item:last-child {
+  margin-right: 0;
+}
+
+.right-box .item:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #ffd700;
+  border-radius: 50%;
+}
+
+.right-box .item.deep:after {
+  background-color: #6b75ff;
+}
+
+.right-box .item .img-con {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.right-box .item.add {
+  width: 48px;
+  height: 48px;
+}
+
+.right-box .item.add:after {
+  display: none;
 }
