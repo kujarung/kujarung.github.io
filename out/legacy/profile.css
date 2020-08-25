@@ -1,0 +1,62 @@
+.profile-con {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.profile-txt {
+  text-align: center;
+  margin-bottom: 17px;
+}
+
+.input-con {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.input-con .inner-con {
+  display: flex;
+  align-items: center;
+  border: 1px solid #F0F0F0;
+  box-sizing: border-box;
+  border-radius: 30px;
+  height: 60px;
+  padding-left: 14px;
+}
+
+.input-con .inner-con {
+  margin-bottom: 14px;
+}
+
+.input-con .inner-con .left-con {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  width: 100px;
+}
+
+.inner-input input {
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+/* circle icon */
+.circle-icon {
+  background: rgba(197, 197, 197, 0.0782616);
+  border-radius: 16px;  
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.circle-icon.name {
+  background-image: url('../img/name-img.png');
+  background-position: center;
+  background-size: contain;
+}
+
+.gray-info {
+  font-size: 13px;
+  opacity: 0.4;
+}

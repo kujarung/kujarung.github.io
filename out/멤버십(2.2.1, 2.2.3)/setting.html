@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서비스회원</title>
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="../style/btn.css">
+  <link rel="stylesheet" href="../style/utils.css">
+  <link rel="stylesheet" href="../style/reset.css">
+  <script src="../js/index.js"></script>
+</head>
+<body>
+  <!-- 클릭 시 나타나는 drawer -->
+  <div class="drawer-con" id="drawerCon">
+    <div class="drawer">
+      <div class="drawer-top">
+        <div class="profile-con">
+          <div class="x-btn-con" id="xBtn"></div>
+          <div class="profil-img-con">
+            <img src="../img/profile.svg" alt="profile">
+          </div>
+        </div>
+        <h5 class="mb57">
+          안녕하세요! <br>
+          로그인을 해주세요
+        </h5>
+        <div class="common-btn mb20">
+          <input type="text" class="btn btn-style1" value="로그인" readonly>
+        </div>
+      </div>
+      <div class="drawer-bottom">
+        <ul>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/study.svg');">학습</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/card.svg');">맴버쉽</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/mil.svg');">마일리지</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/setting.svg');">셋팅</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/desk.svg');">노느니 연산수학</p>
+            </a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </div>  
+  <div class="main-content">
+    <div class="header">
+      <div class="left-gnb">
+        <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu">
+      </div>
+      <div class="header-txt">
+        설정
+      </div>
+      <div class="empty"></div>
+    </div> 
+    <div class="setting-content-con">
+      <div class="section">
+        <div class="mb10">
+          <h4 class="strong">
+            간편 비밀 번호 설정
+          </h4>
+          <h6 class="small">
+            설정변경, 결제 등 민감한 기능에 사용됩니다.
+          </h6>
+        </div>
+        <div class="number-input-con pass">
+          <div class="select-con">
+            <select></select>
+          </div>
+          <div class="select-con">
+            <select></select>
+          </div>
+          <div class="select-con">
+            <select></select>
+          </div>
+          <div class="select-con">
+            <select></select>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="mb10">
+          <h4 class="strong">
+            하루 학습 목료량 설정
+          </h4>
+          <h6 class="small">
+            하루에 학슴할 목표량을 설정해 주세요.
+          </h6>
+        </div>
+        <div class="number-input-con pr20 mb20">
+          <div class="select-con goal">
+            <input class="mr5" value="60"/>
+            <h6 class="gray">
+              장
+            </h6>
+          </div>
+        </div>
+        <div class="mb20">
+          <h6 class="small gray mb6">
+            학습 시작 10분 전에 알림이 울립니다.
+          </h6>
+          <div class="radio-wrap type2">
+            <div class="radio-con">
+              <input type="radio" id="yes" name="useAram">
+              <label class="type2" for="yes"><span class="check-yn">네</span></label>
+            </div>
+            <div class="radio-con">
+              <input type="radio" id="no" name="useAram" checked>
+              <label class="type2" for="no"><span class="check-yn">아니오</span></label>
+            </div>            
+          </div>
+        </div>
+        <div>
+          <h6 class="small gray mb6">
+            학습 시작 시간을 설정해 주세요
+          </h6>
+          <div class="number-input-con pr20 mb20">
+            <div class="select-con time pr10">
+              <select class="ampm">
+                <option value="am">오전</option>
+                <option value="pm">오후</option>
+              </select>
+            </div>            
+            <div class="select-con time mr12">
+              <select class="mr5 hour"></select>
+              <h6 class="gray">
+                시
+              </h6>
+            </div>
+            <div class="select-con time">
+              <select class="mr5 min"></select>
+              <h6 class="gray">
+                분
+              </h6>
+            </div>            
+          </div>
+        </div>              
+      </div>
+      <div class="section">
+        <div class="mb10">
+          <h4 class="strong">
+            백업 및 복원
+          </h4>
+          <h6 class="small">
+            기기변경 및 에러 발생시 복구할 수 있습니다.
+          </h6>
+        </div>
+        <div class="icon-list">
+          <ul>
+            <li>
+              <div class='icon-txt-con'>
+                <i class="icon">
+                  <img src="../img/bak.png" alt="bakup-img">
+                </i>
+                <div class="icon-txt">
+                  백업
+                </div>
+              </div>
+              <div class="desc-txt">
+                마지막 백업일 2020.01.01 13:22:56
+              </div>
+            </li>
+            <li>
+              <div class='icon-txt-con'>
+                <i class="icon">
+                  <img src="../img/recov.png" alt="recovery-img">
+                </i>
+                <div class="icon-txt">
+                  복원
+                </div>
+              </div>
+              <div class="desc-txt">
+                복원일 2020.01.01 13:22:56
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="logout-con">
+      <h6 class="small gray">
+        로그아웃
+      </h6>
+    </div>
+  </div>
+</body>
+
+<!-- select에 숫자 넣는 스크립트 -->
+<script>
+  const selectPass = document.querySelectorAll(".pass select");
+  selectPass.forEach(e => {
+    for(let i=0;i<10;i++) {
+      const option = document.createElement('option');
+      option.appendChild( document.createTextNode(i) );
+      e.append(option)
+    }
+  })
+
+  const selectHour = document.querySelectorAll(".time select.hour");
+  selectHour.forEach(e => {
+    for(let i=1;i<13;i++) {
+      const option = document.createElement('option');
+      option.appendChild( document.createTextNode(i) );
+      e.append(option)
+    }
+  })  
+
+  const selectMin = document.querySelectorAll(".time select.min");
+  selectMin.forEach(e => {
+    for(let i=0;i<60;i++) {
+      const option = document.createElement('option');
+      option.appendChild( document.createTextNode(i) );
+      e.append(option)
+    }
+  })    
+</script>
+</html>

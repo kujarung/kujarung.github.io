@@ -1,0 +1,56 @@
+.login-content-con .login-txt-con {
+  text-align: center;
+  font-size:26px;
+  line-height: 38px;
+  background-image: url("../img/weave.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  margin-bottom: 33px;
+}
+
+.login-content-con .login-txt-con .strong {
+  font-weight: 500;
+}
+
+.login-content-con .img-con {
+  height: 300px;
+  width: 100%;
+  background-image: url(../img/loginbak.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right -60px;
+}
+
+.login-content-con .img-con img {
+  width: 100%;
+  position: relative;
+}
+
+
+.sns-wrap {
+  position: absolute;
+  bottom: 40px;
+}
+
+.sns-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.sns-wrap ul {
+  display: flex;
+  justify-content: center;
+}
+
+.sns-wrap ul li img {
+  width: 60px;
+  height: 60px;
+}
+
+.sns-wrap ul li {
+  margin-right: 7px;
+}
+
+.sns-wrap ul li:last-child {
+  margin-right: 0;
+}

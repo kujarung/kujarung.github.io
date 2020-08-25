@@ -1,0 +1,12 @@
+.study-con {
+  padding: 14px 14px 30px 14px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0891882);
+  border-radius: 18px;
+  background-color: white;
+}
+
+.study-title-con {
+  border-bottom: 1px solid 	rgba(199,199,199,.1);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}

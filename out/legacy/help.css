@@ -1,0 +1,227 @@
+.workbook-con {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #3240ff;
+}
+
+.workbook-con .workbook-top {
+  text-align: center;
+  padding-top: 90px;
+  color: white;
+}
+
+.step-txt p {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.main-title p {
+  font-size: 30px;
+  display: inline-block;
+  border-bottom:1px solid white;
+  margin-bottom: 14px;
+  padding-bottom: 5px;
+}
+
+.sub-title p {
+  font-size: 14px;;
+}
+
+.workbook-con .workbook-bottom {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.help-step {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.help-close {
+  margin-left: auto;
+  width: 40px;
+  height: 40px;;
+  text-align: right;
+  padding-top: 30px;
+  padding-right: 10px;
+}
+
+.help-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top:20%;
+  color: white;
+  font-size: 16px;
+  font-weight: 500 !important;
+}
+
+.help-title h6.desc {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.help-center {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.help-icon {
+  padding-right: 20px;
+}
+
+.help-icon .icon-top {
+  text-align: right;
+}
+
+.help-icon .icon-bottom {
+  display: flex; 
+  justify-content: flex-end;
+}
+
+.help-icon .icon-bottom.x-eq {
+  justify-content: space-between;
+}
+
+.tab-con {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tab-con .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.2);
+  background-color: #F2F2F2;;
+  border: 1px solid #F2F2F2;
+  box-sizing: border-box;
+  border-radius: 6px 6px 0px 0px;
+  width: 60px;
+  height: 26px;
+}
+
+.tab-con .tab.active {
+  color:#3240ff;
+  background: #FBFBFB;
+}
+
+.help-txt {
+  position: relative;
+  overflow: visible;
+}
+
+.arrow-pos {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: -70px;
+  left: -30px;
+  background-image: url('../img/arrow.png');
+  background-repeat: no-repeat;
+  background-position: bottom 20px right;  
+  padding-bottom: 50px;
+}
+
+.arrow-pos.left {
+  left: 20px;
+  background-position: bottom 20px left 70px;
+}
+
+.arrow-pos.type2 {
+  top: -60px;
+  left: -20px;
+}
+
+.arrow-pos.type2.right {
+  text-align: right;
+  right: 40px;
+}
+
+.arrow-pos.type3 {
+  left: -90px;
+  padding-bottom: 80px;
+  top: -100px;
+  background-position: bottom 40px right 60px;
+}
+
+.arrow-pos.center {
+  top: 30px;
+  left: 30px;
+  background-position: bottom 20px right 20px;  
+}
+
+.center-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(251, 251, 251);
+  height: 42px;
+  color: #3240ff;
+  text-align: center;
+  font-size: 13px;
+}
+
+.spot {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  left: -10px;
+  width: 8px;
+  height: 8px;
+  background-color: #3240ff;
+  top: calc(50% - 4px);
+  border-radius: 50%;
+}
+
+.center-txt {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: white; 
+  padding-top: 40px;
+}
+
+.center-con .circle-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border:1px solid #3240ff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.center-con .circle-num:first-child {
+  margin-left: 0;
+}
+
+
+.up-img {
+  background-image: url('../img/arrow-typ2.png');
+  background-repeat: no-repeat;
+  background-position: top 5px center;
+}

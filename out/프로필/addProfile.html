@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로필등록</title>
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="../style/btn.css">
+  <link rel="stylesheet" href="../style/utils.css">
+  <link rel="stylesheet" href="../style/reset.css">
+  <script src="../js/index.js"></script>
+</head>
+<body>
+  <!-- 클릭 시 나타나는 drawer -->
+  <div class="drawer-con" id="drawerCon">
+    <div class="drawer">
+      <div class="drawer-top">
+        <div class="profile-con">
+          <div class="x-btn-con" id="xBtn"></div>
+          <div class="profil-img-con">
+            <img src="../img/profile.svg" alt="profile">
+          </div>
+        </div>
+        <h5 class="mb57">
+          안녕하세요! <br>
+          로그인을 해주세요
+        </h5>
+        <div class="common-btn mb20">
+          <input type="text" class="btn btn-style1" value="로그인" readonly>
+        </div>
+      </div>
+      <div class="drawer-bottom">
+        <ul>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/study.svg');">학습</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/card.svg');">맴버쉽</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/mil.svg');">마일리지</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/setting.svg');">셋팅</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/desk.svg');">노느니 연산수학</p>
+            </a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </div>  
+  <div class="main-content">
+    <div class="header">
+      <div class="left-gnb">
+        <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu">
+      </div>
+    </div> 
+    <div class="profile-txt">
+      <h3>
+        <span class="strong">정성옥</span>님의 프로필을<br> 입력하세요.
+      </h3>
+    </div>
+    <div class="input-con">
+      <div class="inner-con">
+        <div class="left-con">
+          <div class="circle-icon name"></div>
+          <div class="inner-txt">
+            이름
+          </div>
+        </div>
+        <div class="inner-input">
+          <input type="text" placeholder="이름을 입력해주세요.">
+        </div>
+      </div>
+      <div class="inner-con">
+        <div class="left-con">
+          <div class="circle-icon"></div>
+          <div class="inner-txt">
+            이름
+          </div>
+        </div>
+        <div class="inner-input">
+          <input type="text" placeholder="별명을 입력해주세요.">
+        </div>
+      </div>
+      <div class="inner-con">
+        <div class="left-con">
+          <div class="circle-icon"></div>
+          <div class="inner-txt">
+            이름
+          </div>
+        </div>
+        <div class="radio-wrap">
+          <div class="radio-con">
+            <input type="radio" name="sex" id="noneUse">
+            <label for="noneUse">사용안함</label>
+          </div>
+          <div class="radio-con">
+            <input type="radio" name="sex" id="girl">
+            <label for="girl">여자</label>
+          </div>
+          <div class="radio-con">
+            <input type="radio" name="sex" id="man" checked>
+            <label for="man">남자</label>
+          </div>                    
+        </div>
+      </div>
+      <div class="inner-con">
+        <div class="left-con">
+          <div class="circle-icon"></div>
+          <div class="inner-txt">
+            생년월일
+          </div>
+        </div>
+        <div class="inner-input">
+          <input type="text" placeholder="이름을 입력해주세요.">
+        </div>
+      </div>
+      <p class="gray-info tr">
+        *입력하면 바로 저장됩니다.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
