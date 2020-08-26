@@ -1,9 +1,3 @@
-h3 {
-  font-size: 26px;
-  line-height: 38px;
-  font-weight: normal;
-}
-
 .strong {
   font-weight: 500 !important;
 }
@@ -11,6 +5,12 @@ h3 {
 h2 {
   font-size: 46px;
   line-height: 55px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: normal;
 }
 
 h4 {
@@ -21,6 +21,11 @@ h4 {
 h5 {
   font-size: 18px;
   line-height: 27px;
+}
+
+h5.small {
+  font-size: 17px;
+  font-weight: 24px;
 }
 
 h6 {
@@ -48,7 +53,6 @@ h6.small {
   background-image: url("../img/up-arr.svg");
   margin-bottom: 30px;
 }
-
 
 .open-txt p {
   font-size: 12px;
