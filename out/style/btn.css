@@ -136,18 +136,35 @@
 }
 
 .radio-con label.type3 {
-  color: white;
   display: flex;
   align-items: center;
-  width: 92px;
-  height: 44px;
+  height: 40px;
   border: 1px solid white;
   justify-content: center;
   border-radius: 22px;
   background-image: none;
   padding-left: 0;
   box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 1;
 }
+
+.radio-con label.type3 .check-yn {
+  color: white;
+  background-image: url('../img/check-white.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  padding-left: 13px;  
+}
+
+.radio-con input:checked + label.type3 {
+  background-image: none;
+  background-color: #3240ff;
+  border-color: #3240ff;
+}
+
 
 .radio-con label.type2 .check-yn {
   background-image: url('../img/nocheck.svg');

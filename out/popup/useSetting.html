@@ -17,24 +17,47 @@
     </div>
 
     <div class="solve-wrap">
-      <h3 class="white mb5">
+      <h3 class="font-weight400 white mb15">
         학습지 자판 설정
       </h3>
-      <div class="solve-con tc">
-        <h5 class="samll white">숫자가 오른쪽부터 입력됩니다.</h5>
-        <div class="radio-wrap type2">
+      <div class="solve-con type2 tc">
+        <h5 class="samll white mb6">숫자가 오른쪽부터 입력됩니다.</h5>
+        <div class="radio-wrap d-flex x-center">
           <div class="radio-con type2">
             <input type="radio" id="yes" name="useAram">
-            <label class="type3" for="yes"><span class="check-yn">네</span></label>
+            <label class="type3" for="yes"><span class="check-yn">오른쪽</span></label>
           </div>
           <div class="radio-con">
             <input type="radio" id="no" name="useAram" checked>
-            <label class="type3" for="no"><span class="check-yn">아니오</span></label>
+            <label class="type3" for="no"><span class="check-yn">왼쪽</span></label>
           </div>            
         </div>
       </div>
-      <div class="solve-con">
-
+      <div class="solve-con type2 tc">
+        <h5 class="samll white mb13">정답 입력 후 1초 뒤에 <br>다음 답 칸으로 이동합니다.</h5>
+        <div class="radio-wrap d-flex x-center mb14">
+          <div class="radio-con type2">
+            <input type="radio" id="no-use" name="cho">
+            <label class="type3" for="no-use"><span class="check-yn">사용안함</span></label>
+          </div>
+          <div class="radio-con type2">
+            <input type="radio" id="onecho" name="cho">
+            <label class="type3" for="onecho"><span class="check-yn">1초</span></label>
+          </div>
+          <div class="radio-con type2">
+            <input type="radio" id="onechof" name="cho">
+            <label class="type3" for="onechof"><span class="check-yn">1.5초</span></label>
+          </div>
+          <div class="radio-con type2">
+            <input type="radio" id="2cho" name="cho" checked>
+            <label class="type3" for="2cho"><span class="check-yn">2초</span></label>
+          </div>                                
+        </div>
+        <div class="paging-con d-flex x-center">
+          <div class="current">1</div>
+          <div class="">/</div>
+          <div class="total">2</div>
+        </div>
       </div>
     </div>
   </div>
