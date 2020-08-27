@@ -967,6 +967,10 @@
   width: 100px;
 }
 
+.input-con .inner-con .left-con .inner-txt {
+  width: 70px;
+}
+
 .inner-input input {
   font-size: 14px;
   border: none;
