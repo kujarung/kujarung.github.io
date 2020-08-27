@@ -67,6 +67,10 @@
   font-weight: 500;
 }
 
+.img-con {
+  position: relative;
+}
+
 .empty {
   width: 40px;
 }
@@ -149,6 +153,21 @@
   left: 0;
 }
 
+.blur-con {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(255,255,255, 0.8);
+}
+
+.dou-grap {
+  width:100%; 
+  height:240px;
+}
+
 .main-content {
   position: relative;
   height: 100vh;
@@ -173,6 +192,7 @@
   margin-bottom: 40px;
   padding-left: 20px;
   padding-right: 20px;
+  position: relative;
 }
 
 .section.no-border {
@@ -635,6 +655,7 @@
   padding: 30px 10px;
   margin-bottom: 20px;
   text-align: center;
+  position: relative;
 }
 
 .info-con.type2 {
@@ -933,12 +954,9 @@
   width: 34px;
   height: 34px;
   margin-right: 10px;
-}
-
-.circle-icon.name {
-  background-image: url('../img/name-img.png');
-  background-position: center;
-  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gray-info {
@@ -978,6 +996,10 @@
 
 /*  */
 .list-content-con {
+  padding-bottom: 30px;
+}
+
+.color-grap-wrap {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -988,8 +1010,6 @@
 }
 
 .list-content-con.type2 .color-grap-wrap {
-  padding-left: 20px;
-  padding-right: 20px;
   margin-bottom: 20px;
 }
 
@@ -1006,6 +1026,18 @@
   width: 100%; 
   background-color: rgba(255, 255, 255, 0.1); 
   border-radius: 18px;
+}
+
+#lineGrapOrder2 {
+  height: 150px; 
+  width: 100%; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 18px;
+}
+
+.sheet-list {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .sheet-list ul li {
@@ -1201,6 +1233,62 @@
   color: white;
 }
 
-.paging-con .total {
+.absolut-con {
+  margin-top: -20px;
+}
 
+.left-txt .left-circle {
+  position: relative;
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 5px;
+}
+
+.left-txt .status-txt {
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.left-txt {
+  margin-bottom: 17px;
+}
+
+.left-txt:last-child {
+  margin-bottom: 0;
+}
+
+.left-txt .left-circle:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: calc(50% - 3px);
+}
+
+.left-txt .left-circle.circle-blue:after {
+  background-color: #3240ff;
+}
+
+.left-txt .left-circle.circle-yellow:after {
+  background-color: #ffd700;
+}
+
+.left-txt .left-circle.circle-green:after {
+  background-color: #33cb9a;
+}
+
+.tiket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3240ff;
+  height: 32px;
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }

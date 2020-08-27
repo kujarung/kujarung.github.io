@@ -17,6 +17,9 @@
 <body class="not_scroll">
   <div class="popup-con">
     <div class="study-wrap">
+      <div class="help-close mb5 pr0">
+        <img src="../img/x-btn-white.svg" alt="">
+      </div>          
       <div class="study-con mb20">
         <div class="study-title-con">
           <div class='icon-txt-con'>
@@ -48,23 +51,75 @@
         </div>        
         <div class="grap-wrap" style="display: flex;">
           <div class="" style="width: 20%;">
-
-            <div class="">
-              aaa
+            <div class="left-txt">
+              <div class="left-circle circle-blue">
+                나
+              </div>
+              <div class="status-txt">
+                학습전
+              </div>
             </div>
-
-            <div class="">
-              bbb
-            </div>
-            
-            <div class="">
-              cccc
+            <div class="left-txt">
+              <div class="left-circle circle-yellow">
+                전체
+              </div>
+              <div class="status-txt">
+                56점
+              </div>
+            </div>            
+            <div class="left-txt">
+              <div class="left-circle circle-green">
+                상위 10%
+              </div>
+              <div class="status-txt">
+                90점
+              </div>
             </div>
           </div>
-          <div class="" id='lineGrap' style="width: 80%; height: 250px"></div>
+          <div class="" id='lineGrap' style="width: 80%; height: 150px"></div>
         </div>
       </div>
-      
+      <div class="study-con mb20">
+        <div class="study-title-con">
+          <div class='icon-txt-con'>
+            <i class="icon">
+              <img src="../img/clock.png" alt="bakup-img">
+            </i>
+            <div class="icon-txt type2">
+              평균 풀이시간
+            </div>
+          </div>              
+        </div>        
+        <div class="grap-wrap" style="display: flex;">
+          <div class="" style="width: 20%;">
+            <div class="left-txt">
+              <div class="left-circle circle-blue">
+                나
+              </div>
+              <div class="status-txt">
+                학습전
+              </div>
+            </div>
+            <div class="left-txt">
+              <div class="left-circle circle-yellow">
+                전체
+              </div>
+              <div class="status-txt">
+                2분 30초
+              </div>
+            </div>            
+            <div class="left-txt">
+              <div class="left-circle circle-green">
+                상위 10%
+              </div>
+              <div class="status-txt">
+                2분 30초
+              </div>
+            </div>
+          </div>
+          <div class="" id='lineGrap2' style="width: 80%; height: 150px"></div>
+        </div>
+      </div>      
       <div class="study-con">
         <div class="study-title-con">
           <div class='icon-txt-con'>
@@ -77,7 +132,7 @@
           </div>              
         </div>        
         <div class="grap-wrap">
-          <div class="" id='linearGrap' style="width: 100%; height: 250px"></div>
+          <div class="" id='linearGrap' style="width: 100%; height: 200px"></div>
         </div>
       </div>
 
@@ -227,30 +282,61 @@
 <script>
   window.onload  = () => {
     const myChart = echarts.init( document.getElementById('lineGrap') );
+    const myChart2 = echarts.init( document.getElementById('lineGrap2') );
     const option = {
+      grid: {
+        left: 40,
+        top: 10,
+        right: 0,
+      },            
+      height: 100,
       xAxis: [
         {
+          axisLabel : {
+            color: 'rgba(0, 0, 0, 0.6)'
+          },
+          axisLine : {
+            lineStyle : {
+              color: '#ececec'
+            },
+          },          
           type: 'category',
-          data: ['', '1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회'],
+          data: ['1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회'],
           splitLine: {
             show: false
           },
-          boundaryGap: false,
-          nameGap: 500
+          nameGap: 500,
+          axisTick : {
+            show : false
+          },             
         },
       ],
       yAxis: [
         {
+          axisLine : {
+            lineStyle : {
+              color: '#ececec'
+            },
+          },          
           type: 'value',
           min: 0,
           max: 100,
           interval: 50,
           axisLabel: {
-            formatter: '{value}점'
+            formatter: '{value}점',
+            color: 'rgba(0, 0, 0, 0.6)'
           },
           splitLine: {
             show: false
           },
+          axisTick : {
+            show : false
+          },                
+          nameTextStyle : {
+            fontSize : 11,
+            color: 'white',            
+            fontWeight : 'bold'
+          },          
         },
         {
           show: false,
@@ -262,35 +348,78 @@
       series: [
         {
           type: 'bar',
-          data: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 10],
-          barWidth: 10,
-          barGap: 50
-        },
-        {
-          type: 'line',
-          data: [80, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
-          showSymbol: false,
-        },
-        {
-          type: 'line',
-          data: [80,80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
-          showSymbol: false,
-        }        
+          data: [50, 10, 20, 30, 40, 50, 60, 70, 80, 90, 10],
+          barWidth: 8,
+          itemStyle : {
+            color: '#3240ff'
+          },
+          markLine: {
+            data: [
+              {
+                yAxis : 80,
+                lineStyle : {
+                  color: '#33cb9a',
+                  type: 'solid'
+                },
+                label : {
+                  show: false
+                }
+              },
+              {
+                yAxis : 50,
+                lineStyle : {
+                  color: '#ffd700',
+                  type: 'solid'
+                },
+                label : {
+                  show: false
+                }                            
+              }
+            ]
+          }
+        }
       ]
     };
     myChart.setOption(option);
+    myChart2.setOption(option);
 
     const linearChart = echarts.init( document.getElementById('linearGrap') );
     const linearOption = {
+      grid: {
+        left: 40,
+        top: 10,
+      },        
       xAxis: {
+        axisLabel : {
+          color: 'rgba(0, 0, 0, 0.6)'
+        },
+        axisLine : {
+          lineStyle : {
+            color: '#ececec'
+          },
+        },          
         type: 'category',
         boundaryGap: false,
         data: ['1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회'],
         splitLine: {
           show: false
         },        
+        axisTick : {
+          show : false
+        },             
+        axisLabel: {
+          color: 'rgba(0, 0, 0, 0.6)'
+        },        
       },
       yAxis: {
+        axisLabel : {
+          color: 'rgba(0, 0, 0, 0.6)'
+        },
+        axisLine : {
+          lineStyle : {
+            color: '#ececec'
+          },
+        },        
         type: 'value',
         min: 0,
         max: 100,
@@ -298,16 +427,37 @@
         splitLine: {
           show: false
         },              
+        axisTick : {
+          show : false
+        },              
       },
       series: [
       {
         type: 'line',
         smooth: true,
-        symbol: 'none',
         sampling: 'average',
         itemStyle: {
           color: 'transparent'
         },
+        showSymbol : false,
+        markPoint: {
+          data: [
+            {
+              symbolSize : [110, 30],
+              symbol: 'path://M2500 1875 c0 -8 -7 -15 -15 -15 -8 0 -15 -7 -15 -15 0 -8 -7 -15 -15 -15 -8 0 -15 -7 -15 -15 0 -8 -7 -15 -15 -15 -10 0 -15 -10 -15 -30 l0 -30 -740 0 c-651 0 -740 -2 -740 -15 0 -12 -14 -15 -65 -15 -51 0 -65 -3 -65 -15 0 -10 -10 -15 -30 -15 -23 0 -30 -4 -30 -20 0 -16 -7 -20 -30 -20 -20 0 -30 -5 -30 -15 0 -10 -10 -15 -30 -15 -20 0 -30 -5 -30 -15 0 -8 -7 -15 -15 -15 -8 0 -15 -7 -15 -15 0 -8 -7 -15 -15 -15 -8 0 -15 -7 -15 -15 0 -8 -7 -15 -15 -15 -8 0 -15 -7 -15 -15 0 -8 -7 -15 -15 -15 -8 0 -15 -7 -15 -15 0 -8 -9 -15 -20 -15 -11 0 -20 -7 -20 -15 0 -8 -7 -15 -15 -15 -10 0 -15 -10 -15 -30 0 -20 -5 -30 -15 -30 -10 0 -15 -10 -15 -30 0 -20 -5 -30 -15 -30 -10 0 -15 -11 -15 -35 0 -24 -5 -35 -15 -35 -12 0 -15 -13 -15 -60 0 -47 -3 -60 -15 -60 -13 0 -15 -21 -15 -125 0 -104 2 -125 15 -125 12 0 15 -13 15 -60 0 -47 3 -60 15 -60 10 0 15 -10 15 -30 0 -20 5 -30 15 -30 10 0 15 -10 15 -30 0 -20 5 -30 15 -30 10 0 15 -10 15 -30 0 -20 5 -30 15 -30 8 0 15 -7 15 -15 0 -8 9 -15 20 -15 11 0 20 -7 20 -15 0 -8 7 -15 15 -15 8 0 15 -9 15 -20 0 -11 7 -20 15 -20 8 0 15 -7 15 -15 0 -8 7 -15 15 -15 8 0 15 -7 15 -15 0 -8 7 -15 15 -15 8 0 15 -7 15 -15 0 -10 10 -15 30 -15 20 0 30 -5 30 -15 0 -10 10 -15 30 -15 20 0 30 -5 30 -15 0 -10 10 -15 30 -15 20 0 30 -5 30 -15 0 -10 10 -15 29 -15 16 0 31 -6 33 -12 4 -10 361 -14 1731 -16 1534 -2 1727 0 1727 13 0 12 13 15 60 15 47 0 60 3 60 15 0 10 10 15 30 15 20 0 30 5 30 15 0 10 10 15 30 15 20 0 30 5 30 15 0 10 10 15 30 15 20 0 30 5 30 15 0 8 7 15 15 15 8 0 15 7 15 15 0 8 7 15 15 15 8 0 15 7 15 15 0 8 9 15 20 15 13 0 20 7 20 20 0 11 7 20 15 20 8 0 15 7 15 15 0 8 7 15 15 15 8 0 15 7 15 15 0 8 7 15 15 15 10 0 15 10 15 30 0 20 5 30 15 30 10 0 15 10 15 30 0 20 5 30 15 30 10 0 15 10 15 30 0 20 5 30 15 30 12 0 15 13 15 60 0 47 3 60 15 60 13 0 15 21 15 125 0 104 -2 125 -15 125 -12 0 -15 13 -15 60 0 47 -3 60 -15 60 -10 0 -15 11 -15 35 0 24 -5 35 -15 35 -10 0 -15 10 -15 30 0 20 -5 30 -15 30 -10 0 -15 10 -15 30 0 20 -5 30 -15 30 -8 0 -15 7 -15 15 0 8 -7 15 -15 15 -8 0 -15 7 -15 15 0 8 -7 15 -15 15 -8 0 -15 7 -15 15 0 8 -9 15 -20 15 -11 0 -20 7 -20 15 0 8 -7 15 -15 15 -8 0 -15 7 -15 15 0 8 -7 15 -15 15 -8 0 -15 7 -15 15 0 10 -10 15 -30 15 -20 0 -30 5 -30 15 0 10 -10 15 -30 15 -23 0 -30 4 -30 20 0 16 -7 20 -30 20 -20 0 -30 5 -30 15 0 12 -13 15 -60 15 -47 0 -60 3 -60 15 0 13 -99 15 -835 15 -736 0 -835 2 -835 15 0 8 -7 15 -15 15 -8 0 -15 7 -15 15 0 8 -7 15 -15 15 -10 0 -15 10 -15 30 0 20 -5 30 -15 30 -8 0 -15 7 -15 15 0 10 -10 15 -30 15 -20 0 -30 -5 -30 -15z',
+              value: "정성옥님의 위치", 
+              yAxis: 75,
+              xAxis: 4, 
+              itemStyle : {
+                color : '#3240ff'
+              },
+              label : {
+                color: 'white',
+                fontSize: 10
+              },
+            },
+          ]
+        },     
         areaStyle: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
             offset: 0,

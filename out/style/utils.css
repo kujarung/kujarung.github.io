@@ -61,7 +61,15 @@ h6.small {
   text-align: right;
 }
 
+.opacity3 {
+  opacity: 0.8;
+}
+
 /* etc-utils */
+.z-index2 {
+  z-index: 10;
+}
+
 .he32 {
   height: 32px !important;
 }
@@ -72,6 +80,10 @@ h6.small {
 
 .wi84 {
   width: 84px !important;
+}
+
+.wi92 {
+  width: 92px !important;
 }
 
 .wi140 {

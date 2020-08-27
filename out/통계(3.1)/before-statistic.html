@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="kr">
 <head>
@@ -9,110 +10,62 @@
   <link rel="stylesheet" href="../style/utils.css">
   <link rel="stylesheet" href="../style/reset.css">
   <script src="../js/index.js"></script>
+  
+  <!-- 차트 js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+
 </head>
-<body class="not_scroll">
-  <div class="popup-con">
-    <div class="study-wrap">
-      <div class="close-btn-con">
-        <img src="../img/x-btn-white.svg" alt="">
-      </div>
-      <div class="solve-wrap mb27">
-        <div class="solve-con">
-          <div class="solve-title-con">
-            <div class="d-flex x-eq y-center">
-              <div class="title">
-                A part
-              </div>
-              <div class="d-flex">
-                <div class="circle-solve mr23">
-                  푼 문제
-                </div>
-                <div class="circle-solve no-solve">
-                  안 푼 문제
-                </div>
-              </div>
-            </div>
-            <div class="desc">
-              안 푼 문제 번호를 클릭하면 이동합니다.
-            </div>
+<body>
+  <!-- 클릭 시 나타나는 drawer -->
+  <div class="drawer-con" id="drawerCon">
+    <div class="drawer">
+      <div class="drawer-top">
+        <div class="profile-con">
+          <div class="x-btn-con" id="xBtn"></div>
+          <div class="profil-img-con">
+            <img src="../img/profile.svg" alt="profile">
           </div>
-          <div class="problem-con">
-            <div class="item-row">
-              <div class="problem-item">
-                1
-              </div>
-              <div class="problem-item active">
-                2
-              </div>  
-              <div class="problem-item active">
-                3
-              </div>  
-              <div class="problem-item active">
-                4
-              </div>  
-              <div class="problem-item active">
-                5
-              </div>                                            
-            </div>
-            <div class="item-row">
-              <div class="problem-item active">
-                6
-              </div>
-              <div class="problem-item active">
-                7
-              </div>  
-              <div class="problem-item active">
-                8
-              </div>  
-              <div class="problem-item active">
-                9
-              </div>  
-            </div>            
-          </div>
+        </div>
+        <h5 class="mb57">
+          안녕하세요! <br>
+          로그인을 해주세요
+        </h5>
+        <div class="common-btn mb20">
+          <input type="text" class="btn btn-style1" value="로그인" readonly>
         </div>
       </div>
-      <div class="solve-con">
-        <div class="solve-title-con">
-          <div class="d-flex x-eq y-center">
-            <div class="title">
-              B part
-            </div>
-            <div class="d-flex">
-              <div class="circle-solve mr23">
-                푼 문제
-              </div>
-              <div class="circle-solve no-solve">
-                안 푼 문제
-              </div>
-            </div>
-          </div>
-          <div class="desc">
-            안 푼 문제 번호를 클릭하면 이동합니다.
-          </div>
-        </div>
-        <div class="problem-con">
-          <div class="item-row">
-            <div class="problem-item">
-              1
-            </div>
-          </div>
-        </div>
-      </div>      
-      <div class="btn-wrap">
-        <div class="common-btn wi140">
-          <div class="btn btn-style3 he50">
-            다시 풀기
-          </div>
-        </div>
-        <div class="common-btn wi140">
-          <div class="btn btn-style3 he50">
-            채점하기
-          </div>
-        </div>
+      <div class="drawer-bottom">
+        <ul>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/study.svg');">학습</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/card.svg');">맴버쉽</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/mil.svg');">마일리지</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/setting.svg');">셋팅</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/desk.svg');">노느니 연산수학</p>
+            </a>
+          </li>          
+        </ul>
       </div>
-    </div>    
-  </div>
-  <div class="main-content not_scroll">
+    </div>
+  </div>  
+  <div class="main-content">
     <div class="header">
       <div class="left-gnb">
         <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu">
@@ -152,15 +105,20 @@
         </div>    
       </div>
       <div class="section">
-        <div class="mb20">
-          <h4>
-            <span class="strong">정성옥</span>님의 학습성취도는<br>
-            <span class="strong weave-txt">아주 좋음</span>입니다.
-          </h4>
-        </div>        
-        <div id="chartDou" style="width:100%; height:300px;"></div>
+        <div class="blur-con pl20 pr20">
+          <div class="mb30">
+            <h4>
+              학습 후 학습성취도를<br>
+              확인할 수 있습니다.
+            </h4>
+          </div>
+          <div class="">
+            <img src="../img/guide.svg" alt="">
+          </div>
+        </div>
+        <div id="chartDou" class="dou-grap blur"></div>
       </div>
-      <div class="section">
+      <div class="section no-border">
         <div class="mb12">
           <h4 class="font-weight700">
             학습스타일
@@ -207,7 +165,7 @@
               </div>              
             </div>
           </div>
-          <div class="study-con">
+          <div class="study-con no-border">
             <div class="study-title-con">
               <div class='icon-txt-con'>
                 <i class="icon">
@@ -255,6 +213,53 @@
 
 <script>
   window.onload  = () => {
+    const myChart = echarts.init( document.getElementById('chartDou') );
+    const data = 
+    [
+      {value: 50 / 100, name: '아주 좋음'},
+      {value: 20 / 100, name: '좋음'},
+      {value: 10 / 100, name: '보통'},
+      {value: 20 / 100, name: '낮음'},
+    ]
+    const option = {
+      color: ['#3241FF','#34CB9A', '#FFC13B', '#FA742C', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'],
+      legend: {
+        orient: 'vertical',
+        data: ['아주 좋음', '좋음', '보통', '낮음'],
+        right: 0,
+        top: 'middle',
+        verticalAlign: 'middle',
+        icon: "circle",
+        textStyle : {
+          fontSize :12,
+        }
+      },
+      series: [
+        {
+          name: '학업성취도',
+          width: 250,
+          type: 'pie',
+          radius: ['50%', '80%'],
+          avoidLabelOverlap: false,
+          label: {
+            show: false,
+            position: 'center'
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: '20',
+              fontWeight: 'bold'
+            }
+          },
+          labelLine: {
+            show: false
+          },
+          data,
+        }
+      ]
+    };
+    myChart.setOption(option);
   }
 </script>
 </html>

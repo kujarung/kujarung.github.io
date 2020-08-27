@@ -39,12 +39,16 @@
 }
 
 .common-btn .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: 500;
   width: 100%;
   text-align: center;
   box-sizing: border-box;
   cursor: pointer;
+  background-color: white;
 }
 
 .common-btn .btn-style1 {
@@ -63,10 +67,21 @@
 }
 
 .common-btn .btn-style3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #3241FF;
   border-radius: 30px;  
   height: 40px;
   color: #3241FF;
+  position: relative;
+
+}
+
+.common-btn .btn-style3.plus{
+  background-image: url('../img/plus-blue.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .common-btn .btn-style-pin {
@@ -83,10 +98,6 @@
   background-position: left 15px center;
   background-size: 15px;
   padding-left: 10px;
-}
-
-.common-btn .btn-style-check {
-
 }
 
 .he50 {
@@ -246,4 +257,30 @@
   background-repeat: no-repeat;
   background-position: center right 12px;
   background-size: 10px 6px;
+}
+
+.complete-btn-con {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.complete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 45px;
+  background-color: #b43940;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  transform: rotate(-20deg)
 }

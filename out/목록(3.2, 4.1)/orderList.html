@@ -13,6 +13,9 @@
   <!-- 차트 js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
 
+  <!-- slide -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">    
 </head>
 <body>
   <!-- 클릭 시 나타나는 drawer -->
@@ -74,84 +77,163 @@
       </div>
       <div class="empty"></div>
     </div> 
-    <div class="list-content-con pb30">
-      <div class="color-grap-wrap mb16">
-        <div class="color-grap-con">
-          <div class='icon-txt-con mb16'>
-            <i class="icon circle-icon" style="background-image: url('../img/open-book.png');"></i>
-            <div class="icon-txt type2 white small">
-              1권
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="list-content-con swiper-slide">
+          <div class="color-grap-wrap mb16">
+            <div class="color-grap-con">
+              <div class='icon-txt-con mb16'>
+                <i class="icon circle-icon" style="background-image: url('../img/open-book.png');"></i>
+                <div class="icon-txt type2 white small">
+                  1권
+                </div>
+              </div>  
+              <div class="mb21">
+                <p class="white mb10">
+                  합이 9까지인 덧셈
+                </p>
+                <h6 class="small op8-white">
+                  숫자 쓰기 능력을 토대로 더하기 1~4의 덧셈 연습으로 
+                  덧셈의 기본 개념을 익히는 것을 목표로 학습합니다.
+                </h6>
+              </div>
+              <div class="grap-wrap">
+                <div class="open-txt active" id="openBtn">
+                  <p>
+                    단원별 학습 통계 그래프 보기 
+                  </p>
+                </div>
+                <div class="grap">
+                  <div id="lineGrapOrder"></div>
+                </div>            
+              </div>
             </div>
-          </div>  
-          <div class="mb21">
-            <p class="white mb10">
-              합이 9까지인 덧셈
-            </p>
-            <h6 class="small op8-white">
-              숫자 쓰기 능력을 토대로 더하기 1~4의 덧셈 연습으로 
-              덧셈의 기본 개념을 익히는 것을 목표로 학습합니다.
-            </h6>
+            <div class="btn-wrap">
+              <div class="common-btn wi140">
+                <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="학습통계 보기">
+              </div>
+              <div class="common-btn wi140">
+                <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="평균점수로 보기">
+              </div>
+            </div>
           </div>
-          <div class="grap-wrap">
-            <div class="open-txt active" id="isOpen">
-              <p>
-                단원별 학습 통계 그래프 보기 
-              </p>
-            </div>
-            <div class="grap">
-              <div id="lineGrapOrder"></div>
-            </div>            
+          <div class="sheet-list">
+            <ul>
+              <li>
+                <div class="circle-num">
+                  <p>
+                    1
+                  </p>
+                </div>
+                <p class="">
+                  수를 가르고 모으기
+                </p>
+              </li>
+              <li>
+                <div class="circle-num">
+                  <p>
+                    2
+                  </p>
+                </div>
+                <p class="">
+                  수를 가르고 모으기
+                </p>
+              </li>
+              <li>
+                <div class="circle-num">
+                  <p>
+                    3
+                  </p>
+                </div>
+                <p class="">
+                  수를 가르고 모으기
+                </p>
+              </li>                    
+            </ul>
           </div>
-        </div>
-        <div class="btn-wrap">
-          <div class="common-btn wi140">
-            <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="학습통계 보기">
+        </div>          
+        <div class="list-content-con swiper-slide">
+          <div class="color-grap-wrap mb16">
+            <div class="color-grap-con">
+              <div class='icon-txt-con mb16'>
+                <i class="icon circle-icon" style="background-image: url('../img/open-book.png');"></i>
+                <div class="icon-txt type2 white small">
+                  2권
+                </div>
+              </div>  
+              <div class="mb21">
+                <p class="white mb10">
+                  합이 9까지인 덧셈
+                </p>
+                <h6 class="small op8-white">
+                  숫자 쓰기 능력을 토대로 더하기 1~4의 덧셈 연습으로 
+                  덧셈의 기본 개념을 익히는 것을 목표로 학습합니다.
+                </h6>
+              </div>
+              <div class="grap-wrap">
+                <div class="open-txt active" id="openBtn2">
+                  <p>
+                    단원별 학습 통계 그래프 보기 
+                  </p>
+                </div>
+                <div class="grap">
+                  <div id="lineGrapOrder2"></div>
+                </div>            
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <div class="common-btn wi140">
+                <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="학습통계 보기">
+              </div>
+              <div class="common-btn wi140">
+                <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="평균점수로 보기">
+              </div>
+            </div>
           </div>
-          <div class="common-btn wi140">
-            <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="평균점수로 보기">
+          <div class="sheet-list">
+            <ul>
+              <li>
+                <div class="circle-num">
+                  <p>
+                    1
+                  </p>
+                </div>
+                <p class="">
+                  2권 목록1
+                </p>
+              </li>
+              <li>
+                <div class="circle-num">
+                  <p>
+                    2
+                  </p>
+                </div>
+                <p class="">
+                  2권 목록2
+                </p>
+              </li>
+              <li>
+                <div class="circle-num">
+                  <p>
+                    3
+                  </p>
+                </div>
+                <p class="">
+                  2권 목록3
+                </p>
+              </li>                    
+            </ul>
           </div>
-        </div>
-      </div>
-      <div class="sheet-list">
-        <ul>
-          <li>
-            <div class="circle-num">
-              <p>
-                1
-              </p>
-            </div>
-            <p class="">
-              수를 가르고 모으기
-            </p>
-          </li>
-          <li>
-            <div class="circle-num">
-              <p>
-                2
-              </p>
-            </div>
-            <p class="">
-              수를 가르고 모으기
-            </p>
-          </li>
-          <li>
-            <div class="circle-num">
-              <p>
-                3
-              </p>
-            </div>
-            <p class="">
-              수를 가르고 모으기
-            </p>
-          </li>                    
-        </ul>
+        </div>            
       </div>
     </div>
   </div>
 </body>
 
+<!-- chart -->
 <script>
   const myChart = echarts.init( document.getElementById('lineGrapOrder') );
+  const myChart2 = echarts.init( document.getElementById('lineGrapOrder2') );
   const option = {
     height: 80,
     grid: {
@@ -236,6 +318,91 @@
       }     
     ]
 };
+const option2 = {
+    height: 80,
+    grid: {
+      left: 40,
+      top: 30,
+    },      
+    title : {
+      width: 200,
+      show: false,
+    },
+    color: ['#FFD700','rgba(255,255,255,0.2)',],
+    legend: {
+      data: ['나의 점수', '전체 평균'],
+      bottom: 5,
+      right: 10,
+      textStyle : {
+        fontSize : 11,
+        color: 'white'
+      },
+      icon : "pin"
+    },
+    xAxis: {
+      axisTick : {
+        show : false
+      },      
+      type: 'category',
+      data: ['', '', '', '', '', '', ''],
+      splitLine: {
+        show: false
+      },
+      axisLine : {
+        lineStyle : {
+          color: 'white'
+        }
+      }
+    },
+    yAxis: {
+      position: "left",
+      type: 'value',
+      min: 0,
+      max: 100,
+      interval: 50,    
+      splitLine: {
+        show: false
+      },   
+      nameTextStyle : {
+        fontWeight : 'bold'
+      },
+      axisTick : {
+        show : false
+      },      
+      axisLine : {
+        show: false,
+        lineStyle : {
+          color: 'white'
+        }
+      }, 
+      axisLabel: {
+        formatter: '{value}점',
+        fontSize: 10,
+        padding: [0,0,10,0]
+      },      
+    },
+    series: [
+      {
+        lineStyle : {
+          width: 5,
+        },
+        name: '나의 점수',
+        type: 'line',
+        data: [80, 20, 10, 50, 90, 50, 50],
+        showSymbol: false,
+      },
+      {
+        lineStyle : {
+          width: 5,
+        },        
+        name: '전체 평균',
+        type: 'line',
+        data: [80, 30, 80, 80, 10, 20, 80],
+        showSymbol: false,
+      }     
+    ]
+};
 myChart.setOption(option);
+myChart2.setOption(option2);
 </script>
 </html>
