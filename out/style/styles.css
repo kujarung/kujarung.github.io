@@ -578,6 +578,32 @@
   margin-left: 0;
 }
 
+.right-txt {
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: white; 
+  padding-top: 40px;
+  right: 20px;
+}
+
+.left-txt {
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: white; 
+  padding-top: 40px;
+  left: 20px;
+}
+
+.up-img2.right {
+  background-image: url('../img/arrow-typ3.png');
+  background-repeat: no-repeat;
+  background-position: top 10px right 5px;
+}
+
 .up-img {
   background-image: url('../img/arrow-typ2.png');
   background-repeat: no-repeat;
@@ -1069,7 +1095,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .circle-num p {
@@ -1083,6 +1109,7 @@
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .legend-con {
@@ -1127,6 +1154,10 @@
 
 .width-circle.princi:after { 
   background-color: #ffd700;
+}
+
+.study-list {
+  position: relative;
 }
 
 .study-list ul li {
@@ -1237,27 +1268,27 @@
   margin-top: -20px;
 }
 
-.left-txt .left-circle {
+.grap-left-txt .left-circle {
   position: relative;
   padding-left: 10px;
   color: rgba(0, 0, 0, 0.7);
   margin-bottom: 5px;
 }
 
-.left-txt .status-txt {
+.grap-left-txt .status-txt {
   font-size: 12px;
   padding-left: 10px;
 }
 
-.left-txt {
+.grap-left-txt {
   margin-bottom: 17px;
 }
 
-.left-txt:last-child {
+.grap-left-txt:last-child {
   margin-bottom: 0;
 }
 
-.left-txt .left-circle:after {
+.grap-left-txt .left-circle:after {
   content: "";
   position: absolute;
   left: 0;
@@ -1267,15 +1298,15 @@
   top: calc(50% - 3px);
 }
 
-.left-txt .left-circle.circle-blue:after {
+.grap-left-txt .left-circle.circle-blue:after {
   background-color: #3240ff;
 }
 
-.left-txt .left-circle.circle-yellow:after {
+.grap-left-txt .left-circle.circle-yellow:after {
   background-color: #ffd700;
 }
 
-.left-txt .left-circle.circle-green:after {
+.grap-left-txt .left-circle.circle-green:after {
   background-color: #33cb9a;
 }
 
@@ -1291,4 +1322,30 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+
+.absolut-icon-con {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+}
+
+.inner-absolute {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.7);
+  width: 240px;
+  height: 135px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }

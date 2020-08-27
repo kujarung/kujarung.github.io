@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>통계</title>
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="../style/btn.css">
+  <link rel="stylesheet" href="../style/utils.css">
+  <link rel="stylesheet" href="../style/reset.css">
+  <script src="../js/index.js"></script>
+  
+  <!-- 차트 js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+
+</head>
+<body>
+  <!-- 클릭 시 나타나는 drawer -->
+  <div class="drawer-con" id="drawerCon">
+    <div class="drawer">
+      <div class="drawer-top">
+        <div class="profile-con">
+          <div class="x-btn-con" id="xBtn"></div>
+          <div class="profil-img-con">
+            <img src="../img/profile.svg" alt="profile">
+          </div>
+        </div>
+        <h5 class="mb57">
+          안녕하세요! <br>
+          로그인을 해주세요
+        </h5>
+        <div class="common-btn mb20">
+          <input type="text" class="btn btn-style1" value="로그인" readonly>
+        </div>
+      </div>
+      <div class="drawer-bottom">
+        <ul>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/study.svg');">학습</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/card.svg');">맴버쉽</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/mil.svg');">마일리지</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/setting.svg');">셋팅</p>
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <p class="icon" style="background-image: url('../../img/desk.svg');">노느니 연산수학</p>
+            </a>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </div>  
+  <div class="main-content">
+    <div class="header">
+      <div class="left-gnb">
+        <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu">
+      </div>
+      <div class="header-txt">
+        학습통계
+      </div>
+      <div class="empty"></div>
+    </div> 
+    <div class="list-content-con type2 pb30">
+      <div class="color-grap-wrap">
+        <div class="color-grap-con">
+          <div class="d-flex x-eq y-center mb16">
+            <div class='icon-txt-con'>
+              <i class="icon circle-icon" style="background-image: url('../img/open-book.png');"></i>
+              <div class="icon-txt type2 white small">
+                2단계
+              </div>
+            </div>  
+            <div class="common-btn">
+              <input type="text" readonly class="btn btn-style-pin" value="요점정리">
+            </div>
+          </div>
+
+          <div class="mb21">
+            <p class="white mb10">
+              합이 9까지인 덧셈
+            </p>
+            <h6 class="small op8-white">
+              숫자 쓰기 능력을 토대로 더하기 1~4의 덧셈 연습으로 
+              덧셈의 기본 개념을 익히는 것을 목표로 학습합니다.
+            </h6>
+          </div>
+          <div class="grap-wrap">
+            <div class="open-txt active" id="isOpen">
+              <p>
+                단원별 학습 통계 그래프 보기 
+              </p>
+            </div>
+            <div class="grap">
+              <div id="lineGrapOrder"></div>
+            </div>            
+          </div>
+        </div>
+        <div class="btn-wrap">
+          <div class="common-btn wi140">
+            <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="학습통계 보기">
+          </div>
+          <div class="common-btn wi140">
+            <input type="text" readonly class="btn btn-style2 he40 font-weight300" value="평균점수로 보기">
+          </div>
+        </div>
+      </div>
+      <div class="study-list-con">
+        <div class="absolut-icon-con">
+          <div class="inner-absolute">
+            <div class="mr60">
+              <div class="mb5 tc">
+                <img src="../img/show-sta.svg" alt="">
+              </div>
+              <div class="white">
+                <h6 class="small">
+                  통계 보기
+                </h6>
+              </div>              
+            </div>
+            <div class="">
+              <div class="mb5 tc">
+                <img src="../img/study-icon.svg" alt="">
+              </div>
+              <div class="white">
+                <h6 class="small">
+                  학습하기
+                </h6>                
+              </div>              
+            </div>            
+          </div>
+        </div>        
+        <div class="legend-con">
+          <div class="width-circle princi">
+            원리 학습
+          </div>
+          <div class="width-circle deep">
+            심화 학습
+          </div>
+        </div>
+        <div class="study-list">
+          <ul>
+            <li>
+              <div class="title free">
+                <p>
+                  1차
+                </p>
+              </div>
+              <div class="right-box">
+                <div class="item deep">
+                  <div class="img-con">
+                    <div class="">
+                      <img src="../img/empty-star.svg" alt="empty-star">
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="img-con">
+                    <div class="">
+                      <img src="../img/start.svg" alt="start">
+                    </div>
+                    <div class="">
+                      <img src="../img/start.svg" alt="start">
+                    </div>
+                    <div class="">
+                      <img src="../img/start.svg" alt="start">
+                    </div>                                        
+                  </div>                  
+                </div>
+                <div class="item">
+                  <div class="img-con">
+                    <div class="">
+                      <img src="../img/start.svg" alt="start">
+                    </div>
+                    <div class="">
+                      <img src="../img/start.svg" alt="start">
+                    </div>
+                  </div>                    
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <p>
+                  2차
+                </p>
+              </div>
+              <div class="right-box">
+                <div class="item deep">
+                  <div class="img-con">
+                    <div class="">
+                      <img src="../img/start.svg" alt="start">
+                    </div>
+                    <div class="">
+                      <img src="../img/empty-star.svg" alt="empty-star">
+                    </div>                      
+                  </div>                    
+                </div>
+                <div class="item">
+                  <div class="img-con">
+                    <div class="">
+                      <img src="../img/open-icon.svg" alt="close-icon">
+                    </div>                     
+                  </div>                     
+                </div>
+                <div class="item">
+                  <div class="img-con">
+                    <div class="">
+                      <img src="../img/close-icon.svg" alt="close-icon">
+                    </div>
+                  </div>                     
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                <p>
+                  3차
+                </p>
+              </div>
+              <div class="right-box">
+                <div class="item deep">
+                  <div class="img-con">
+                    <div class="">
+                      <img src="../img/start.svg" alt="start">
+                    </div>
+                    <div class="">
+                      <img src="../img/empty-star.svg" alt="empty-star">
+                    </div>                      
+                  </div>                    
+                </div>
+                <div class="item deep">
+                  <div class="img-con">
+                    <div class="">
+                      <img src="../img/start.svg" alt="start">
+                    </div>
+                    <div class="">
+                      <img src="../img/empty-star.svg" alt="empty-star">
+                    </div>                      
+                  </div>                    
+                </div>
+              </div>
+            </li>          
+            <li>
+              <div class="title">
+                <p>
+                  추가학습
+                </p>
+              </div>
+              <div class="right-box">
+                <div class="item add">
+                  <div class="">
+                    <img src="../img/plus.svg" alt="">
+                  </div>
+                </div>
+              </div>
+            </li>                              
+          </ul>
+        </div>
+      </div>      
+    </div>
+  </div>
+</body>
+
+<script>
+  const myChart = echarts.init( document.getElementById('lineGrapOrder') );
+  const option = {
+    height: 80,
+    grid: {
+      left: 40,
+      top: 30,
+    },      
+    title : {
+      width: 200,
+      show: false,
+    },
+    color: ['#FFD700','rgba(255,255,255,0.2)',],
+    legend: {
+      data: ['나의 점수', '전체 평균'],
+      bottom: 5,
+      right: 10,
+      textStyle : {
+        fontSize : 11,
+        color: 'white'
+      },
+      icon : "pin"
+    },
+    xAxis: {
+      axisTick : {
+        show : false
+      },      
+      type: 'category',
+      data: ['', '', '', '', '', '', ''],
+      splitLine: {
+        show: false
+      },
+      axisLine : {
+        lineStyle : {
+          color: 'white'
+        }
+      }
+    },
+    yAxis: {
+      position: "left",
+      type: 'value',
+      min: 0,
+      max: 100,
+      interval: 50,    
+      splitLine: {
+        show: false
+      },   
+      nameTextStyle : {
+        fontWeight : 'bold'
+      },
+      axisTick : {
+        show : false
+      },      
+      axisLine : {
+        show: false,
+        lineStyle : {
+          color: 'white'
+        }
+      }, 
+      axisLabel: {
+        formatter: '{value}점',
+        fontSize: 10,
+        padding: [0,0,10,0]
+      },      
+    },
+    series: [
+      {
+        lineStyle : {
+          width: 5,
+        },
+        name: '나의 점수',
+        type: 'line',
+        data: [80, 20, 10, 50, 90, 50, 50],
+        showSymbol: false,
+      },
+      {
+        lineStyle : {
+          width: 5,
+        },        
+        name: '전체 평균',
+        type: 'line',
+        data: [80, 30, 80, 80, 10, 20, 80],
+        showSymbol: false,
+      }     
+    ]
+};
+myChart.setOption(option);
+</script>
+</html>

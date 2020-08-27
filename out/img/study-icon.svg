@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+    <defs>
+        <filter id="pvp40iwk2a">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" filter="url(#pvp40iwk2a)" transform="translate(-8)">
+        <g>
+            <path stroke="#163567" stroke-width="1.6" d="M37.6 4L26.4 21.6 16.8 18.4.8 37.6M.8.8L.8 37.6M37.6 37.6L.8 37.6" transform="translate(8)"/>
+        </g>
+    </g>
+</svg>
