@@ -113,6 +113,7 @@
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 10px;
 }
 
 .drawer-con .drawer .drawer-bottom {
@@ -147,6 +148,25 @@
 .profil-img-con img {
   width: 80px;
   height: 80px;;
+}
+
+.profil-img-con.login {
+  display: inline-block;
+  position: relative;
+}
+
+.camera {
+  position: absolute;
+  width:24px;
+  height: 24px;
+  background-image: url("../img/camera.svg");
+  background-position: center center;
+  background-color: white;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  border:1px solid #f2f2f2;
+  bottom: 0px;
+  right: 0px;
 }
 
 .drawer-con.active .drawer {
@@ -296,7 +316,7 @@
   display: flex;
   align-items: center;
   height: 60px;
-  background-color: #f2f2f2;
+  background-color: rgba(242,242,242,0.3);
   border-radius: 29px;
   position: relative;
   margin-bottom: 10px;
@@ -779,10 +799,11 @@
 
 /* popup */
 .popup-con {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: calc(100% + 50px);
   overflow-y: auto;
   background-color: rgba(0,0,0,0.7);
   padding:10px 20px 32px 20px;
@@ -1187,7 +1208,7 @@
 .study-list .title.free:after {
   content: "FREE";
   position: absolute;
-  bottom: 3px;
+  bottom: 1px;
   width: 40px;
   height: 13px;
   background-color: #3240FF;
