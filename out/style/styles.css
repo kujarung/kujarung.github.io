@@ -59,6 +59,16 @@
   padding-left: 20px;
   padding-right: 20px;
   height: 68px;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  z-index: 1;  
+  box-sizing: border-box;
+  top:0;
+}
+
+.header.fixed-header {
+  position: fixed;
 }
 
 .header .header-txt {
@@ -217,6 +227,10 @@
 
 .section.no-border {
   border:none
+}
+
+.setting-content-con {
+  padding-top: 70px; 
 }
 
 .setting-content-con .section:first-child {
@@ -630,7 +644,14 @@
   background-position: top 5px center;
 }
 
+.content-con {
+  padding-top: 70px;
+}
+
 /* 로그인 */
+.login-content-con {
+  padding-top: 70px;
+}
 
 .login-content-con .login-txt-con {
   text-align: center;
@@ -647,7 +668,7 @@
 }
 
 .login-content-con .img-con {
-  height: 300px;
+  height: 250px;
   width: 100%;
   background-image: url(../img/loginbak.png);
   background-repeat: no-repeat;
@@ -662,7 +683,7 @@
 
 .sns-wrap {
   position: absolute;
-  bottom: 40px;
+  bottom: 30%;
 }
 
 .sns-wrap {
@@ -1046,7 +1067,12 @@
 
 /*  */
 .list-content-con {
+  padding-top: 70px;
   padding-bottom: 30px;
+}
+
+.swiper-padding-top {
+  padding-top: 70px !important;
 }
 
 .color-grap-wrap {

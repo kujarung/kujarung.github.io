@@ -56,4 +56,15 @@ window.onload  = () => {
       }
     })  
   }
+
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector('.header');
+    if(window.scrollY > 50) {
+      if( !header.classList.contains('fixed-header')) {
+        header.classList.add('fixed-header')
+      }
+    } else {
+      header.classList.remove('fixed-header')
+    }
+  })
 }
