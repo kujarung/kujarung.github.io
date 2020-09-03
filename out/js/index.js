@@ -56,8 +56,9 @@ window.onload  = () => {
       }
     })  
   }
-
+  
   window.addEventListener("scroll", () => {
+    console.log("scroll")
     const header = document.querySelector('.header');
     if(window.scrollY > 50) {
       if( !header.classList.contains('fixed-header')) {

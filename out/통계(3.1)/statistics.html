@@ -205,66 +205,64 @@
 </body>
 
 <script>
-  window.onload  = () => {
-    const myChart = echarts.init( document.getElementById('chartDou') );
-    const data = 
-    [
-      {value: 50 / 100, name: '아주 좋음'},
-      {value: 20 / 100, name: '좋음'},
-      {value: 10 / 100, name: '보통'},
-      {value: 20 / 100, name: '낮음'},
-    ]
-    const option = {
-      color: ['#3241FF','#34CB9A', '#FFC13B', '#FA742C', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'],
-      legend: {
-        orient: 'vertical',
-        data: ['아주 좋음', '좋음', '보통', '낮음'],
-        right: 0,
-        top: 'middle',
-        verticalAlign: 'middle',
-        icon: "circle",
-        textStyle : {
-          fontSize :12,
-        }
-      },
-      series: [
-        {
-          name: '학업성취도',
-          width: 250,
-          type: 'pie',
-          radius: ['50%', '80%'],
-          avoidLabelOverlap: false,
-          label: {
-            show: false,
-            position: 'center'
-          },
-          markPoint: {
-            symbolSize  : 50,
-            symbolOffset: [25, '150%'],
-            data: [
-              {
-                name: 'screen coordinate',
-                x: 100,
-                y: 100,
-                symbolRotate: 50,
-              }
-            ]
-          },          
-          emphasis: {
-            label: {
-              show: true,
-              fontSize: '20',
-              fontWeight: 'bold'
+  const myChart = echarts.init( document.getElementById('chartDou') );
+  const data = 
+  [
+    {value: 50 / 100, name: '아주 좋음'},
+    {value: 20 / 100, name: '좋음'},
+    {value: 10 / 100, name: '보통'},
+    {value: 20 / 100, name: '낮음'},
+  ]
+  const option = {
+    color: ['#3241FF','#34CB9A', '#FFC13B', '#FA742C', '#91c7ae','#749f83',  '#ca8622', '#bda29a','#6e7074', '#546570', '#c4ccd3'],
+    legend: {
+      orient: 'vertical',
+      data: ['아주 좋음', '좋음', '보통', '낮음'],
+      right: 0,
+      top: 'middle',
+      verticalAlign: 'middle',
+      icon: "circle",
+      textStyle : {
+        fontSize :12,
+      }
+    },
+    series: [
+      {
+        name: '학업성취도',
+        width: 250,
+        type: 'pie',
+        radius: ['50%', '80%'],
+        avoidLabelOverlap: false,
+        label: {
+          show: false,
+          position: 'center'
+        },
+        markPoint: {
+          symbolSize  : 50,
+          symbolOffset: [25, '150%'],
+          data: [
+            {
+              name: 'screen coordinate',
+              x: 100,
+              y: 100,
+              symbolRotate: 50,
             }
-          },
-          labelLine: {
-            show: false
-          },
-          data,
-        }
-      ]
-    };
-    myChart.setOption(option);
-  }
+          ]
+        },          
+        emphasis: {
+          label: {
+            show: true,
+            fontSize: '20',
+            fontWeight: 'bold'
+          }
+        },
+        labelLine: {
+          show: false
+        },
+        data,
+      }
+    ]
+  };
+  myChart.setOption(option);
 </script>
 </html>
