@@ -172,6 +172,8 @@ h4.font-samll {
   height: 40px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border-radius: 2px !important;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
 }
 
 .label-txt {
@@ -464,4 +466,13 @@ h4.font-samll {
 
 .table.custom {
   margin-bottom: 0;
+}
+
+ul.pagination li.page-item a {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+ul.pagination li.page-item.total a {
+  border: none;
 }
