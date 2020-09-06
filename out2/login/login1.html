@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="profile-anonymous"
+    ></script>
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/index.js"></script>
+
+    <title>시공품질관리시스템 | 로그인</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1 class="logo-con">
+        <img src="../assets/imgs/logo.png" alt="logo">
+      </h1>
+    </div>
+
+    <!-- login -->
+    <article class="login bg-img">
+      <section class="login-form">
+        <div class="form-header bg-yellow">
+          <h5 class="form-font">
+            시공 품질관리 시스템
+          </h3>
+        </div>
+        <div class="form-body">
+          <div class="icon-wrap mb27">
+            <ul>
+              <li>
+                <div class="mb20">
+                  <img src="../assets/icons/login-icon1.svg" alt="login-icon1">
+                </div>
+                <h4 class="font-samll bold">
+                  시공현장방문
+                </h4>
+              </li>
+              <li>
+                <div class="mb10">
+                  <img src="../assets/icons/login-icon2.svg" alt="login-icon2">
+                </div>
+                <h4 class="font-samll bold">
+                  시공점검<br>
+                  정보입력
+                </h4>
+              </li>
+              <li>
+                <div class="mb10">
+                  <img src="../assets/icons/login-icon3.svg" alt="login-icon3">
+                </div>
+                <h4 class="font-samll bold">
+                  시공점검<br>
+                  정보입력
+                </h4>
+              </li>
+              <li>
+                <div class="mb10">
+                  <img src="../assets/icons/login-icon4.svg" alt="login-icon4">
+                </div>
+                <h4 class="font-samll bold">
+                  성능보증<br>
+                  지불계수 산출
+                </h4>
+              </li>          
+              <li>
+                <div class="mb10">
+                  <img src="../assets/icons/login-icon4.svg" alt="login-icon4">
+                </div>
+                <h4 class="font-samll bold">
+                  표준화<br>
+                  보고서 생성
+                </h4>
+              </li>                     
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-center">시스템 소개</h5>
+            <h4 class="text-center font-samll black07">
+              도로포장 제품(아스팔트 혼합물)의 현장 시공과정에서 발생하는 관리항목 (제품 온도, 밀도, 포장두께, 다짐회수 등)을<br>
+              국가표준 요구사항에 대응하여 적합하게 관리할 수 있도록 지원
+            </h4>
+          </div>
+          <hr class="custom-line mt27 mb27">
+          <section class="bottom-btn-wrap">
+            <div class="col-12 row no-gutters">
+              <div class="col-6 form-group pr20">
+                <label class="label-txt mb6" for="login-email">Email</label>
+                <input
+                  type="email"
+                  class="custom-input"
+                  id="login-email"
+                  placeholder="sample@email.com"
+                />
+              </div>
+              <div class="col-6 pl20 form-group">
+                <label class="label-txt mb6" for="login-password">Password</label>
+                <input
+                  type="password"
+                  class="custom-input"
+                  id="login-password"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            
+            <div class="col-12 no-gutters mt20 mb40">
+              <div class="form-check custom-check-box">
+                <input
+                  type="checkbox"
+                  class="form-check-input checkbox"
+                  id="remember-email"
+                />
+                <label class="form-check-label" for="remember-email">아이디 저장</label
+                >
+              </div>
+            </div>
+
+            <div class="col-12 row no-gutters">
+              <div class="col-6 pr20">
+                <button
+                  type="submit"
+                  class="btn btn-outline-primary-variant text-lg-16 rounded-0 w-100 p-2"
+                  data-toggle="modal"
+                  data-target="#userConfirm"
+                >
+                  사용자 등록 요청
+                </button>
+              </div>
+              <div class="col-6 pl20">
+                <button
+                  type="submit"
+                  class="btn custom-btn custom-btn-color text-lg-16 rounded-0 w-100 p-2"
+                >
+                  로그인
+                </button>
+              </div>
+            </div>
+
+          </section>
+        </div>
+      </section>
+    <!-- 사용자 등록 요청 modal -->
+    <div
+      class="modal fade"
+      id="userConfirm"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="userConfirmLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header bg-primary-variant p-3">
+            <h3 class="text-center text-16 text-lg-18 fw-700 text-primary">
+              아스팔트 혼합물 품질관리시스템 로그인
+            </h3>
+          </div>
+          <div class="modal-body px-5">
+            <h4 class="my-3 text-lg-20 fw-500 text-primary">사용자 정보</h4>
+            <div class="form-wrapper row">
+              <div class="form-group col-12 my-2">
+                <label for="user-category">사용자 구분</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="user-category"
+                  placeholder="ex)제조사"
+                />
+              </div>
+              <div class="form-group col-12 col-lg-6 my-2">
+                <label for="user-name">성명</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="user-name"
+                  placeholder="홍길동"
+                />
+              </div>
+              <div class="form-group col-12 col-lg-6 my-2">
+                <label for="category">연락처</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="category"
+                  placeholder="010-0000-0000"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                  maxlength="11"
+                />
+              </div>
+            </div>
+            <h5 class="mt-5 text-lg-14 fw-700 text-primary">업체 번호</h5>
+            <div class="form-wrapper row">
+              <div class="form-group col-12 col-lg-6 my-2">
+                <label for="company-name1">업체명</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="company-name1"
+                  placeholder="샘플 텍스트"
+                />
+              </div>
+              <div class="form-group col-12 col-lg-6 my-2">
+                <label for="company-business-number1">사업자번호</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="company-business-number1"
+                  placeholder="000-00-0000"
+                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{5}"
+                  maxlength="12"
+                />
+              </div>
+              <div class="form-group col-12 col-lg-6 my-2">
+                <label for="company-name2">업체명</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="company-name2"
+                  placeholder="샘플 텍스트"
+                />
+              </div>
+              <div class="form-group col-12 col-lg-6 my-2">
+                <label for="company-business-number2">사업자번호</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="company-business-number2"
+                  placeholder="000-00-0000"
+                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{5}"
+                  maxlength="12"
+                />
+              </div>
+            </div>
+
+            <div class="my-4 border-top border-light"></div>
+
+            <div class="form-wrapper row">
+              <div class="form-group col-12">
+                <label for="sign-up-email" class="d-block">아이디</label>
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control position-relative pr-5"
+                    id="sign-up-email"
+                    placeholder="sample@email.com"
+                  />
+                  <div
+                    class="input-group-append position-absolute right-0 ml-2 p-3 zIndex-10"
+                  >
+                    <button
+                      class="btn btn-primary rounded-pill text-12 text-lg-12 mt-n2 px-3 py-1"
+                      type="button"
+                    >
+                      중복체크
+                    </button>
+                  </div>
+                </div>
+                <small class="form-text text-error">
+                  사용할 수 없는 아이디입니다.
+                </small>
+              </div>
+              <div class="form-group col-12 col-lg-6 my-2">
+                <label for="sign-up-password">비밀번호</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="sign-up-password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="form-group col-12 col-lg-6 my-2">
+                <label for="sign-up-password-confirm">비밀번호확인</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="sign-up-password-confirm"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer pb-4">
+            <div class="row container flex-column-reverse flex-lg-row">
+              <div class="form-btn my-2 my-lg-0 col-12 col-lg-6">
+                <button
+                  type="submit"
+                  class="btn btn-outline-primary-variant text-lg-16 rounded-0 w-100 p-2"
+                  data-dismiss="modal"
+                >
+                  닫기
+                </button>
+              </div>
+              <div class="form-btn my-2 my-lg-0 col-12 col-lg-6">
+                <button
+                  type="submit"
+                  class="btn btn-primary text-lg-16 rounded-0 w-100 p-2"
+                >
+                  로그인
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !사용자 등록 요청 modal -->
+    </article>
+    <!-- !login -->
+
+    <!-- footer -->
+    <footer
+      id="footer"
+      class="footer"
+    >
+      <div class="mr-auto">
+        <a
+          href="./construction_list.html"
+          role="button"
+          class="text-12 text-lg-14 text-grey"
+        >
+          아스팔트혼합물품질관리시스템
+        </a>
+      </div>
+      <div class="mx-0 text-12 text-lg-14 fw-500 text-grey">
+        Copyright &copy; 2020 All Right Reserved
+      </div>
+    </footer>
+    <!-- !footer -->
+  </body>
+</html>
