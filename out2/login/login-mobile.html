@@ -6,19 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="profile-anonymous"
-    ></script>
 
     <!-- Custom -->
-    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href='../css/mobile.css'>
+    <link rel="stylesheet" href='../css/utils.css'>
     <script src="../js/index.js"></script>
 
     <title>시공품질관리시스템 | 로그인</title>
@@ -26,13 +17,37 @@
 
   <body>
     <div class="m-header">
-      <div class="menu-con">
+      <div class="menu-con" id="menuIcon">
         <img src="../assets/imgs/menu.svg" alt="">
       </div>
     </div>
 
     <!-- login -->
-    <article class="login bg-img">
+    <article class="m-main login bg-img">
+      <div class="drawer" id="drawer">
+        <div class="d-flex x-eq y-center mb25">
+          <div class="font14">
+            <span class="font-bold">홍길동</span>님 환영합니다.
+          </div>
+          <div class="">
+            <button
+            type="submit"
+            class="btn custom-btn custom-btn-color text-lg-16 small-btn"
+            data-toggle="modal"
+            data-target="#userConfirm"
+          >
+            로그아웃
+          </button>
+          </div>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li class="active">nav1</li>
+            <li>nav2</li>
+            <li>nav</li>
+          </ul>
+        </div>
+      </div>          
       <section class="m-login-form">
         <div class="form-header bg-carret">
           <h5 class="form-font">
@@ -56,11 +71,11 @@
             </div>
             
             <div class="col-12 form-group">
-              <label class="label-txt mb6" for="login-email">Email</label>
+              <label class="label-txt mb6" for="login-password">Password</label>
               <input
-                type="email"
+                type="password"
                 class="custom-input"
-                id="login-email"
+                id="login-password"
                 placeholder="sample@email.com"
               />
             </div>
@@ -82,7 +97,7 @@
             <div class="col-12 mb6">
               <button
                 type="submit"
-                class="btn custom-btn btn-outline-primary-variant text-lg-16 rounded-0 w-100 p-2"
+                class="btn custom-btn btn-outline-primary-variant text-lg-16  w-100 p-2"
                 data-toggle="modal"
                 data-target="#userConfirm"
               >
@@ -92,7 +107,7 @@
             <div class="col-12">
               <button
                 type="submit"
-                class="btn custom-btn custom-btn-color text-lg-16 rounded-0 w-100 p-2"
+                class="btn custom-btn custom-btn-color text-lg-16  w-100 p-2"
               >
                 로그인
               </button>
