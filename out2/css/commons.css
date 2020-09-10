@@ -930,7 +930,7 @@ a.underline, a:active.underline, a:visited.underline {
   z-index: 135 !important;
   width: 100%;
   height: 100vh;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .dim.dim-active {
@@ -1070,22 +1070,23 @@ aside.aside-bar .lnb-item.lnb-item-active .lnb-link-wrapper .lnb-link-active > a
   width: 0.5rem;
   height: 2px;
   background-color: #002257;
+  display: -ms-flexbox;
 }
 
 .login {
-  display: flex;
-  align-items: center;
+  display: flex; display: -ms-flexbox;
+  align-items: center; -ms-flex-align: center;
   justify-content: center;
 }
 
 .login.bg-img {
-  min-height: calc(100vh - 170px);
+  height: calc(100vh - 170px);
   background: url("../assets/imgs/bg-login1.png");
 }
 
 @media all and (max-width: 768px) {
   .login.bg-img {
-    min-height: calc(100vh - 48px);
+    height: calc(100vh - 48px);
   }
   .form-body {
     width: 100%;

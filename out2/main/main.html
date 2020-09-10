@@ -29,7 +29,7 @@
 <body>
   <div class="m-header">
     <div class="menu-con">
-      <img src="../assets/imgs/menu.svg" alt="">
+      <img src="../assets/imgs/menu.png" alt="" id="menuIcon">
     </div>
     <div class="m-logo-header">
       <img src="../assets/imgs/m-logo.png" alt="">
@@ -37,6 +37,30 @@
     <div class="empty"></div>
   </div>
   <div class="m-main">
+    <div class="drawer" id="drawer">
+      <div class="d-flex x-eq y-center">
+        <div class="font14">
+          <span class="font-bold">홍길동</span>님 환영합니다.
+        </div>
+        <div class="">
+          <button
+          type="submit"
+          class="btn custom-btn custom-btn-color text-lg-16 small-btn"
+          data-toggle="modal"
+          data-target="#userConfirm"
+        >
+          로그아웃
+        </button>
+        </div>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li class="active">nav1</li>
+          <li>nav2</li>
+          <li>nav</li>
+        </ul>
+      </div>
+    </div>  
     <section class="filter-con mt30 mb20">
       <div class="form-row align-items-end form-construction-outline">
         <div class="form-group col-6 col-md-6 col-lg-2 my-2 my-md-0">
