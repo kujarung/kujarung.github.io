@@ -1,99 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>로그인1</title>
-  <link rel="stylesheet" href="../style/styles.css">
-  <link rel="stylesheet" href="../style/btn.css">
-  <link rel="stylesheet" href="../style/utils.css">
-  <link rel="stylesheet" href="../style/reset.css">
-  <script src="../js/index.js"></script>
-</head>
-<body>
-  <!-- 클릭 시 나타나는 drawer -->
-  <div class="drawer-con" id="drawerCon">
-    <div class="drawer">
-      <div class="drawer-top">
-        <div class="profile-con">
-          <div class="x-btn-con" id="xBtn"></div>
-          <div class="profil-img-con login">
-            <div class="camera"></div>
-            <img src="../img/profile.svg" alt="profile">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인1</title>
+    <link rel="stylesheet" href="../style/styles.css" />
+    <link rel="stylesheet" href="../style/btn.css" />
+    <link rel="stylesheet" href="../style/utils.css" />
+    <link rel="stylesheet" href="../style/reset.css" />
+    <script src="../js/index.js"></script>
+  </head>
+  <body>
+    <!-- 클릭 시 나타나는 drawer -->
+    <div class="drawer-con" id="drawerCon">
+      <div class="drawer">
+        <div class="drawer-top">
+          <div class="profile-con">
+            <div class="x-btn-con" id="xBtn"></div>
+            <div class="profil-img-con login">
+              <div class="camera"></div>
+              <img src="../img/profile.svg" alt="profile" />
+            </div>
+          </div>
+          <h5 class="mb9">
+            안녕하세요! <br />
+            <span class="strong">정성옥님</span>
+          </h5>
+          <div class="common-btn mb8">
+            <div class="btn btn-style2 font-weight300">프로필 등록</div>
+          </div>
+          <div class="common-btn mb8">
+            <div class="btn btn-style2 font-weight300">프로필 수정</div>
           </div>
         </div>
-        <h5 class="mb9">
-          안녕하세요! <br>
-          <span class="strong">정성옥님</span>
-        </h5>
-        <div class="common-btn mb8">
-          <div class="btn btn-style2 font-weight100">
-            프로필 등록
-          </div>
+        <div class="drawer-bottom">
+          <ul>
+            <li>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../img/study.svg')"
+                >
+                  학습
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../img/card.svg')"
+                >
+                  멤버십
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <p class="icon" style="background-image: url('../img/pig.svg')">
+                  마일리지
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../img/setting.svg')"
+                >
+                  설정
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../img/desk.svg')"
+                >
+                  노느니 연산수학
+                </p>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="common-btn mb8">
-          <div class="btn btn-style2 font-weight100">
-            프로필 수정
-          </div>
-        </div>        
       </div>
-      <div class="drawer-bottom">
+    </div>
+    <div class="main-content">
+      <div class="header">
+        <div class="left-gnb">
+          <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu" />
+        </div>
+      </div>
+      <div class="login-content-con">
+        <div class="tc mb22">
+          <img src="../img/logo.svg" alt="" />
+        </div>
+        <p class="login-txt-con">
+          <span class="strong">로그인 후 학습하세요!</span>
+        </p>
+        <div class="tc mb20">
+          <img src="../img/loginChar.svg" alt="" />
+        </div>
+      </div>
+      <div class="sns-wrap">
         <ul>
           <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../img/study.svg');">학습</p>
-            </a>
+            <img src="../img/google.png" alt="" />
           </li>
           <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../img/card.svg');">멤버십</p>
-            </a>
+            <img src="../img/facebook.png" alt="" />
           </li>
           <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../img/pig.svg');">마일리지</p>
-            </a>
+            <img src="../img/kakao.png" alt="" />
           </li>
-          <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../img/setting.svg');">설정</p>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../img/desk.svg');">노느니 연산수학</p>
-            </a>
-          </li>          
         </ul>
       </div>
     </div>
-  </div>
-  <div class="main-content">
-    <div class="header">
-      <div class="left-gnb">
-        <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu">
-      </div>
-    </div>
-    <div class="login-content-con">
-      <p class="login-txt-con">
-        노느니 연산수학<br>
-        <span class="strong">로그인 후 학습하세요!</span>
-      </p>
-      <div class="img-con"></div>
-    </div>
-    <div class="sns-wrap">
-      <ul>
-        <li>
-          <img src="../img/google.png" alt="">
-        </li>
-        <li>
-          <img src="../img/facebook.png" alt="">
-        </li>
-        <li>
-          <img src="../img/kakao.png" alt="">
-        </li>
-      </ul>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
