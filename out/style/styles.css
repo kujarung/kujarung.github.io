@@ -202,6 +202,7 @@
 .main-content {
   position: relative;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -390,6 +391,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color: #3240ff;
 }
 
@@ -431,6 +433,7 @@
 .help-step {
   position: absolute;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
@@ -1446,7 +1449,7 @@
 .splash {
   width: 100%;
   height: 100vh;
-  min-height: -webkit-fill-available;
+  height: calc(var(--vh, 1vh) * 100);
   background-image: url("../img/splash.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1458,6 +1461,7 @@
 
 .start-back {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color: #3240ff;
   min-height: -webkit-fill-available;
 }
