@@ -388,6 +388,7 @@
 
 /* 도움말 */
 .workbook-con {
+  position: fixed;
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   background-color: #3240ff;
@@ -430,7 +431,7 @@
 }
 
 .help-step {
-  position: absolute;
+  position: fixed;
   top:0;
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
