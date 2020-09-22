@@ -1,184 +1,165 @@
 <!DOCTYPE html>
 <html lang="kr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>통계</title>
-  <link rel="stylesheet" href="../style/styles.css">
-  <link rel="stylesheet" href="../style/btn.css">
-  <link rel="stylesheet" href="../style/utils.css">
-  <link rel="stylesheet" href="../style/reset.css">
-  <script src="../js/index.js"></script>
-</head>
-<body>
-  <div class="popup-con">
-    <div class="popup-inner">
-      <div class="close-btn-con type2">
-        <img src="../img/xBtn.svg" alt="">
-      </div>
-      <div class="popup-content">
-        <h3 class="tc font-weight500 mb5">
-          결제
-        </h3>
-        <h5 class="tc">
-          유료회원 전환 후<br>
-          학습할 수 있습니다.
-        </h5>
-        <div class="img-con">
-          <img src="../img/popup-img.png" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>통계</title>
+    <link rel="stylesheet" href="../style/styles.css" />
+    <link rel="stylesheet" href="../style/btn.css" />
+    <link rel="stylesheet" href="../style/utils.css" />
+    <link rel="stylesheet" href="../style/reset.css" />
+    <script src="../js/index.js"></script>
+  </head>
+  <body>
+    <div class="popup-con">
+      <div class="popup-inner">
+        <div class="close-btn-con type2">
+          <img src="../img/xBtn.svg" alt="" />
         </div>
-      </div>
-      <div class="btn-wrap">
-        <div class="common-btn wi140">
-          <div class="btn btn-style3 he50">닫기</div>
-        </div>
-        <div class="common-btn wi140">
-          <div class="btn btn-style1 he50">결제하러 가기</div>
-        </div>        
-      </div>
-
-    </div>
-  </div>
-
-  
-  <div class="main-content not_scroll">
-    <div class="header">
-      <div class="left-gnb">
-        <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu">
-      </div>
-      <div class="header-txt">
-        학습통계
-      </div>
-      <div class="empty"></div>
-    </div> 
-    <div class="setting-content-con">
-      <div class="section">
-        <div class="mb20">
-          <h4>
-            지금까지 <span class="strong">정성옥</span>님은<br>
-            <span class="strong weave-txt">총 4장</span>을 학습했습니다.
-          </h4>
-        </div>
-        <div class="icon-list mb18">
-          <ul>
-            <li>
-              <div class='icon-txt-con'>
-                <i class="icon">
-                  <img src="../img/book.png" alt="bakup-img">
-                </i>
-                <div class="icon-txt">
-                  마지막 학습
-                </div>
-              </div>
-              <div class="desc-txt font-weight300">
-                합이 9 까지인 덧셈
-              </div>
-            </li>
-          </ul>
-        </div>    
-        <div class="common-btn">
-          <input type="text" class="btn btn-style3 he60" readonly value="학습하러 가기">
-        </div>    
-      </div>
-      <div class="section">
-        <div class="mb20">
-          <h4>
-            <span class="strong">정성옥</span>님의 학습성취도는<br>
-            <span class="strong weave-txt">아주 좋음</span>입니다.
-          </h4>
-        </div>        
-        <div id="chartDou" style="width:100%; height:300px;"></div>
-      </div>
-      <div class="section">
-        <div class="mb12">
-          <h4 class="font-weight700">
-            학습스타일
-          </h4>
-        </div>
-        <div class="study-wrap">
-          <div class="study-con mb20">
-            <div class="study-title-con">
-              <div class='icon-txt-con'>
-                <i class="icon">
-                  <img src="../img/books.png" alt="bakup-img">
-                </i>
-                <div class="icon-txt type2">
-                  일 평균 학습량
-                </div>
-              </div>              
-            </div>
-            <div class="grap-wrap">
-              <div class="grap-con">
-                <div class="grap-title">
-                  정성옥님
-                </div>
-                <div class="bar-grap">
-                  <div class="inner blue" style="width: 60%"></div>
-                </div>
-              </div>
-
-              <div class="grap-con">
-                <div class="grap-title">
-                  전체
-                </div>
-                <div class="bar-grap">
-                  <div class="inner" style="width: 20%"></div>
-                </div>
-              </div>
-              
-              <div class="grap-con">
-                <div class="grap-title">
-                  상위 10%
-                </div>
-                <div class="bar-grap">
-                  <div class="inner" style="width: 10%"></div>
-                </div>
-              </div>              
-            </div>
+        <div class="popup-content mb21">
+          <h3 class="tc font-weight500 mb5">결제</h3>
+          <h5 class="tc mb19">
+            유료회원 전환 후<br />
+            학습할 수 있습니다.
+          </h5>
+          <div class="img-con tc">
+            <img
+              src="../img/chargChar.png"
+              alt=""
+              style="width: 100px; height: 140px"
+            />
           </div>
-          <div class="study-con">
-            <div class="study-title-con">
-              <div class='icon-txt-con'>
-                <i class="icon">
-                  <img src="../img/clock.png" alt="bakup-img">
-                </i>
-                <div class="icon-txt type2">
-                  일 평균 학습시간
-                </div>
-              </div>              
-            </div>
-            <div class="grap-wrap">
-              <div class="grap-con">
-                <div class="grap-title">
-                  정성옥님
-                </div>
-                <div class="bar-grap">
-                  <div class="inner blue" style="width: 60%"></div>
-                </div>
-              </div>
+        </div>
+        <div class="btn-wrap">
+          <div class="common-btn wi135">
+            <div class="btn btn-style3 he50">닫기</div>
+          </div>
+          <div class="common-btn wi135">
+            <div class="btn btn-style1 he50">결제하러 가기</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-              <div class="grap-con">
-                <div class="grap-title">
-                  전체
+    <div class="main-content not_scroll">
+      <div class="header">
+        <div class="left-gnb">
+          <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu" />
+        </div>
+        <div class="header-txt">학습통계</div>
+        <div class="empty"></div>
+      </div>
+      <div class="setting-content-con">
+        <div class="section">
+          <div class="mb20">
+            <h4>
+              지금까지 <span class="strong">정성옥</span>님은<br />
+              <span class="strong weave-txt">총 4장</span>을 학습했습니다.
+            </h4>
+          </div>
+          <div class="icon-list mb18">
+            <ul>
+              <li>
+                <div class="icon-txt-con">
+                  <i class="icon">
+                    <img src="../img/book.png" alt="bakup-img" />
+                  </i>
+                  <div class="icon-txt">마지막 학습</div>
                 </div>
-                <div class="bar-grap">
-                  <div class="inner" style="width: 20%"></div>
+                <div class="desc-txt font-weight300">합이 9 까지인 덧셈</div>
+              </li>
+            </ul>
+          </div>
+          <div class="common-btn">
+            <input
+              type="text"
+              class="btn btn-style3 he60"
+              readonly
+              value="학습하러 가기"
+            />
+          </div>
+        </div>
+        <div class="section">
+          <div class="mb20">
+            <h4>
+              <span class="strong">정성옥</span>님의 학습성취도는<br />
+              <span class="strong weave-txt">아주 좋음</span>입니다.
+            </h4>
+          </div>
+          <div id="chartDou" style="width: 100%; height: 300px"></div>
+        </div>
+        <div class="section">
+          <div class="mb12">
+            <h4 class="font-weight700">학습스타일</h4>
+          </div>
+          <div class="study-wrap">
+            <div class="study-con mb20">
+              <div class="study-title-con">
+                <div class="icon-txt-con">
+                  <i class="icon">
+                    <img src="../img/books.png" alt="bakup-img" />
+                  </i>
+                  <div class="icon-txt type2">일 평균 학습량</div>
                 </div>
               </div>
-              
-              <div class="grap-con">
-                <div class="grap-title">
-                  상위 10%
+              <div class="grap-wrap">
+                <div class="grap-con">
+                  <div class="grap-title">정성옥님</div>
+                  <div class="bar-grap">
+                    <div class="inner blue" style="width: 60%"></div>
+                  </div>
                 </div>
-                <div class="bar-grap">
-                  <div class="inner" style="width: 10%"></div>
+
+                <div class="grap-con">
+                  <div class="grap-title">전체</div>
+                  <div class="bar-grap">
+                    <div class="inner" style="width: 20%"></div>
+                  </div>
                 </div>
-              </div>              
+
+                <div class="grap-con">
+                  <div class="grap-title">상위 10%</div>
+                  <div class="bar-grap">
+                    <div class="inner" style="width: 10%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="study-con">
+              <div class="study-title-con">
+                <div class="icon-txt-con">
+                  <i class="icon">
+                    <img src="../img/clock.png" alt="bakup-img" />
+                  </i>
+                  <div class="icon-txt type2">일 평균 학습시간</div>
+                </div>
+              </div>
+              <div class="grap-wrap">
+                <div class="grap-con">
+                  <div class="grap-title">정성옥님</div>
+                  <div class="bar-grap">
+                    <div class="inner blue" style="width: 60%"></div>
+                  </div>
+                </div>
+
+                <div class="grap-con">
+                  <div class="grap-title">전체</div>
+                  <div class="bar-grap">
+                    <div class="inner" style="width: 20%"></div>
+                  </div>
+                </div>
+
+                <div class="grap-con">
+                  <div class="grap-title">상위 10%</div>
+                  <div class="bar-grap">
+                    <div class="inner" style="width: 10%"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

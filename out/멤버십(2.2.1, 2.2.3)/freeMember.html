@@ -1,125 +1,170 @@
 <!DOCTYPE html>
 <html lang="kr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>무료회원</title>
-  <link rel="stylesheet" href="../style/styles.css">
-  <link rel="stylesheet" href="../style/btn.css">
-  <link rel="stylesheet" href="../style/utils.css">
-  <link rel="stylesheet" href="../style/reset.css">
-  <script src="../js/index.js"></script>
-</head>
-<body>
-  <!-- 클릭 시 나타나는 drawer -->
-  <div class="drawer-con" id="drawerCon">
-    <div class="drawer">
-      <div class="drawer-top">
-        <div class="profile-con">
-          <div class="x-btn-con" id="xBtn"></div>
-          <div class="profil-img-con">
-            <img src="../img/profile.svg" alt="profile">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>무료회원</title>
+    <link rel="stylesheet" href="../style/styles.css" />
+    <link rel="stylesheet" href="../style/btn.css" />
+    <link rel="stylesheet" href="../style/utils.css" />
+    <link rel="stylesheet" href="../style/reset.css" />
+    <script src="../js/index.js"></script>
+  </head>
+  <body>
+    <!-- 클릭 시 나타나는 drawer -->
+    <div class="drawer-con" id="drawerCon">
+      <div class="drawer">
+        <div class="drawer-top">
+          <div class="profile-con">
+            <div class="x-btn-con" id="xBtn"></div>
+            <div class="profil-img-con">
+              <img src="../img/profile.svg" alt="profile" />
+            </div>
+          </div>
+          <h5 class="mb57">
+            안녕하세요! <br />
+            로그인을 해주세요
+          </h5>
+          <div class="common-btn mb20">
+            <input type="text" class="btn btn-style1" value="로그인" readonly />
           </div>
         </div>
-        <h5 class="mb57">
-          안녕하세요! <br>
-          로그인을 해주세요
-        </h5>
-        <div class="common-btn mb20">
-          <input type="text" class="btn btn-style1" value="로그인" readonly>
-        </div>
-      </div>
-      <div class="drawer-bottom">
-        <ul>
-          <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../../img/study.svg');">학습</p>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../../img/card.svg');">멤버십</p>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../../img/pig.svg');">마일리지</p>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../../img/setting.svg');">셋팅</p>
-            </a>
-          </li>
-          <li>
-            <a href="/">
-              <p class="icon" style="background-image: url('../../img/desk.svg');">노느니 연산수학</p>
-            </a>
-          </li>          
-        </ul>
-      </div>
-    </div>
-  </div>  
-  <div class="main-content">
-    <div class="header">
-      <div class="left-gnb">
-        <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu">
-      </div>
-      <div class="header-txt">
-        멤버십
-      </div>
-      <div class="empty"></div>
-    </div> 
-    <div class="content-con member-content-con">
-      <div class="info-con">
-        <h3 class="strong mb2">
-          <span class="weave-txt">무료 서비스</span> 중입니다.
-        </h3>
-        <h6>
-          무료 서비스는 단원별로<br>
-          3장만 학습 할 수 있습니다.
-        </h6>
-        <div class="rel-img-box">
-          <img src="../img/member.svg" alt="">
-        </div>
-        <div class="absolut-con type2">
-          <div class="common-btn mb10">
-            <input type="text" class="btn btn-style1" readonly value="정기결제 5.000">
-          </div>
-          <div class="common-btn">
-            <input type="text" class="btn btn-style3" readonly value="서비스 쿠폰 사용">
-          </div>
-
-        </div>
-      </div>
-      <div class="info-con type2">
-        <h3 class="strong mb25">
-          유료회원/서비스<br>
-          회원 혜택
-        </h3>
-        <div class="advantage-con">
+        <div class="drawer-bottom">
           <ul>
             <li>
-              <i class="desc-icon" style="background-image: url(../img/books.png);"></i>
-              <div class="desc-txt">
-                단원의 모든 시트를 학습 후<br>
-                부족하면 추가학습 가능
-              </div>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../../img/study.svg')"
+                >
+                  학습
+                </p>
+              </a>
             </li>
             <li>
-              <i class="desc-icon" style="background-image: url(../img/hund.png);"></i>
-              <div class="desc-txt">
-                모든 시트를 100점 맞을 때까지 반복학습
-              </div>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../../img/card.svg')"
+                >
+                  멤버십
+                </p>
+              </a>
             </li>
             <li>
-              <i class="desc-icon" style="background-image: url(../img/book.png);"></i>
-              <div class="desc-txt">한 권 학습은 마무리 학습으로 총정리</div>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../../img/pig.svg')"
+                >
+                  마일리지
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../../img/setting.svg')"
+                >
+                  셋팅
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <p
+                  class="icon"
+                  style="background-image: url('../../img/desk.svg')"
+                >
+                  노느니 연산수학
+                </p>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
-</body>
+    <div class="main-content">
+      <div class="header">
+        <div class="left-gnb">
+          <img src="../img/drawer-menu.svg" alt="drawer-menu" id="gnbMenu" />
+        </div>
+        <div class="header-txt">멤버십</div>
+        <div class="empty"></div>
+      </div>
+      <div class="content-con member-content-con">
+        <div class="info-con">
+          <h3 class="strong mb2">
+            <span class="weave-txt">무료 서비스</span> 중입니다.
+          </h3>
+          <h6>
+            무료 서비스는 단원별로<br />
+            3장만 학습 할 수 있습니다.
+          </h6>
+          <div class="rel-img-box">
+            <img
+              src="../img/freeChar.png"
+              alt=""
+              style="width: 117px; height: 127px"
+            />
+          </div>
+          <div>
+            <div class="common-btn mb10">
+              <input
+                type="text"
+                class="btn btn-style1"
+                readonly
+                value="정기결제 5.000"
+              />
+            </div>
+            <div class="common-btn">
+              <input
+                type="text"
+                class="btn btn-style3"
+                readonly
+                value="서비스 쿠폰 사용"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="info-con type2">
+          <h3 class="strong mb25">
+            유료회원/서비스<br />
+            회원 혜택
+          </h3>
+          <div class="advantage-con">
+            <ul>
+              <li>
+                <i
+                  class="desc-icon"
+                  style="background-image: url(../img/books.png)"
+                ></i>
+                <div class="desc-txt">
+                  단원의 모든 시트를 학습 후<br />
+                  부족하면 추가학습 가능
+                </div>
+              </li>
+              <li>
+                <i
+                  class="desc-icon"
+                  style="background-image: url(../img/hund.png)"
+                ></i>
+                <div class="desc-txt">
+                  모든 시트를 100점 맞을 때까지 반복학습
+                </div>
+              </li>
+              <li>
+                <i
+                  class="desc-icon"
+                  style="background-image: url(../img/book.png)"
+                ></i>
+                <div class="desc-txt">한 권 학습은 마무리 학습으로 총정리</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
