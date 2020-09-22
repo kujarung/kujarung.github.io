@@ -239,6 +239,7 @@
   box-sizing: border-box;
   padding-left: 12px;
   padding-right: 12px;
+  background-color: white;
 }
 
 .select-con input {
