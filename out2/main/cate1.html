@@ -20,7 +20,8 @@
     ></script>
 
     <!-- Custom -->
-    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/utils.css">
     <script src="../js/index.js"></script>
 
     <title>시공품질관리시스템 | 로그인</title>
@@ -28,8 +29,8 @@
 
 <body>
   <div class="m-header">
-    <div class="menu-con">
-      <img src="../assets/imgs/menu.png" alt="" id="menuIcon">
+    <div class="menu-con" id="menuIcon">
+      <img src="../assets/imgs/menu.svg" alt="">
     </div>
     <div class="m-logo-header">
       <img src="../assets/imgs/m-logo.png" alt="">
@@ -38,29 +39,24 @@
   </div>
   <div class="m-main">
     <div class="drawer" id="drawer">
-      <div class="d-flex x-eq y-center">
-        <div class="font14">
-          <span class="font-bold">홍길동</span>님 환영합니다.
+      <div class="d-flex x-eq">
+        <div class="">
+          홍길동님 환영합니다.
         </div>
         <div class="">
-          <button
-          type="submit"
-          class="btn custom-btn custom-btn-color text-lg-16 small-btn"
-          data-toggle="modal"
-          data-target="#userConfirm"
-        >
-          로그아웃
-        </button>
+          <div class="">
+            로그아웃
+          </div>
         </div>
       </div>
-      <div class="nav-menu">
+      <div class="">
         <ul>
-          <li class="active">nav1</li>
+          <li>nav1</li>
           <li>nav2</li>
           <li>nav</li>
         </ul>
       </div>
-    </div>  
+    </div>    
     <div class="title-wrap">
       <div class="select-menu-con">
         <ul>
@@ -79,7 +75,7 @@
       <div class="col-12 mb6">
         <button
           type="submit"
-          class="btn custom-btn btn-outline-primary-variant text-lg-16 rounded-0 w-100 p-2"
+          class="btn custom-btn btn-outline-primary-variant text-lg-16  w-100 p-2"
         >
           시공관리
         </button>
@@ -88,7 +84,7 @@
       <div class="col-12 mb6">
         <button
           type="submit"
-          class="btn custom-btn btn-outline-primary-variant text-lg-16 rounded-0 w-100 p-2"
+          class="btn custom-btn btn-outline-primary-variant text-lg-16  w-100 p-2"
         >
           품질관리
         </button>
@@ -97,7 +93,7 @@
       <div class="col-12 mb6">
         <button
           type="submit"
-          class="custom-btn custom-btn-color text-lg-16 rounded-0 w-100 p-2"
+          class="custom-btn custom-btn-color text-lg-16  w-100 p-2"
         >
           검사
         </button>
@@ -106,7 +102,7 @@
       <div class="col-12">
         <button
           type="submit"
-          class="btn custom-btn btn-outline-primary-variant text-lg-16 rounded-0 w-100 p-2"
+          class="btn custom-btn btn-outline-primary-variant text-lg-16  w-100 p-2"
         >
           준공/사후관리
         </button>

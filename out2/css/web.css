@@ -9,6 +9,50 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
 
+.logo-con {
+  position: relative;
+}
+
+.logo-con:after {
+  font-size: 22px;
+  color: #002257;
+  padding-left: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: calc(100% + 20px);  
+  display: flex;
+  align-items: center;
+  top: 0;
+  background-image: url('../assets/icons/path-2.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-weight: bold;
+}
+
+.logo-con.doro:after {
+  content:"도로포장 설계 시스템";
+}
+
+.logo-con.sigon:after {
+  content: "시공 품질관리 시스템"; 
+}
+
+.logo-con.sigon-pol:after {
+  content:"시공지침 시스템";
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login.bg-img {
+  min-height: calc(100vh - 170px);
+  background: url("../assets/imgs/bg-login1.png");
+}
+
 .login-form {
   width: 1000px;
   background-color: white;
@@ -314,17 +358,6 @@ h4.font-samll {
   width: 100%;
 }
 
-
-@media all and (max-width: 768px) {
-  .form-header {
-    height: 48px;
-  }
-  .form-body {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-}
-
 .m-logo-header img {
   height: 24px;
 }
@@ -422,41 +455,6 @@ h4.font-samll {
   top: calc(50% - 4px);
 }
 
-select::-ms-expand {
-  display: none;
-}
-
-.form-construction-outline .form-group {
-  padding: 0 !important;
-}
-
-.form-construction-outline .form-group:first-child select {
-  border-left: 2px solid #002257 !important;
-}
-
-.form-construction-outline .form-group label {
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.form-construction-outline .form-group select {
-  width: 100%;
-  padding: .45rem 1.25rem;
-  color: #333333;
-  border: 2px solid #002257 !important;
-  border-right: 1px solid #002257 !important;
-  border-left: 1px solid #002257 !important;
-  background-image: url("../assets/icons/caret.png");
-  background-size: 10px 8px;
-  background-repeat: no-repeat;
-  background-position: 95% center;
-  border-radius: 0 !important;
-}
-
-.form-construction-outline .form-group select:focus, .form-construction-outline .form-group select:active {
-  border-radius: 0 !important;
-}
 
 .select-menu-con ul li:last-child {
   font-weight: bold;
@@ -910,361 +908,3 @@ select::-ms-expand {
 .input-group-border input {
   padding: 0.25rem 1rem !important;
 }
-
-.m-main {
-<<<<<<< HEAD
-  height: 100vh;
-=======
-  min-height: 100vh;
->>>>>>> 532f1a3aa83c016f89933c0a5634c657f304ef7c
-  position: relative;
-}
-
-ul.pagination li.page-item {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-  display: table;
-  margin: 0 .5rem;
-}
-
-ul.pagination li.page-item a.page-link {
-  display: table-cell;
-  vertical-align: middle;
-  width: 2.5rem;
-  height: 2.5rem;
-  text-align: center;
-  margin: auto;
-  padding: 0.25rem;
-  border-radius: 4px;
-  color: #333333;
-}
-
-ul.pagination li.page-item a.page-link:hover {
-  color: #121A2D;
-}
-
-ul.pagination li.page-item a.page-link:active, ul.pagination li.page-item a.page-link:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: 0;
-}
-
-ul.pagination li.page-item-active a {
-  color: #002257 !important;
-  font-weight: 700;
-}
-
-.not_scroll {
-  position: fixed;
-  overflow: hidden;
-  width: 100%;
-  height: 100%
-}
-
-.drawer-dim {
-  background-color: rgba(18, 26, 45, 0.25);
-  position: fixed;
-  z-index: 135 !important;
-  width: 100%;
-  height: 100vh;
-  min-height: 100vh;
-  top: 48px;
-<<<<<<< HEAD
-  left: 0;
-=======
->>>>>>> 532f1a3aa83c016f89933c0a5634c657f304ef7c
-}
-
-.table-wrapper.wrapper-scroll-x {
-  padding: 0 !important;
-  margin: 0 !important;
-  white-space: nowrap;
-  overflow-x: scroll;
-  width: 100%;
-}
-
-.table-wrapper.wrapper-scroll-x table thead th {
-  font-weight: 500;
-}
-
-.table-wrapper.wrapper-scroll-x table tbody tr, .table-wrapper.wrapper-scroll-x table tbody td {
-  border: 1px solid #F2F2F3;
-}
-
-.table-wrapper.wrapper-scroll-x table tbody td:hover {
-  font-weight: 700;
-}
-
-.table-wrapper.wrapper-scroll-x table tbody td.cell-emphasis {
-  font-weight: 500;
-  background-color: #F3F5F7;
-}
-
-<<<<<<< HEAD
-.m-login {
-=======
-.login {
->>>>>>> 532f1a3aa83c016f89933c0a5634c657f304ef7c
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-<<<<<<< HEAD
-.m-login.m-bg-img {
-  height: calc(100vh - 48px);
-  background: url("../assets/imgs/bg-login1.png");
-  overflow-y: hidden;
-=======
-.login.bg-img {
-  height: calc(100vh - 48px);
-  background: url("../assets/imgs/bg-login1.png");
->>>>>>> 532f1a3aa83c016f89933c0a5634c657f304ef7c
-}
-
-.drawer {
-  left: -300%;
-  position: absolute;
-  width: 265px;
-  z-index: 999;
-  background-color: white;
-  min-height: 100vh;
-  transition: 0.3s;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 25px;
-<<<<<<< HEAD
-  top: 0px;
-=======
->>>>>>> 532f1a3aa83c016f89933c0a5634c657f304ef7c
-}
-
-.drawer.active {
-  left: 0;
-  transition: 0.3s;
-}
-
-.custom-btn.small-btn {
-  font-size: 12px !important;
-  width: 76px;
-  height: 28px;
-}
-
-<<<<<<< HEAD
-=======
-i.icon.icon-process-next {
-  background-image: url(../assets/icons/process-next.png);
-}
-
-i.icon.icon-process-next-down {
-  background-image: url(../assets/icons/process-next-down.png);
-}
-
-i.icon.icon-prev-last {
-  background-image: url(../assets/icons/prev-last.png);
-}
-
-i.icon.icon-prev {
-  background-image: url(../assets/icons/prev.png);
-}
-
-i.icon.icon-next {
-  background-image: url(../assets/icons/next.png);
-}
-
-i.icon.icon-next-last {
-  background-image: url(../assets/icons/next-last.png);
-}
-
-i.icon {
-  width: 24px;
-  min-width: 24px;
-  height: 24px;
-  display: inline-block;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-}
-
-i.icon.dot {
-  position: relative;
-}
-
-i.icon.dot:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 8px;
-  height: 8px;
-  background: #002257;
-  top: 2px;
-  right: 2px;
-  border-radius: 50%;
-}
-
-i.icon.icon-8 {
-  min-width: 8px;
-  width: 8px;
-  height: 8px;
-}
-
-i.icon.icon-12 {
-  min-width: 12px;
-  width: 12px;
-  height: 12px;
-}
-
-i.icon.icon-14 {
-  min-width: 14px;
-  width: 14px;
-  height: 14px;
-}
-
-i.icon.icon-16 {
-  min-width: 16px;
-  width: 16px;
-  height: 16px;
-}
-
-i.icon.icon-18 {
-  min-width: 18px;
-  width: 18px;
-  height: 18px;
-}
-
-i.icon.icon-20 {
-  min-width: 20px;
-  width: 20px;
-  height: 20px;
-}
-
-i.icon.icon-21 {
-  min-width: 21px;
-  width: 21px;
-  height: 21px;
-}
-
-i.icon.icon-24  {
-  min-width: 24 28px;
-  width: 24 28px;
-  height: 24 28px;
-}
-
-i.icon.icon-32 {
-  min-width: 32px;
-  width: 32px;
-  height: 32px;
-}
-
-i.icon.icon-40 {
-  min-width: 40px;
-  width: 40px;
-  height: 40px;
-}
-
-i.icon.icon-45 {
-  min-width: 45px;
-  width: 45px;
-  height: 45px;
-}
-
-i.icon.icon-48 {
-  min-width: 48px;
-  width: 48px;
-  height: 48px;
-}
-
-i.icon.icon-96 {
-  min-width: 96px;
-  width: 96px;
-  height: 96px;
-}
-
-
->>>>>>> 532f1a3aa83c016f89933c0a5634c657f304ef7c
-.arr-select-con select {
-  background-image: url(../assets/icons/caret.png);
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 10px 6px;
-<<<<<<< HEAD
-  padding-left: 20%;
-=======
-  text-align-last: center
->>>>>>> 532f1a3aa83c016f89933c0a5634c657f304ef7c
-}
-
-.nav-menu ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.nav-menu ul li {
-  color: #002257;
-  font-size: 16px;
-  margin-bottom: 30px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.nav-menu ul li.active {
-  font-weight: bold;
-}
-
-.nav-menu ul li:after {
-  position: absolute;
-  content: "-";
-  left: 0px;
-}
-
-.nav-menu ul li:last-child {
-  margin-bottom: 0;
-}
-
-.font14 {
-  font-size: 14px;
-<<<<<<< HEAD
-}
-
-/* mobile */
-.m-header {
-  height: 48px;
-  display: flex; 
-  display: -ms-flexbox;
-  align-items: center; 
-  -ms-flex-align: center;
-  padding-left: 17px;
-  padding-right: 17px;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.m-login-form {
-  border-radius: 4px;
-  width: calc(100% - 40px);
-  background-color: white;
-}
-
-.m-logo-con img {
-  width: 100%;
-  height: 50px;
-}
-
-.menu-con img {
-  height: 32px;
-}
-
-@media all and (max-width: 768px) {
-  .form-header {
-    height: 48px;
-  }
-  .form-body {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-}
-=======
-}
->>>>>>> 532f1a3aa83c016f89933c0a5634c657f304ef7c

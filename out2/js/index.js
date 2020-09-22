@@ -1,21 +1,13 @@
 window.onload = function() {
-  if (!('remove' in Element.prototype)) {
-    Element.prototype.remove = function() {
-        if (this.parentNode) {
-            this.parentNode.removeChild(this);
-        }
-    };
-}
-
   var tabCon = document.getElementsByClassName("tab-con")[0];
   var tabs = document.getElementsByClassName('tab');
   // tab관련 js
   if(tabCon && tabs ) {
     tabCon.addEventListener('click', function(e) {
-      for(let i=0;i<tabs.length;i++) { 
-        tabs[i].classList.remove('active');
+      for(tab of tabs) {
+        tab.classList.remove('active')
       }
-      e.target.classList.add('active');
+      e.target.classList.add('active')
     })
   }
 
@@ -42,8 +34,8 @@ window.onload = function() {
   // dim 클릭 시 이벤트 제거
   document.addEventListener('click', function(e) {
     if( e.target.classList.contains('drawer-dim') ) {
-      main.classList.remove('not_scroll');
-      drawer.classList.remove('active');
+      main.classList.remove('not_scroll')
+      drawer.classList.remove('active')
       document.getElementsByClassName('drawer-dim')[0].remove();
     }
   })
@@ -56,7 +48,7 @@ window.onload = function() {
         if(!e.target.classList.contains('active')) {
           lis.forEach( function(li) {
             li.classList.remove('active');
-            e.target.classList.add('active');
+            e.target.classList.add('active')
           })
         }
       }
