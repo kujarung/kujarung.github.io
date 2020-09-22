@@ -390,7 +390,7 @@
 .workbook-con {
   top: 0;
   left:0;
-  position: relative;
+  position: fixed;
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   background-color: #3240ff;

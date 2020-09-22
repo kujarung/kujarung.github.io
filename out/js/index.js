@@ -1,12 +1,13 @@
-window.onload = () => {
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+window.addEventListener("resize", () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
 
-  window.addEventListener("resize", () => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  });
 
+window.onload = () => {
   const swiper = document.querySelector(".swiper-container");
   if (swiper) {
     var mySwiper = new Swiper(".swiper-container", {
