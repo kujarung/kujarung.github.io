@@ -391,6 +391,7 @@
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   background-color: #3240ff;
+  overflow-y: hidden;
 }
 
 .workbook-con .workbook-top {
@@ -436,6 +437,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
   min-height: -webkit-fill-available;
+  overflow-y: hidden;
 }
 
 .help-close {
