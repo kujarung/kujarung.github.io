@@ -396,8 +396,9 @@
 }
 
 .workbook-con .workbook-top {
+  position: relative;
   text-align: center;
-  padding-top: 90px;
+  top: 90px;
   color: white;
 }
 
