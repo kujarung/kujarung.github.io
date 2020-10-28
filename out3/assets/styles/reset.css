@@ -1,6 +1,5 @@
 html,
 body,
-div,
 span,
 applet,
 object,
@@ -73,7 +72,6 @@ menu,
 nav,
 output,
 ruby,
-section,
 summary,
 time,
 mark,
@@ -147,4 +145,22 @@ select::-ms-expand {
 input {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+}
+
+button,
+input[type='button'] {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
 }

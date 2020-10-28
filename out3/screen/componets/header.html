@@ -1,0 +1,77 @@
+<div class="inner-header mw-1520 m-auto">
+  <div class="left-menu">
+    <h1 class="logo">
+      <a href="/">
+        <img src="../../assets/img/puple-logo.png" alt="logo" />
+      </a>
+    </h1>
+    <ul class="menu">
+      <li>
+        <a href=""> What is KIDFUNLAB? </a>
+      </li>
+      <li>
+        <a href="../blog/blog.html"> BLOG </a>
+      </li>
+      <li>
+        <a href=""> SUPPORT </a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="btn-menu">
+    <li class="mr15">
+      <input type="button" class="btn-style2 bungee-font" value="ENG" />
+    </li>
+    <li><input type="button" class="btn-style1 bungee-font" value="creator" /></li>
+  </ul>
+</div>
+
+<div class="m-menu">
+  <input type="button" class="menu-btn" id="menuIcon" />
+</div>
+
+<div class="m-active-menu">
+  <div class="left-menu">
+    <ul class="menu">
+      <li>
+        <a href=""> What is KIDFUNLAB? </a>
+      </li>
+      <li>
+        <a href=""> BLOG </a>
+      </li>
+      <li>
+        <a href=""> SUPPORT </a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="btn-menu">
+    <li class="mr15">
+      <input type="button" class="btn-style2 bungee-font" value="ENG" />
+    </li>
+    <li><input type="button" class="btn-style1 bungee-font" value="creator" /></li>
+  </ul>
+</div>
+
+<script>
+  var activeMenu = $('.m-active-menu');
+  var main = $('#main');
+  var dim = '<div class="dim"></div>';
+  $('#menuIcon').on('click', function () {
+    if (activeMenu.hasClass('active')) {
+      activeMenu.removeClass('active');
+      main.removeClass('no-scroll');
+      $('.dim').remove();
+    } else {
+      activeMenu.addClass('active');
+      main.addClass('no-scroll');
+      main.append(dim);
+    }
+  });
+
+  $(document).on('click', '.dim', function () {
+    activeMenu.removeClass('active');
+    main.removeClass('no-scroll');
+    $('.dim').remove();
+  });
+</script>
