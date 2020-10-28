@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bar graph</title>
+  </head>
+  <body>
+    <div id="barGraph">
+      <div class="left-legend"></div>
+      <div class="line"></div>
+      <div class="data"></div>
+      <div class="bottom-legend"></div>
+    </div>
+
+    <script>
+      var maxValue = 40;
+      var graph = {
+        width: 0,
+        height: 0,
+        maxValue: 0,
+        month: 0,
+        type: '',
+        tolerance: 0,
+        init: function (width, height, maxValue, month, type, tolerance) {
+          this.width = width ? width : 1100;
+          this.height = height ? height : 850;
+          this.maxValue = maxValue ? maxValue : 400;
+          this.month = month ? month : 1;
+          this.tolerance = tolerance ? tolerance : 100;
+
+          document.getElementById('barGraph').style.width = this.width + 'px';
+          document.getElementById('barGraph').style.height = this.height + 'px';
+        },
+
+        dataSetting: function (data) {},
+
+        getLastDateNum: function (year, month) {
+          var dayList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+          var dayNum = dayList[month * 1 - 1];
+          // 윤년 여부
+          if (month == 2) {
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+              dayNum = 29;
+            }
+          }
+        },
+      };
+
+      console.log(graph);
+      graph.init();
+    </script>
+  </body>
+</html>
