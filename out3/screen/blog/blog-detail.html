@@ -29,15 +29,57 @@
             <div class="blog-txt">
               <img src="../../assets/img/BLOG.png" alt="blog" />
             </div>
-            <p class="h3-desc font-bold">The platform that kids & parents asked for</p>
+            <p class="h3-desc font-weight600">The platform that kids & parents asked for</p>
           </div>
         </div>
 
         <div class="content blog">
           <div class="mw-1400 m-auto">
-            <div class="">
-              <div class=""></div>
-            </div>
+            <article>
+              <div class="detail-title-con">
+                <div class="detail-title">
+                  <h3 class="small color-navy font-weight600">
+                    Make Sure Your Ice Is Safe And Clean
+                  </h3>
+
+                  <div class="d-flex">
+                    <h5 class="left-view mr41 color-dark-blue font-weight500">243</h5>
+                    <h5 class="left-heart empty mr36 color-dark-blue font-weight500">243</h5>
+                    <h5 class="date color-dark-blue font-weight500">21 Apr 2020</h5>
+                  </div>
+                </div>
+
+                <p class="h3-desc color-dark-blue font-weight600">Environment | Kids Video</p>
+              </div>
+
+              <div class="detail-content">
+                <h5 class="detail-line color-navy font-weight500">
+                  To ensure the blackest blacks and sharpest colors on every print job, the Eclipse
+                  OEM-compatible toner cartridges use just premium toner and all new internal
+                  components on every remanufactured toner cartridge.
+                </h5>
+                <div class="detail-img-con">
+                  <img src="../../assets/img/detail-img.png" alt="char1" />
+                </div>
+
+                <h5 class="detail-line color-navy font-weight500">
+                  For business professionals caught between high OEM price and mediocre print and
+                  graphic output, there’s a solution: Business Express’s Eclipse line of compatible
+                  laser toner cartridges that meet or exceed OEM quality for 20% less than typical
+                  OEM price. While even brand name OEMs display “This cartridge may contain recycled
+                  components” on packaging, only Business Express, a leading U.S.-based toner
+                  cartridge remanufacturer, uses all new internal components on its Eclipse line of
+                  compatible toner cartridges, and offers a guaranty on the cartridge and printer.
+                  <br /><br />
+                  Because this includes a brand new photoelectric drum, primary charge roller,
+                  magnetic rollers, wiper and doctor blades, as well as seals and end foams to
+                  prevent leaking, each toner cartridge prints at optimum quality to the end of is
+                  life cycle. In contrast, lower quality toner cartridges and even some OEM brands
+                  may reuse internal components over and over, diminishing print quality and
+                  reliability.
+                </h5>
+              </div>
+            </article>
           </div>
         </div>
 
@@ -51,4 +93,22 @@
       </div>
     </div>
   </body>
+
+  <script>
+    window.onload = function () {
+      var faqCon = document.querySelectorAll('.faq-con');
+      faqCon.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          var target = this;
+          if (e.target.tagName === 'H4') {
+            if (target.classList.contains('active')) {
+              target.classList.remove('active');
+            } else {
+              target.classList.add('active');
+            }
+          }
+        });
+      });
+    };
+  </script>
 </html>

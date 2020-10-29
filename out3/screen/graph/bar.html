@@ -6,14 +6,143 @@
     <title>bar graph</title>
   </head>
   <body>
+    <style>
+      p {
+        margin: 0;
+      }
+
+      #barGraph {
+        position: relative;
+      }
+
+      .y-axis {
+        position: absolute;
+        width: 40px;
+        height: calc(100% - 50px);
+
+        display: flex;
+        flex-direction: column;
+        -ms-flex-direction: column;
+
+        justify-content: space-between;
+      }
+
+      .y-axis .axis {
+        text-align: right;
+      }
+
+      .y-axis .axis p {
+        line-height: 25px;
+      }
+
+      .line-con {
+        height: calc(100% - 50px);
+        width: calc(100% - 50px);
+        margin-left: auto;
+
+        display: flex;
+        flex-direction: column;
+        -ms-flex-direction: column;
+
+        justify-content: space-between;
+      }
+
+      .line-con .line {
+        width: 100%;
+        border-top: 1px solid black;
+
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+
+      .data {
+        height: 30px;
+        width: calc(100% - 50px);
+        margin-left: auto;
+
+        display: flex;
+        display: -ms-flexbox;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .data .day {
+        text-align: center;
+        width: 24px;
+      }
+
+      .bar-line {
+        width: 24px;
+        background: #8d7cf6;
+        border-radius: 12px;
+        height: 70px;
+        position: relative;
+      }
+
+      .graph-content {
+        position: absolute;
+        top: 0;
+        width: calc(100% - 50px);
+        height: calc(100% - 62px);
+        padding-left: 50px;
+
+        display: flex;
+
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    </style>
     <div id="barGraph">
-      <div class="left-legend"></div>
-      <div class="line"></div>
+      <div class="y-axis">
+        <div class="axis">
+          <p>40</p>
+        </div>
+
+        <div class="axis">
+          <p>30</p>
+        </div>
+
+        <div class="axis">
+          <p>20</p>
+        </div>
+
+        <div class="axis">
+          <p>10</p>
+        </div>
+
+        <div class="axis">
+          <p>0</p>
+        </div>
+      </div>
+      <div class="line-con">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
       <div class="data"></div>
+      <div class="graph-content"></div>
       <div class="bottom-legend"></div>
     </div>
 
     <script>
+      window.onload = function () {
+        var date = document.getElementsByClassName('data')[0];
+        var graphContent = document.getElementsByClassName('graph-content')[0];
+
+        for (var i = 0; i < 31; i++) {
+          var appendDay = document.createElement('div');
+          var appendBar = document.createElement('div');
+          var text = document.createTextNode(i);
+          appendDay.appendChild(text);
+          appendDay.classList.add('day');
+          appendBar.classList.add('bar-line');
+          date.append(appendDay);
+          graphContent.append(appendBar);
+        }
+      };
+
       var maxValue = 40;
       var graph = {
         width: 0,
@@ -24,7 +153,7 @@
         tolerance: 0,
         init: function (width, height, maxValue, month, type, tolerance) {
           this.width = width ? width : 1100;
-          this.height = height ? height : 850;
+          this.height = height ? height : 300;
           this.maxValue = maxValue ? maxValue : 400;
           this.month = month ? month : 1;
           this.tolerance = tolerance ? tolerance : 100;

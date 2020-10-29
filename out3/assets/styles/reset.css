@@ -145,10 +145,13 @@ select::-ms-expand {
 input {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
+  outline: none;
+  appearance: none;
 }
 
 button,
-input[type='button'] {
+input[type='button'],
+input[type='submit'] {
   background: inherit;
   border: none;
   box-shadow: none;
