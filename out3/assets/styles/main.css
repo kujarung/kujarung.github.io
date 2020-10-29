@@ -1,0 +1,363 @@
+/* header */
+header {
+  width: 100%;
+  position: absolute;
+  height: 80px;
+  display: flex;
+  display: -ms-flexbox;
+  background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+header .inner-header {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-menu,
+.btn-menu {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+.logo.footer {
+  line-height: 41px;
+}
+
+.logo a {
+  display: block;
+  height: 100%;
+}
+
+.logo a img {
+  height: 41px;
+}
+
+.menu {
+  display: flex;
+  display: -ms-flexbox;
+  margin-left: 57px;
+}
+
+.menu > li {
+  margin-right: 30px;
+}
+
+.menu > li > a {
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  font-weight: 600;
+}
+
+.inner-header .menu > li:last-child {
+  margin-right: 0;
+}
+
+.m-menu {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.m-active-menu.active {
+  top: 0;
+  transition: 0.5s;
+}
+
+.m-active-menu {
+  top: -500%;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: absolute;
+  height: 264px;
+  background-color: #1f094a;
+  z-index: 5;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.5s;
+  left: 0;
+}
+
+.m-active-menu .menu {
+  width: 100%;
+  margin-left: 0;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  align-items: center;
+}
+
+.m-active-menu .menu > li a {
+  font-size: 16px;
+  line-height: 20px;
+}
+.m-active-menu .menu > li {
+  margin-right: 0;
+  margin-bottom: 19px;
+}
+
+.m-active-menu .menu > li:last-child {
+  margin-bottom: 0;
+}
+
+.m-active-menu .btn-menu {
+  margin-top: 29px;
+  justify-content: center;
+}
+
+/* main section */
+.main-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: bottom;
+}
+
+/* main one */
+.main-section.one {
+  height: 900px;
+  background-image: url('../img/web-main1.png');
+  z-index: 2;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.main-txt {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 144px;
+  background-image: url('../img/WebKidsFunLabFont.png');
+}
+
+.back-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: bottom center;
+}
+
+.back-img.contain {
+  background-size: contain;
+}
+
+/* main two */
+.main-section.two {
+  height: 2300px;
+  background-image: url('../img/web-main2.png');
+  margin-top: -150px;
+}
+
+.two-left-img-con {
+  position: relative;
+  padding-top: 400px;
+  margin-bottom: 310px;
+}
+
+.back-img.two-left-img {
+  height: 727px;
+  background-image: url('../img/web-char1.png');
+  background-position: left bottom;
+}
+
+.two-left-txt {
+  position: absolute;
+  top: 41px;
+  left: 1000px;
+  text-align: right;
+}
+
+.two-bottom-img-con {
+  position: relative;
+}
+
+.back-img.two-bottom-img {
+  height: 970px;
+  background-image: url('../img/web-char2.png');
+}
+
+.two-bottom-txt {
+  width: 100%;
+  top: -100px;
+  position: absolute;
+  text-align: center;
+}
+
+/* main three */
+.main-section.three {
+  height: 2200px;
+  background-image: url('../img/web-main3.png');
+}
+
+.three-left-img-con {
+  position: relative;
+  padding-top: 400px;
+  margin-bottom: 320px;
+}
+
+.back-img.three-left-img {
+  height: 727px;
+  background-image: url('../img/web-char1.png');
+}
+
+.three-bottom-txt {
+  padding-top: 172px;
+  margin-bottom: 190px;
+}
+
+.char-img-con img {
+  height: 270px;
+  position: relative;
+  z-index: 2;
+}
+
+.talk-char-con {
+  position: relative;
+}
+
+.talk-char-con:nth-child(odd) {
+  text-align: left;
+}
+
+.talk-char-con:nth-child(even) {
+  text-align: right;
+}
+
+/* main four */
+.main-section.four {
+  height: 710px;
+  background-image: url('../img/web-main4.png');
+}
+
+/* main five */
+.main-section.five {
+  height: 1300px;
+  background-image: url('../img/web-main5.png');
+  background-position: top;
+}
+
+.left-txt-groom {
+  position: absolute;
+  top: -40px;
+  left: 200px;
+}
+
+.left-txt-groom img {
+  height: 260px;
+}
+
+.right-txt-groom {
+  position: absolute;
+  top: -50px;
+  right: 220px;
+}
+
+.right-txt-groom img {
+  height: 260px;
+}
+
+.img-desc {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.img-desc.type2 {
+  top: 85px;
+}
+
+.img-desc.type3 {
+  top: 85px;
+}
+
+/* footer */
+footer.main {
+  position: relative;
+  z-index: 2;
+  margin-top: -130px;
+}
+
+footer {
+  height: 140px;
+  background-color: #170635;
+}
+
+footer .menu {
+  margin-left: 0;
+  align-items: center;
+}
+
+footer .menu > li.sns img {
+  height: 18px;
+}
+
+@media (max-width: 1520px) {
+  header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu {
+    margin-left: 30px;
+  }
+  .menu > li {
+    margin-right: 10px;
+  }
+  .menu > li > a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 760px) {
+  .main-txt {
+    height: 41px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/mKidsFunLabFont.png');
+  }
+
+  .main-section.one {
+    height: 640px;
+    background-image: url('../img/main-back1.png');
+  }
+
+  .main-section.two {
+    height: 785px;
+    background-image: url('../img/main-back2.png');
+  }
+  header {
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  header .inner-header {
+    display: none;
+  }
+
+  .m-menu {
+    display: block;
+  }
+
+  .main-txt-desc {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

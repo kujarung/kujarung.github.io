@@ -15,11 +15,5 @@ cssVars({
   // Display transformed CSS
   onComplete: function (cssText, styleNodes, cssVariables, benchmark) {
     var codeElm = document.querySelector('code');
-
-    // Format CSS (external library)
-    cssText = css_beautify(cssText);
-
-    // Update <code> tag with CSS result
-    codeElm.textContent = cssText;
   },
 });

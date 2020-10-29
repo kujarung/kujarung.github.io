@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-beautify@1/js/lib/beautify-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <link rel="stylesheet" href="../../assets/styles/index.css" />
+    <script src="../../assets/js/index.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <script>
+          $(document).ready(function () {
+            $('header').load('../componets/header.html');
+          });
+        </script>
+      </header>
+      <div id="sub">
+        <div class="sub-header">
+          <div class="inner">
+            <div class="blog-txt">
+              <img src="../../assets/img/BLOG.png" alt="blog" />
+            </div>
+            <p class="h3-desc font-bold">The platform that kids & parents asked for</p>
+          </div>
+        </div>
+
+        <div class="content blog">
+          <div class="mw-1400 m-auto">
+            <div class="">
+              <div class=""></div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <script>
+            $(document).ready(function () {
+              $('footer').load('../componets/footer.html');
+            });
+          </script>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

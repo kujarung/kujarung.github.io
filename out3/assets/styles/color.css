@@ -1,0 +1,23 @@
+:root {
+  --primary--puple: #8d7cf6;
+  --navy: #2d3556;
+  --dark--blue: #57628c;
+  --gray: #757575;
+  --sub---background--color: #cddbef;
+}
+
+.color-dark-blue {
+  color: var(--dark--blue);
+}
+
+.color-gray {
+  color: var(--gray);
+}
+
+.color-puple {
+  color: var(--primary--puple);
+}
+
+.color-navy {
+  color: var(--navy);
+}
