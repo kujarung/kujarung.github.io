@@ -202,9 +202,9 @@
 .main-content {
   position: relative;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   max-width: 600px;
   margin: 0 auto;
+  min-height: -webkit-fill-available;
 }
 
 .blur {
@@ -388,11 +388,12 @@
 
 /* 도움말 */
 .workbook-con {
-  position: relative;
   width: 100%;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   background-color: #3240ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .workbook-con .workbook-top {
@@ -420,23 +421,20 @@
 
 .workbook-con .workbook-bottom {
   width: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
+  margin-bottom: 30px;
 }
 
 .help-step {
   position: absolute;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
+  min-height: -webkit-fill-available;
+  overflow-y: hidden;
 }
 
 .help-close {
@@ -1005,7 +1003,12 @@
   width: 70px;
 }
 
+.inner-input {
+  width: 160px;
+}
+
 .inner-input input {
+  width: 100%;
   font-size: 14px;
   border: none;
   outline: none;
@@ -1449,7 +1452,6 @@
 .splash {
   width: 100%;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   background-image: url("../img/splash.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1457,11 +1459,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.start-back {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  background-color: #3240ff;
   min-height: -webkit-fill-available;
 }
+
