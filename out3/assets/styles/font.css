@@ -153,4 +153,29 @@ h6 {
     font-size: 16px;
     line-height: 20px;
   }
+
+  h5.detail-line {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  h3.small {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  h4.small {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 34px;
+  }
+
+  .forget-font {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

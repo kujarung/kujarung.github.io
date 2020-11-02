@@ -55,6 +55,19 @@
   padding-bottom: 250px;
 }
 
+.login-input-box {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+.search-account-con {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: flex-end;
+  margin-bottom: 70px;
+}
+
 .card-con {
   display: flex;
   display: -ms-flexbox;
@@ -630,8 +643,8 @@ table.table-style2 tbody tr td {
   .card-con {
     margin-left: 0;
     width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
     box-sizing: border-box;
   }
 
@@ -671,5 +684,89 @@ table.table-style2 tbody tr td {
   .detail-title {
     flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .detail-title-con {
+    margin-bottom: 32px;
+  }
+
+  .number-desc {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .number-desc .left-view {
+    padding-left: 25px;
+    background-position: left -8px bottom -8px;
+    margin-right: 18px !important;
+  }
+
+  .number-desc .left-heart.empty {
+    padding-left: 20px;
+  }
+
+  .detail-title h5 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .detail-title h5.date {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .has-lnb-con .lnb {
+    display: none;
+  }
+
+  .has-lnb-con .right-content {
+    width: 100%;
+  }
+
+  .faq-con {
+    padding: 15px;
+  }
+
+  .faq-con.active .faq-content img {
+    height: 100px;
+  }
+
+  .faq-con.active .faq-content h6.detail-line {
+    line-height: 22px;
+  }
+
+  .sub-header.long {
+    height: 360px;
+  }
+
+  .login-input-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-desc-txt {
+    margin-bottom: 11px;
+  }
+
+  .login-input-box .input-con {
+    width: 100%;
+  }
+
+  .search-account-con {
+    flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+
+  .content.login {
+    padding-top: 53px;
+    padding-bottom: 120px;
+  }
+
+  .sub-header .inner.type3 {
+    bottom: 25px;
   }
 }

@@ -4311,4 +4311,8 @@
   .m-bottom-logo img {
     height: 30px;
   }
+
+  .mr-sm-0 {
+    margin-right: 0 !important;
+  }
 }
