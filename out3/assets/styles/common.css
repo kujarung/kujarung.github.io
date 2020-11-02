@@ -22,6 +22,9 @@
   height: 100%;
 }
 
+.width50 {
+  width: 50px;
+}
 .w-100 {
   width: 100%;
 }
@@ -54,7 +57,7 @@
   margin-right: 30px;
 }
 
-.has-lnb-con .lnb-content {
+.has-lnb-con .right-content {
   width: calc(100% - 300px);
 }
 

@@ -264,3 +264,352 @@
 .input-desc-txt {
   width: 156px;
 }
+
+.card-title {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.card-title p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.dash-board-con {
+  background: linear-gradient(
+    180deg,
+    rgba(253, 253, 255, 0.3) 50%,
+    rgba(195, 218, 241, 0.3) 172.54%
+  );
+  box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+    inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+  backdrop-filter: blur(19.028px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 14px;
+
+  padding: 40px;
+}
+
+.dash-board-con .img-con {
+  background: #cddbef;
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(78.8302px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 14px;
+  width: 190px;
+  height: 105px;
+
+  text-align: center;
+}
+
+.dash-board-con .img-con img {
+  height: 100%;
+}
+
+.card-filter {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+  text-align: right;
+}
+
+.card-filter p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #57628c;
+  margin-right: 70px;
+}
+
+.card-filter p:first-child {
+  margin-right: 40px;
+}
+
+.card-item-wrap .card-item-con {
+  background: linear-gradient(
+    180deg,
+    rgba(253, 253, 255, 0.3) 50%,
+    rgba(195, 218, 241, 0.3) 172.54%
+  );
+  box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+    inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+  backdrop-filter: blur(19.028px);
+
+  border-radius: 32px;
+  padding: 13px 23px;
+
+  margin-bottom: 15px;
+}
+
+.card-item-wrap .card-item-con:last-child {
+  margin-bottom: 0;
+}
+
+.card-item-con .card-item {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+.card-item-con .card-item .card-content {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+.card-item .card-content .no {
+  width: 25px;
+}
+
+.card-item .card-content .title-con {
+  margin-left: 20px;
+}
+
+.card-item .card-content .title {
+  width: 400px;
+
+  margin-bottom: 4px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40px;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card-desc {
+  display: flex;
+  display: -ms-flexbox;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.card-desc p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #2d3556;
+  margin-right: 40px;
+}
+
+.card-desc .percent {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* myinfo */
+.myif-detail-con {
+  background: linear-gradient(
+    180deg,
+    rgba(253, 253, 255, 0.3) 50%,
+    rgba(195, 218, 241, 0.3) 172.54%
+  );
+  box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+    inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+  backdrop-filter: blur(19.028px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 14px;
+  padding: 50px;
+}
+
+.myif-detail-con .detail-title {
+  margin-bottom: 28px;
+}
+
+.left-txt {
+  width: 233px;
+  position: relative;
+}
+
+.right-info {
+  margin-left: auto;
+  width: calc(100% - 233px);
+  margin-bottom: 50px;
+}
+
+.myinfo-img-con img {
+  height: 180px;
+}
+
+.has-left-title {
+  position: relative;
+}
+
+.bottom-txt {
+  position: absolute;
+  left: -233px;
+  bottom: 9px;
+}
+
+.left-label {
+  position: absolute;
+  left: -233px;
+  height: 60px;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+.list-con {
+  background: linear-gradient(
+    180deg,
+    rgba(253, 253, 255, 0.3) 50%,
+    rgba(195, 218, 241, 0.3) 172.54%
+  );
+  box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+    inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+  backdrop-filter: blur(19.028px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 14px;
+
+  padding: 30px 30px 50px 30px;
+}
+
+.list-title-con {
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.list-filter p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #57628c;
+}
+
+table.table-style1 {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+table.table-style2 {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+table.table-style1 thead tr {
+  border-bottom: 1px solid rgba(44, 53, 89, 0.3);
+}
+
+table.table-style1 thead tr th:first-child,
+table.table-style1 thead tr th:last-child {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+table.table-style1 thead tr th {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #57628c;
+  text-align: left;
+  padding-bottom: 14px;
+}
+
+table.table-style1 tbody tr {
+  height: 100px;
+  border-bottom: 1px solid rgba(44, 53, 89, 0.3);
+  cursor: pointer;
+}
+
+table.table-style1 tbody tr:last-child {
+  border-bottom: none;
+}
+
+table.table-style1 tbody tr td:first-child {
+  padding-left: 20px;
+}
+
+table.table-style1 tbody tr td.title {
+  color: #2d3556;
+}
+
+table.table-style1 tbody tr td.title,
+table.table-style1 tbody tr td.comment {
+  width: 166px;
+}
+
+table.table-style1 tbody tr td.link {
+  padding-left: 23px;
+  text-decoration-line: underline;
+}
+
+.table-img-con {
+  width: 130px;
+  height: 73px;
+  background: #cddbef;
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(78.8302px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 14px;
+  text-align: center;
+}
+
+.table-img-con img {
+  height: 100%;
+}
+
+table.table-style1 tbody tr td {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #57628c;
+}
+
+table.table-style2 thead tr {
+  border-bottom: 1px solid rgba(44, 53, 89, 0.3);
+}
+
+table.table-style2 thead tr th {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #57628c;
+  text-align: left;
+  padding-bottom: 14px;
+}
+
+table.table-style2 tbody tr {
+  height: 60px;
+  border-bottom: 1px solid rgba(44, 53, 89, 0.3);
+  cursor: pointer;
+}
+
+table.table-style2 tbody tr:last-child {
+  border-bottom: none;
+}
+
+table.table-style2 tbody tr td.title {
+  color: #2d3556;
+}
+
+table.table-style2 tbody tr td {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #57628c;
+}
