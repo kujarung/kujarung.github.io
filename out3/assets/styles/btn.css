@@ -362,3 +362,39 @@ ul.selectbox-options li.selected {
   display: -ms-flexbox;
   align-items: center;
 }
+
+@media (max-width: 760px) {
+  button.btn-store {
+    justify-content: flex-start;
+    width: 140px;
+    height: 38px;
+  }
+
+  button.btn-store img {
+    padding-left: 13px;
+    width: 15px;
+    height: 19px;
+  }
+
+  button.btn-store h6 {
+    font-size: 11px;
+  }
+
+  input[type='button'].btn-style2 {
+    background-position: left 12px center;
+    padding-left: 18px;
+    background-size: 10px;
+    width: 60px;
+    height: 29px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  input[type='button'].btn-style1 {
+    width: 100px;
+    height: 29px;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

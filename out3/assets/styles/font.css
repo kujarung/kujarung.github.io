@@ -128,3 +128,29 @@ h6 {
 
   color: #2d3556;
 }
+
+@media (max-width: 760px) {
+  h6 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .h3-desc {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  h5 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

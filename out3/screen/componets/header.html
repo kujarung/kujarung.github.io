@@ -55,23 +55,23 @@
 
 <script>
   var activeMenu = $('.m-active-menu');
-  var main = $('#main');
+  var root = $('#root');
   var dim = '<div class="dim"></div>';
   $('#menuIcon').on('click', function () {
     if (activeMenu.hasClass('active')) {
       activeMenu.removeClass('active');
-      main.removeClass('no-scroll');
+      root.removeClass('no-scroll');
       $('.dim').remove();
     } else {
       activeMenu.addClass('active');
-      main.addClass('no-scroll');
-      main.append(dim);
+      root.addClass('no-scroll');
+      root.append(dim);
     }
   });
 
   $(document).on('click', '.dim', function () {
     activeMenu.removeClass('active');
-    main.removeClass('no-scroll');
+    root.removeClass('no-scroll');
     $('.dim').remove();
   });
 </script>

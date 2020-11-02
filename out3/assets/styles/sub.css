@@ -613,3 +613,63 @@ table.table-style2 tbody tr td {
 
   color: #57628c;
 }
+
+@media (max-width: 760px) {
+  .sub-header {
+    height: 120px;
+  }
+
+  .sub-header .inner {
+    bottom: 38px;
+  }
+
+  .blog-txt img {
+    height: 40px;
+  }
+
+  .card-con {
+    margin-left: 0;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+
+  .card-con .card-item {
+    padding-left: 0;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .card-img-con {
+    height: 320px;
+    box-sizing: border-box;
+    padding: 23px;
+  }
+
+  .card-img-con .inner {
+    background-position: top;
+  }
+
+  .card-bottom h6.big {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .left-view {
+    background-position: left bottom -9px;
+  }
+
+  .content.blog {
+    padding-bottom: 40px;
+  }
+
+  .content {
+    padding-top: 25px;
+  }
+
+  .detail-title {
+    flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+  }
+}
