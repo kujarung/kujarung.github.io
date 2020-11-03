@@ -17,6 +17,7 @@
           rgba(253, 253, 255, 0.3) 50%,
           rgba(195, 218, 241, 0.3) 172.54%
         );
+        background-color: gray;
         box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
           inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
         position: relative;
@@ -24,7 +25,7 @@
 
       #yAxis {
         position: absolute;
-        width: 40px;
+        width: 30px;
         height: calc(100% - 50px);
 
         display: flex;
@@ -119,8 +120,8 @@
         z-index: 10;
         background-size: contain;
         background-repeat: no-repeat;
-        right: 0;
-        top: -20px;
+        right: 5px;
+        top: -15px;
       }
 
       .bar-con {
@@ -136,6 +137,10 @@
 
         border-radius: 14px;
         padding: 30px;
+      }
+      .bottom-legend {
+        width: 100%;
+        text-align: center;
       }
     </style>
     <div class="bar-con">
@@ -170,7 +175,7 @@
         </div>
         <div id="date"></div>
         <div id="graphContent"></div>
-        <div class="bottom-legend"></div>
+        <div class="bottom-legend">dfgdfgs xcvbxcvb</div>
       </div>
     </div>
 
@@ -190,6 +195,10 @@
           barInner.classList.add('bar-inner');
           if (i === 10) {
             appendBar.classList.add('max-day');
+          }
+
+          if (i === 11) {
+            barInner.classList.add('max-day');
           }
           appendBar.append(barInner);
           date.append(appendDay);
