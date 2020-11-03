@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-beautify@1/js/lib/beautify-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <link rel="stylesheet" href="../../assets/styles/index.css" />
+    <script src="../../assets/js/index.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <script>
+          $(document).ready(function () {
+            $('header').load('../componets/header.html');
+          });
+        </script>
+      </header>
+      <div id="sub">
+        <div class="sub-header">
+          <div class="inner type3">
+            <div class="blog-txt">
+              <h2 class="bungee-font txt-shadow">
+                CREATOR <br class="hidden block-sm" />
+                DASHBOARD
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="content blog">
+          <div class="mw-1370 pr15 pl15 m-auto">
+            <div class="has-lnb-con">
+              <div class="lnb">
+                <div class="lnb-menu">
+                  <ul>
+                    <li class="active"><a href="">FAQ</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu">
+                  <ul>
+                    <li><a href="">General</a></li>
+                    <li><a href="">Subscriptions</a></li>
+                    <li><a href="">Partnership</a></li>
+                    <li><a href="">Features</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu">
+                  <ul>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Legal</a></li>
+                    <li><a href="">Terms of service</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu mb20">
+                  <ul>
+                    <li><a href="">Contact us</a></li>
+                  </ul>
+                </div>
+                <div class="btn-logout">
+                  <p>Log out</p>
+                </div>
+              </div>
+              <div class="right-content">
+                <div id="selectbox" class="custom-selectbox mb15 ml-auto hidden block-sm">
+                  <ul class="selectbox-options">
+                    <li class="selected" data-value="item1">FAQ</li>
+                    <li data-value="item2">General</li>
+                    <li data-value="item3">Subscriptions</li>
+                    <li data-value="item4">Partnership</li>
+                    <li data-value="item5">Features</li>
+                    <li data-value="item6">Privacy</li>
+                    <li data-value="item7">Legal</li>
+                    <li data-value="item8">Terms of service</li>
+                    <li data-value="item9">Contact us</li>
+                  </ul>
+                </div>
+                <div class="list-con">
+                  <div class="list-title-con">
+                    <div class="">
+                      <p class="h3-desc color-navy font-weight600">My Video List</p>
+                    </div>
+                  </div>
+
+                  <!-- web list -->
+                  <table class="table-style1">
+                    <thead>
+                      <tr>
+                        <th>Thumbnail</th>
+                        <th>title</th>
+                        <th>upload date(UTC)</th>
+                        <th>language</th>
+                        <th>status</th>
+                        <th>comments</th>
+                        <th>interactive game link</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char1.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char2.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char3.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char4.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char5.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char1.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char2.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char3.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char4.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="table-img-con">
+                            <img src="../../assets/img/talk-char5.png" alt="" />
+                          </div>
+                        </td>
+                        <td class="title">The Planet SongThe Planet Song</td>
+                        <td>Apr 12, 2020</td>
+                        <td>English</td>
+                        <td>In Review</td>
+                        <td class="comment">
+                          comment sample text<br />
+                          here…
+                        </td>
+                        <td class="link">URL Link</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div class="m-list-wrap">
+                    <div class="m-list-con">
+                      <div class="top-title">
+                        <div
+                          class="m-left-img"
+                          style="background-image: url('../../assets/img/talk-char1.png')"
+                        ></div>
+                        <div class="left-title-content">
+                          <p class="m-content">
+                            The Planet Song Learn the planets | Space …The Planet Song Learn the
+                            planets | Space …The Planet Song Learn the planets | Space …The Planet
+                            Song Learn the planets | Space …The Planet Song Learn the planets |
+                            Space …
+                          </p>
+                          <div class="util-txt">
+                            <p class="date">Apr 12, 2020</p>
+                            <p class="link">URL Link</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="">
+                        <div class="info-con">
+                          <p class="left-info">language</p>
+                          <p class="right-txt">English</p>
+                        </div>
+
+                        <div class="info-con">
+                          <p class="left-info">status</p>
+                          <p class="right-txt">In Review</p>
+                        </div>
+
+                        <div class="info-con">
+                          <p class="left-info">comments</p>
+                          <p class="right-txt comment">
+                            comment sample text hercomment sample text hercomment sample text
+                            hercomment sample text her
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-list-con">
+                      <div class="top-title">
+                        <div
+                          class="m-left-img"
+                          style="background-image: url('../../assets/img/talk-char2.png')"
+                        ></div>
+                        <div class="left-title-content">
+                          <p class="m-content">
+                            The Planet Song Learn the planets | Space …The Planet Song Learn the
+                            planets | Space …The Planet Song Learn the planets | Space …The Planet
+                            Song Learn the planets | Space …The Planet Song Learn the planets |
+                            Space …
+                          </p>
+                          <div class="util-txt">
+                            <p class="date">Apr 12, 2020</p>
+                            <p class="link">URL Link</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="">
+                        <div class="info-con">
+                          <p class="left-info">language</p>
+                          <p class="right-txt">English</p>
+                        </div>
+
+                        <div class="info-con">
+                          <p class="left-info">status</p>
+                          <p class="right-txt">In Review</p>
+                        </div>
+
+                        <div class="info-con">
+                          <p class="left-info">comments</p>
+                          <p class="right-txt comment">
+                            comment sample text hercomment sample text hercomment sample text
+                            hercomment sample text her
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-list-con">
+                      <div class="top-title">
+                        <div
+                          class="m-left-img"
+                          style="background-image: url('../../assets/img/talk-char3.png')"
+                        ></div>
+                        <div class="left-title-content">
+                          <p class="m-content">
+                            The Planet Song Learn the planets | Space …The Planet Song Learn the
+                            planets | Space …The Planet Song Learn the planets | Space …The Planet
+                            Song Learn the planets | Space …The Planet Song Learn the planets |
+                            Space …
+                          </p>
+                          <div class="util-txt">
+                            <p class="date">Apr 12, 2020</p>
+                            <p class="link">URL Link</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="">
+                        <div class="info-con">
+                          <p class="left-info">language</p>
+                          <p class="right-txt">English</p>
+                        </div>
+
+                        <div class="info-con">
+                          <p class="left-info">status</p>
+                          <p class="right-txt">In Review</p>
+                        </div>
+
+                        <div class="info-con">
+                          <p class="left-info">comments</p>
+                          <p class="right-txt comment">
+                            comment sample text hercomment sample text hercomment sample text
+                            hercomment sample text her
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="paging">
+                    <div class="arr left">
+                      <img src="../../assets/img/arr-left.png" alt="before-img" />
+                    </div>
+                    <ul>
+                      <li>
+                        <a href="">1 </a>
+                      </li>
+                      <li>
+                        <a href=""> 2</a>
+                      </li>
+                      <li class="active">
+                        <a href="">3 </a>
+                      </li>
+                      <li>
+                        <a href="">4 </a>
+                      </li>
+                      <li>
+                        <a href="">5 </a>
+                      </li>
+                    </ul>
+                    <div class="arr right">
+                      <img src="../../assets/img/arr-right.png" alt="next-img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <script>
+            $(document).ready(function () {
+              $('footer').load('../componets/footer.html');
+            });
+          </script>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $.fn.setCustomizedSelectbox = function () {
+    var $selectbox = $(this),
+      $optionbox = $selectbox.children('ul.selectbox-options'),
+      $options = $optionbox.children('li');
+    var isOpened = false;
+
+    function _onToggleOptionBox(event) {
+      event.stopPropagation();
+
+      var target = event.target;
+
+      if ($.inArray(target, $options) !== -1) {
+        if (isOpened) return toggleOptionItem(target);
+        isOpened = true;
+      } else {
+        if (!isOpened) return;
+        isOpened = false;
+      }
+
+      $optionbox.toggleClass('opened');
+    }
+
+    function _onCloseOptionBox(event) {
+      event.stopPropagation();
+
+      var $this = $(this),
+        $target = $(event.target);
+
+      if (($.inArray(event.target, $options) !== -1 || $target.is($this)) && isOpened) {
+        $optionbox.toggleClass('opened');
+        isOpened = false;
+      }
+    }
+
+    function toggleOptionItem(selected) {
+      var $selectedItem = $(selected),
+        value = $selectedItem.data();
+      value = (value && value.value) || null;
+
+      console.log(value);
+      // 선택된 아이템의 값을 이곳에서 처리하면 됩니다.
+      // form 에 적용한다면 hidden input box 를 만들어서 value 를 업데이트 하거나,
+      // 페이지 이동이 필요하면 이곳에서 href relocation 을 처리하면 됩니다. :)
+
+      if (!$selectedItem.hasClass('selected')) {
+        $options.removeClass('selected');
+        $selectedItem.addClass('selected');
+        $selectedItem.trigger('onSorterSelected');
+      }
+
+      $selectbox.trigger('click');
+
+      return;
+    }
+
+    $selectbox.on('click', _onToggleOptionBox);
+  };
+
+  $('#selectbox').setCustomizedSelectbox();
+</script>

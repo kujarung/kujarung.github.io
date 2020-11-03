@@ -306,6 +306,10 @@ footer .menu > li.sns img {
   height: 18px;
 }
 
+.m-footer {
+  display: none;
+}
+
 @media (max-width: 1520px) {
   header {
     padding-left: 10px;
@@ -339,6 +343,7 @@ footer .menu > li.sns img {
   }
 
   .main-section.two {
+    margin-top: -70px;
     height: 785px;
     background-image: url('../img/main-back2.png');
   }
@@ -359,5 +364,127 @@ footer .menu > li.sns img {
   .main-txt-desc {
     font-size: 10px;
     line-height: 12px;
+  }
+
+  .two-left-img-con {
+    padding-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .two-left-txt {
+    left: 0;
+    right: 15px;
+  }
+
+  .back-img.two-left-img {
+    height: 480px;
+    background-position: left center;
+  }
+
+  .back-img.two-bottom-img {
+    height: 218px;
+  }
+
+  .main-section.three {
+    height: 1000px;
+  }
+
+  .three-bottom-txt {
+    padding-top: 50px;
+    margin-bottom: 38px;
+  }
+
+  .char-img-con img {
+    height: 90px;
+  }
+
+  .left-txt-groom img,
+  .right-txt-groom img {
+    height: 100px;
+  }
+
+  .left-txt-groom {
+    top: 0;
+    left: 80px;
+  }
+
+  .talk-char-con {
+    margin-bottom: 60px;
+  }
+
+  .right-txt-groom {
+    top: -10px;
+    right: 100px;
+  }
+
+  .right-txt-groom .img-desc {
+    right: 60px;
+    left: 0px;
+    top: 30px;
+  }
+
+  .img-desc {
+    top: 40px;
+    left: 35px;
+  }
+
+  .img-desc.type2 {
+    top: 22px;
+    left: 50px;
+  }
+
+  .img-desc.other-type {
+    top: 30px;
+    left: 50px;
+  }
+
+  .main-section.four {
+    height: 130px;
+  }
+
+  .main-section.five {
+    height: 280px;
+  }
+
+  footer.main {
+    height: 75px;
+  }
+  footer.main {
+    margin-top: -30px;
+  }
+
+  footer .menu li {
+    display: none;
+  }
+
+  footer .menu li.sns {
+    display: block;
+  }
+
+  footer .menu li.sns.logo {
+    margin-right: 20px;
+  }
+
+  .logo.footer img {
+    height: 12px;
+  }
+
+  footer.main h6 {
+    font-size: 10px;
+  }
+
+  .logo.footer {
+    line-height: 21px;
+  }
+
+  .m-footer {
+    height: 100%;
+    padding-left: 23px;
+    padding-right: 16px;
+    display: flex;
+    display: -ms-flexbox;
+
+    align-items: center;
+    justify-content: space-between;
   }
 }

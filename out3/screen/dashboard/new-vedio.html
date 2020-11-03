@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-beautify@1/js/lib/beautify-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <link rel="stylesheet" href="../../assets/styles/index.css" />
+    <script src="../../assets/js/index.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <script>
+          $(document).ready(function () {
+            $('header').load('../componets/header.html');
+          });
+        </script>
+      </header>
+      <div id="sub">
+        <div class="sub-header">
+          <div class="inner type3">
+            <div class="blog-txt">
+              <h2 class="bungee-font txt-shadow">
+                CREATOR <br class="hidden block-sm" />
+                DASHBOARD
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="content blog">
+          <div class="mw-1370 pr15 pl15 m-auto">
+            <div class="has-lnb-con">
+              <div class="lnb">
+                <div class="lnb-menu">
+                  <ul>
+                    <li class="active"><a href="">FAQ</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu">
+                  <ul>
+                    <li><a href="">General</a></li>
+                    <li><a href="">Subscriptions</a></li>
+                    <li><a href="">Partnership</a></li>
+                    <li><a href="">Features</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu">
+                  <ul>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Legal</a></li>
+                    <li><a href="">Terms of service</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu mb20">
+                  <ul>
+                    <li><a href="">Contact us</a></li>
+                  </ul>
+                </div>
+                <div class="btn-logout">
+                  <p>Log out</p>
+                </div>
+              </div>
+              <div class="right-content">
+                <div id="selectbox" class="custom-selectbox mb10 ml-auto hidden block-sm">
+                  <ul class="selectbox-options">
+                    <li class="selected" data-value="item1">FAQ</li>
+                    <li data-value="item2">General</li>
+                    <li data-value="item3">Subscriptions</li>
+                    <li data-value="item4">Partnership</li>
+                    <li data-value="item5">Features</li>
+                    <li data-value="item6">Privacy</li>
+                    <li data-value="item7">Legal</li>
+                    <li data-value="item8">Terms of service</li>
+                    <li data-value="item9">Contact us</li>
+                  </ul>
+                </div>
+                <form class="myif-detail-con">
+                  <div class="inner">
+                    <div class="detail-title">
+                      <h3 class="small color-navy font-weight600">New Video</h3>
+                    </div>
+
+                    <div class="mb20">
+                      <input
+                        type="file"
+                        class="btn-style-file"
+                        id="file"
+                        onchange="fileCheck(this)"
+                      />
+                      <div class="attach-file-con">
+                        <div id="dragZone"></div>
+                        <div class="tc" id="attach-inner">
+                          <div class="mb20">
+                            <img class="width50" src="../../assets/img/upload.png" alt="upload" />
+                          </div>
+                          <div class="mb24">
+                            <h6 class="font-weight600 big color-navy">Drag and drop file here</h6>
+                          </div>
+
+                          <div class="">
+                            <input
+                              type="button"
+                              value="OK"
+                              class="btn-style-file-attach bungee-font"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <script>
+                        function fileCheck(obj) {
+                          pathpoint = obj.value.lastIndexOf('.');
+                          filepoint = obj.value.substring(pathpoint + 1, obj.length);
+                          filetype = filepoint.toLowerCase();
+                          if (!obj.value) {
+                            return null;
+                          }
+                          if (
+                            filetype == 'video/mpeg' ||
+                            filetype == 'video/avi' ||
+                            filetype == 'video/mp4'
+                          ) {
+                            // 정상적인 이미지 확장자 파일일 경우 ...
+                          } else {
+                            alert('비디오만 가능 합니다.');
+                          }
+                        }
+
+                        var dragZone = $('#dragZone');
+                        var attachArea = $('.attach-file-con');
+                        var attachInner = $('#attachInner');
+                        var okType = ['video/mpeg', 'video/avi', 'video/mp4'];
+                        dragZone.on('click', function (e) {
+                          $('#file').click();
+                        });
+
+                        dragZone
+                          .on('dragenter', function (e) {
+                            //드래그 요소가 들어왔을떄
+                            attachArea.addClass('drag-over');
+                          })
+                          .on('dragleave', function (e) {
+                            //드래그 요소가 나갔을때
+                            attachArea.removeClass('drag-over');
+                          })
+                          .on('dragover', function (e) {
+                            e.stopPropagation();
+                            e.preventDefault();
+                          })
+                          .on('drop', function (e) {
+                            //드래그한 항목을 떨어뜨렸을때
+                            e.preventDefault();
+                            attachArea.removeClass('drag-over');
+                            var files = e.originalEvent.dataTransfer.files;
+                            if (okType.includes(files[0].type)) {
+                              console.log(files);
+                            } else {
+                              alert('비디오만 가능 합니다.');
+                            }
+                          });
+                      </script>
+                    </div>
+                    <div class="right-info">
+                      <div class="input-box has-waring">
+                        <div class="top-txt">
+                          <h5 class="color-navy font-weight600">Title</h5>
+                        </div>
+                        <div class="waring">200자 이내로 입력하세요</div>
+                        <input type="text" class="btn-style3" placeholder="Susie McGuire" />
+                      </div>
+
+                      <div class="input-box has-waring">
+                        <div class="top-txt">
+                          <h5 class="color-navy font-weight600">설명</h5>
+                        </div>
+                        <div class="waring textarea">500자 이내로 입력하세요</div>
+                        <textarea
+                          type="text"
+                          class="btn-style-textarea has-waring"
+                          placeholder="Susie McGuire"
+                        ></textarea>
+                      </div>
+
+                      <div class="has-left-title">
+                        <div class="bottom-txt">
+                          <h5 class="color-navy font-weight600">Language</h5>
+                        </div>
+                        <div id="selectbox2" class="custom-selectbox w-100 max-wight-none">
+                          <ul class="selectbox-options">
+                            <li class="selected" data-value="item1">English</li>
+                            <li data-value="item2">한글</li>
+                            <li data-value="item3">일본어</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tr">
+                    <input type="submit" value="save" class="btn-style-submit bungee-font" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <script>
+            $(document).ready(function () {
+              $('footer').load('../componets/footer.html');
+            });
+          </script>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $.fn.setCustomizedSelectbox = function () {
+    var $selectbox = $(this),
+      $optionbox = $selectbox.children('ul.selectbox-options'),
+      $options = $optionbox.children('li');
+    var isOpened = false;
+
+    function _onToggleOptionBox(event) {
+      event.stopPropagation();
+
+      var target = event.target;
+
+      if ($.inArray(target, $options) !== -1) {
+        if (isOpened) return toggleOptionItem(target);
+        isOpened = true;
+      } else {
+        if (!isOpened) return;
+        isOpened = false;
+      }
+
+      $optionbox.toggleClass('opened');
+    }
+
+    function _onCloseOptionBox(event) {
+      event.stopPropagation();
+
+      var $this = $(this),
+        $target = $(event.target);
+
+      if (($.inArray(event.target, $options) !== -1 || $target.is($this)) && isOpened) {
+        $optionbox.toggleClass('opened');
+        isOpened = false;
+      }
+    }
+
+    function toggleOptionItem(selected) {
+      var $selectedItem = $(selected),
+        value = $selectedItem.data();
+      value = (value && value.value) || null;
+
+      console.log(value);
+      // 선택된 아이템의 값을 이곳에서 처리하면 됩니다.
+      // form 에 적용한다면 hidden input box 를 만들어서 value 를 업데이트 하거나,
+      // 페이지 이동이 필요하면 이곳에서 href relocation 을 처리하면 됩니다. :)
+
+      if (!$selectedItem.hasClass('selected')) {
+        $options.removeClass('selected');
+        $selectedItem.addClass('selected');
+        $selectedItem.trigger('onSorterSelected');
+      }
+
+      $selectbox.trigger('click');
+
+      return;
+    }
+
+    $selectbox.on('click', _onToggleOptionBox);
+  };
+</script>
+
+<script>
+  window.onload = function () {
+    $('#selectbox').setCustomizedSelectbox();
+    $('#selectbox2').setCustomizedSelectbox();
+  };
+</script>

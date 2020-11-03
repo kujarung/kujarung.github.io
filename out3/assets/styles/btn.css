@@ -59,7 +59,7 @@ button.btn-store.type2 {
   border-radius: 14px;
 }
 
-input.search-input {
+input[type='text'].search-input {
   width: 500px;
   height: 60px;
 
@@ -80,9 +80,11 @@ input.search-input {
   background-image: url('../img/search.png');
   background-size: 20px;
   background-position: right 20px center;
+  background-color: white;
 }
 
-input.btn-style-login {
+input[type='text'].btn-style-login,
+input[type='password'].btn-style-login {
   background: linear-gradient(180deg, #fdfdff 50%, #c3daf1 172.54%);
   box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
     inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
@@ -107,6 +109,20 @@ input.btn-style-login.password {
   color: #8d7cf6;
 }
 
+input[type='button'].btn-style-add {
+  width: 180px;
+  height: 60px;
+  background: #8d7cf6;
+  box-shadow: 0px 4px 6px rgba(167, 168, 255, 0.780048), 0px 2px 12px rgba(101, 109, 117, 0.164855),
+    inset 0px -2px 2px rgba(255, 255, 255, 0.691625), inset 0px -12px 12px #6e6ff9,
+    inset 0px 12px 22px rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+}
+
 input[type='submit'].btn-style-submit {
   width: 248px;
   height: 60px;
@@ -117,6 +133,343 @@ input[type='submit'].btn-style-submit {
   border-radius: 16px;
 
   color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.btn-logout p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  text-decoration-line: underline;
+
+  color: #2d3556;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+input[type='text'].btn-style3,
+input[type='email'].btn-style3 {
+  width: 100%;
+  background: linear-gradient(180deg, #fdfdff 50%, #c3daf1 172.54%);
+  box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+    inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+  border-radius: 16px;
+  height: 60px;
+  padding: 0px 23px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #2d3556;
+  box-sizing: border-box;
+  border: none;
+  position: relative;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.has-waring input[type='text'].btn-style3,
+input[type='email'].btn-style3 {
+  padding-right: 50px;
+}
+
+.waring {
+  width: 180px;
+  height: 100%;
+  position: absolute;
+  right: 20px;
+  z-index: 10;
+  background-image: url('../img/ic-warning.png');
+  background-position: right center;
+  background-size: 30px;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #ff6d74;
+  line-height: 24px;
+  font-weight: 600;
+  padding-bottom: 3px;
+}
+
+.waring.textarea {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: flex-end;
+  background-position: right bottom 25px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+textarea.btn-style-textarea {
+  width: 100%;
+  background: linear-gradient(180deg, #fdfdff 50%, #c3daf1 172.54%);
+  box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+    inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+  border-radius: 16px;
+  padding: 15px 50px 15px 23px;
+  height: 281px;
+  box-sizing: border-box;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #2d3556;
+}
+
+textarea.btn-style-textarea.content {
+  height: 580px;
+}
+
+input[type='file'].btn-style-file {
+  display: none;
+}
+
+.attach-file-con {
+  width: 100%;
+  height: 370px;
+  background: linear-gradient(180deg, #fdfdff 50%, #c3daf1 172.54%);
+  box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+    inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+  border-radius: 16px;
+
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+#dragZone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.attach-file-con.drag-over {
+  border: 1px solid black;
+}
+
+input[type='button'].btn-style-file-attach {
+  background: #8d7cf6;
+  box-shadow: 0px 4px 6px rgba(167, 168, 255, 0.780048), 0px 2px 12px rgba(101, 109, 117, 0.164855),
+    inset 0px -2px 2px rgba(255, 255, 255, 0.691625), inset 0px -12px 12px #6e6ff9,
+    inset 0px 12px 22px rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  width: 150px;
+  height: 48px;
   font-size: 20px;
   line-height: 24px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+input[type='file'].btn-style-file.type2 {
+  display: block;
+  width: 200px;
+  height: 60px;
+  background: #8d7cf6;
+  box-shadow: 0px 4px 6px rgba(167, 168, 255, 0.780048), 0px 2px 12px rgba(101, 109, 117, 0.164855),
+    inset 0px -2px 2px rgba(255, 255, 255, 0.691625), inset 0px -12px 12px #6e6ff9,
+    inset 0px 12px 22px rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+input[type='button'].btn-style-file-attach.type2 {
+  margin-left: 9px;
+  width: 200px;
+  height: 60px;
+}
+
+.custom-selectbox {
+  position: relative;
+  height: 60px;
+}
+
+ul.selectbox-options {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  max-height: 60px;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  transition: max-height 0.5s ease-out;
+
+  background: linear-gradient(180deg, #fdfdff 50%, #c3daf1 172.54%);
+  box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+    inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+  border-radius: 16px;
+}
+
+ul.selectbox-options li {
+  list-style: none;
+}
+
+ul.selectbox-options.opened {
+  height: auto;
+  max-height: 500px;
+}
+
+ul.selectbox-options li {
+  display: none;
+  height: 60px;
+  padding: 0 23px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  color: #2d3556;
+
+  cursor: pointer;
+}
+
+ul.selectbox-options li.selected,
+ul.selectbox-options li:first-child,
+ul.selectbox-options.opened li.selected:first-child {
+  background-repeat: no-repeat;
+  background-image: url('../img/arrow-down.png');
+  background-position: right 20px center;
+  background-size: 24px;
+}
+ul.selectbox-options.opened li:first-child,
+ul.selectbox-options.opened li.selected:first-child {
+  background-image: url('../img/arrow-up.png');
+}
+ul.selectbox-options.opened li {
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+ul.selectbox-options.opened li.selected {
+  background-image: none;
+}
+ul.selectbox-options li.selected {
+  font-weight: bold;
+
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+}
+
+@media (max-width: 760px) {
+  button.btn-store {
+    justify-content: flex-start;
+    width: 140px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  button.btn-store img {
+    padding-left: 13px;
+    width: 15px;
+    height: 19px;
+  }
+
+  button.btn-store h6 {
+    font-size: 11px;
+  }
+
+  input[type='button'].btn-style2 {
+    background-position: left 12px center;
+    padding-left: 18px;
+    background-size: 10px;
+    width: 60px;
+    height: 29px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  input[type='button'].btn-style1 {
+    width: 100px;
+    height: 29px;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  input[type='text'].search-input {
+    width: 240px;
+    height: 38px;
+    border-radius: 10px;
+    padding-left: 15px;
+  }
+
+  input[type='text'].btn-style-login,
+  input[type='password'].btn-style-login {
+    width: 100%;
+    height: 38px;
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 10px;
+  }
+
+  input[type='submit'].btn-style-submit {
+    width: 150px;
+    height: 38px;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 10px;
+  }
+
+  .custom-selectbox {
+    max-width: 250px;
+    height: 38px;
+  }
+  ul.selectbox-options {
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  ul.selectbox-options li {
+    height: 38px;
+    border-radius: 14px;
+
+    font-size: 14px;
+  }
+
+  input[type='text'].btn-style3,
+  input[type='email'].btn-style3 {
+    height: 38px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  input[type='button'].btn-style-file-attach.type2 {
+    height: 38px;
+
+    font-size: 14px;
+
+    border-radius: 10px;
+  }
+
+  textarea.btn-style-textarea {
+    padding: 15px;
+  }
 }

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-beautify@1/js/lib/beautify-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <link rel="stylesheet" href="../../assets/styles/index.css" />
+    <script src="../../assets/js/index.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <script>
+          $(document).ready(function () {
+            $('header').load('../componets/header.html');
+          });
+        </script>
+      </header>
+      <div id="sub">
+        <div class="sub-header">
+          <div class="inner type3">
+            <div class="blog-txt">
+              <h2 class="bungee-font txt-shadow">
+                CREATOR <br class="block-sm hidden" />
+                DASHBOARD
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="content blog">
+          <div class="mw-1370 pr15 pl15 m-auto">
+            <div class="has-lnb-con">
+              <div class="lnb">
+                <div class="lnb-menu">
+                  <ul>
+                    <li class="active"><a href="">FAQ</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu">
+                  <ul>
+                    <li><a href="">General</a></li>
+                    <li><a href="">Subscriptions</a></li>
+                    <li><a href="">Partnership</a></li>
+                    <li><a href="">Features</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu">
+                  <ul>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Legal</a></li>
+                    <li><a href="">Terms of service</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu mb20">
+                  <ul>
+                    <li><a href="">Contact us</a></li>
+                  </ul>
+                </div>
+                <div class="btn-logout">
+                  <p>Log out</p>
+                </div>
+              </div>
+              <div class="right-content">
+                <div id="selectbox" class="custom-selectbox mb10 ml-auto hidden block-sm">
+                  <ul class="selectbox-options">
+                    <li class="selected" data-value="item1">FAQ</li>
+                    <li data-value="item2">General</li>
+                    <li data-value="item3">Subscriptions</li>
+                    <li data-value="item4">Partnership</li>
+                    <li data-value="item5">Features</li>
+                    <li data-value="item6">Privacy</li>
+                    <li data-value="item7">Legal</li>
+                    <li data-value="item8">Terms of service</li>
+                    <li data-value="item9">Contact us</li>
+                  </ul>
+                </div>
+                <form class="myif-detail-con">
+                  <div class="inner">
+                    <div class="detail-title">
+                      <h3 class="small color-navy font-weight600">My Info</h3>
+                    </div>
+                    <div class="right-info">
+                      <div class="mb30 pos-rel">
+                        <div class="top-txt center">
+                          <h5 class="color-navy font-weight600">대표 이미지</h5>
+                        </div>
+                        <div class="myinfo-img-con">
+                          <img src="../../assets/img/myinfo-img.png" alt="" />
+                        </div>
+                      </div>
+
+                      <div class="input-box has-waring">
+                        <div class="top-txt">
+                          <h5 class="color-navy font-weight600">콘텐츠 채널 이름</h5>
+                        </div>
+                        <div class="waring">30자 이내로 입력하세요</div>
+                        <input type="text" class="btn-style3" placeholder="Susie McGuire" />
+                      </div>
+
+                      <div class="input-box has-waring">
+                        <div class="top-txt">
+                          <h5 class="color-navy font-weight600">설명</h5>
+                        </div>
+                        <div class="waring textarea"></div>
+                        <textarea
+                          type="text"
+                          class="btn-style-textarea has-waring"
+                          placeholder="Susie McGuire"
+                        ></textarea>
+                      </div>
+
+                      <div class="has-left-title">
+                        <div class="bottom-txt eq">
+                          <h5 class="color-navy font-bold">
+                            Paypal account <br class="block hidden-sm" />
+                          </h5>
+                          <h6 class="font-weight400 color-navy ml-sm-10">(Read only)</h6>
+                        </div>
+                        <input
+                          type="email"
+                          class="btn-style3"
+                          placeholder="emailadress@email.com"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tr">
+                    <input type="submit" value="save" class="btn-style-submit bungee-font" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <script>
+            $(document).ready(function () {
+              $('footer').load('../componets/footer.html');
+            });
+          </script>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $.fn.setCustomizedSelectbox = function () {
+    var $selectbox = $(this),
+      $optionbox = $selectbox.children('ul.selectbox-options'),
+      $options = $optionbox.children('li');
+    var isOpened = false;
+
+    function _onToggleOptionBox(event) {
+      event.stopPropagation();
+
+      var target = event.target;
+
+      if ($.inArray(target, $options) !== -1) {
+        if (isOpened) return toggleOptionItem(target);
+        isOpened = true;
+      } else {
+        if (!isOpened) return;
+        isOpened = false;
+      }
+
+      $optionbox.toggleClass('opened');
+    }
+
+    function _onCloseOptionBox(event) {
+      event.stopPropagation();
+
+      var $this = $(this),
+        $target = $(event.target);
+
+      if (($.inArray(event.target, $options) !== -1 || $target.is($this)) && isOpened) {
+        $optionbox.toggleClass('opened');
+        isOpened = false;
+      }
+    }
+
+    function toggleOptionItem(selected) {
+      var $selectedItem = $(selected),
+        value = $selectedItem.data();
+      value = (value && value.value) || null;
+
+      console.log(value);
+      // 선택된 아이템의 값을 이곳에서 처리하면 됩니다.
+      // form 에 적용한다면 hidden input box 를 만들어서 value 를 업데이트 하거나,
+      // 페이지 이동이 필요하면 이곳에서 href relocation 을 처리하면 됩니다. :)
+
+      if (!$selectedItem.hasClass('selected')) {
+        $options.removeClass('selected');
+        $selectedItem.addClass('selected');
+        $selectedItem.trigger('onSorterSelected');
+      }
+
+      $selectbox.trigger('click');
+
+      return;
+    }
+
+    $selectbox.on('click', _onToggleOptionBox);
+  };
+</script>
+<script>
+  window.onload = function () {
+    $('#selectbox').setCustomizedSelectbox();
+  };
+</script>

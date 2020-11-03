@@ -149,8 +149,17 @@ input {
   appearance: none;
 }
 
+input[type='submit'],
+button,
+input[type='button'] {
+  cursor: pointer;
+}
+
 button,
 input[type='button'],
+input[type='input'],
+input[type='text'],
+input[type='email'],
 input[type='submit'] {
   background: inherit;
   border: none;
@@ -158,12 +167,17 @@ input[type='submit'] {
   border-radius: 0;
   padding: 0;
   overflow: visible;
-  cursor: pointer;
   outline: none;
   appearance: none;
-  background-color: transparent;
 }
 
 a {
   text-decoration: none;
+}
+
+textarea {
+  border: none;
+  appearance: none;
+  outline: none;
+  resize: none;
 }

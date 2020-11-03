@@ -1,6 +1,9 @@
 .font14 {
   font-size: 14px;
 }
+.font-weight400 {
+  font-weight: 400;
+}
 .font-weight600 {
   font-weight: 600;
 }
@@ -4280,4 +4283,40 @@
 }
 .height300 {
   height: 300px;
+}
+
+@media (max-width: 760px) {
+  .mb-sm-0 {
+    margin-bottom: 0 !important;
+  }
+  .mb-sm-10 {
+    margin-bottom: 10px !important;
+  }
+  .mb-sm-22 {
+    margin-bottom: 22px !important;
+  }
+
+  .mr-sm-14 {
+    margin-right: 14px !important;
+  }
+
+  .block-sm {
+    display: block;
+  }
+
+  .hidden-sm {
+    display: none;
+  }
+
+  .m-bottom-logo img {
+    height: 30px;
+  }
+
+  .mr-sm-0 {
+    margin-right: 0 !important;
+  }
+
+  .ml-sm-10 {
+    margin-left: 10px !important;
+  }
 }

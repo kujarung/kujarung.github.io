@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-beautify@1/js/lib/beautify-css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <link rel="stylesheet" href="../../assets/styles/index.css" />
+    <script src="../../assets/js/index.js"></script>
+    <!-- 차트 js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <script>
+          $(document).ready(function () {
+            $('header').load('../componets/header.html');
+          });
+        </script>
+      </header>
+      <div id="sub">
+        <div class="sub-header">
+          <div class="inner type3">
+            <div class="blog-txt">
+              <h2 class="bungee-font txt-shadow">
+                CREATOR <br class="hidden block-sm" />
+                DASHBOARD
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="content blog">
+          <div class="mw-1370 pr15 pl15 m-auto">
+            <div class="has-lnb-con">
+              <div class="lnb">
+                <div class="lnb-menu">
+                  <ul>
+                    <li class="active"><a href="">FAQ</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu">
+                  <ul>
+                    <li><a href="">General</a></li>
+                    <li><a href="">Subscriptions</a></li>
+                    <li><a href="">Partnership</a></li>
+                    <li><a href="">Features</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu">
+                  <ul>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Legal</a></li>
+                    <li><a href="">Terms of service</a></li>
+                  </ul>
+                </div>
+                <div class="lnb-menu mb20">
+                  <ul>
+                    <li><a href="">Contact us</a></li>
+                  </ul>
+                </div>
+                <div class="btn-logout">
+                  <p>Log out</p>
+                </div>
+              </div>
+              <div class="right-content">
+                <div id="selectbox" class="custom-selectbox mb10 ml-auto hidden block-sm">
+                  <ul class="selectbox-options">
+                    <li class="selected" data-value="item1">FAQ</li>
+                    <li data-value="item2">General</li>
+                    <li data-value="item3">Subscriptions</li>
+                    <li data-value="item4">Partnership</li>
+                    <li data-value="item5">Features</li>
+                    <li data-value="item6">Privacy</li>
+                    <li data-value="item7">Legal</li>
+                    <li data-value="item8">Terms of service</li>
+                    <li data-value="item9">Contact us</li>
+                  </ul>
+                </div>
+                <div class="dash-board-wrap">
+                  <div class="dash-board-con mb20">
+                    <div id="barGraph" class="mb90 pos-rel">
+                      <div class="yAxis" id="yAxis">
+                        <div class="axis">
+                          <p>40</p>
+                        </div>
+
+                        <div class="axis">
+                          <p>30</p>
+                        </div>
+
+                        <div class="axis">
+                          <p>20</p>
+                        </div>
+
+                        <div class="axis">
+                          <p>10</p>
+                        </div>
+
+                        <div class="axis">
+                          <p>0</p>
+                        </div>
+                      </div>
+                      <div class="line-con">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="graphContent" id="graphContent"></div>
+                      <div class="xAxis" id="xAxis"></div>
+                      <div id="bottomDesc">
+                        날짜(일) - 어제날짜부터 최근 한달을 표시한 (UTC기준)
+                      </div>
+                    </div>
+
+                    <div id="barGraph2" class="pos-rel">
+                      <div class="yAxis" id="yAxis2">
+                        <div class="axis">
+                          <p>40</p>
+                        </div>
+
+                        <div class="axis">
+                          <p>30</p>
+                        </div>
+
+                        <div class="axis">
+                          <p>20</p>
+                        </div>
+
+                        <div class="axis">
+                          <p>10</p>
+                        </div>
+
+                        <div class="axis">
+                          <p>0</p>
+                        </div>
+                      </div>
+                      <div class="line-con">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="graphContent" id="graphContent2"></div>
+                      <div class="xAxis" id="xAxis2"></div>
+                      <div id="bottomDesc">
+                        날짜(일) - 어제날짜부터 최근 한달을 표시한 (UTC기준)
+                      </div>
+                    </div>
+
+                    <script>
+                      var maxValue = 40;
+                      var graph = {
+                        width: 0,
+                        height: 0,
+                        maxValue: 0,
+                        month: 0,
+                        type: '',
+                        tolerance: 0,
+                        maxDate: 30,
+                        // 그래프 크기 세팅
+                        setLayout: function (
+                          canvas,
+                          width,
+                          height,
+                          maxValue,
+                          month,
+                          type,
+                          tolerance,
+                        ) {
+                          this.width = width ? width : 1100;
+                          this.height = height ? height : 300;
+                          this.maxValue = maxValue ? maxValue : 400;
+                          this.month = month ? month : 1;
+                          this.tolerance = tolerance ? tolerance : 100;
+
+                          document.getElementById(canvas).style.height = this.height + 'px';
+                          document.getElementById(canvas).style.width = this.width + 'px';
+                        },
+
+                        dataSetting: function (canvas, data1, data2, showmax) {
+                          var graphContent = document.getElementById(canvas);
+
+                          for (var i = 0; i < data1.length; i++) {
+                            var appendBar = document.createElement('div');
+                            var appendBarInner = document.createElement('div');
+
+                            appendBar.classList.add('bar-line');
+                            appendBar.style.height = data1[i] * 10 + 'px';
+
+                            var maxDay = document.createElement('div');
+                            var text = document.createTextNode('308');
+                            maxDay.classList.add('max-day');
+                            if (data2) {
+                              appendBarInner.classList.add('inner');
+                              appendBarInner.style.height = data2[i] * 5 + 'px';
+
+                              if (showmax && i === 29) {
+                                appendBarInner.append(maxDay);
+                              }
+                            }
+
+                            if (showmax && i === 29) {
+                              maxDay.appendChild(text);
+                              appendBar.append(maxDay);
+                            }
+
+                            appendBar.append(appendBarInner);
+                            graphContent.append(appendBar);
+                          }
+                        },
+
+                        // 월 날짜 계산
+                        getLastDateNum: function (month, year) {
+                          var dayList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                          var dayNum = dayList[month * 1 - 1];
+                          // 윤년 여부
+                          if (month == 2) {
+                            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                              dayNum = 29;
+                            }
+                          }
+
+                          return dayNum;
+                        },
+
+                        setVerticalXis: function (month, year, xAxis) {
+                          var maxDay = this.getLastDateNum(month, year);
+                          console.log(maxDay);
+                          for (var i = 1; i < maxDay; i++) {
+                            var date = document.getElementById(xAxis);
+                            var appendDay = document.createElement('div');
+                            var text = document.createTextNode(i);
+                            appendDay.appendChild(text);
+                            appendDay.classList.add('day');
+                            date.append(appendDay);
+                          }
+                        },
+                      };
+                      window.onload = function () {
+                        graph.setLayout('barGraph');
+                        graph.setLayout('barGraph2');
+                        graph.setVerticalXis(3, 2019, 'xAxis');
+                        graph.setVerticalXis(3, 2019, 'xAxis2');
+
+                        graph.dataSetting('graphContent', [
+                          1,
+                          5,
+                          2,
+                          3,
+                          1,
+                          4,
+                          6,
+                          8,
+                          9,
+                          1,
+                          2,
+                          4,
+                          5,
+                          6,
+                          3,
+                          2,
+                          2,
+                          1,
+                          6,
+                          7,
+                          5,
+                          3,
+                          3,
+                          1,
+                          2,
+                          3,
+                          5,
+                          3,
+                          10,
+                          12,
+                        ]);
+                      };
+
+                      graph.dataSetting(
+                        'graphContent2',
+                        [
+                          1,
+                          5,
+                          2,
+                          3,
+                          1,
+                          4,
+                          6,
+                          8,
+                          9,
+                          1,
+                          2,
+                          4,
+                          5,
+                          6,
+                          3,
+                          2,
+                          2,
+                          1,
+                          6,
+                          7,
+                          5,
+                          3,
+                          3,
+                          1,
+                          2,
+                          3,
+                          5,
+                          3,
+                          10,
+                          12,
+                        ],
+                        [
+                          1,
+                          5,
+                          2,
+                          3,
+                          1,
+                          4,
+                          6,
+                          8,
+                          9,
+                          1,
+                          2,
+                          4,
+                          5,
+                          6,
+                          3,
+                          2,
+                          2,
+                          1,
+                          6,
+                          7,
+                          5,
+                          3,
+                          3,
+                          1,
+                          2,
+                          3,
+                          5,
+                          3,
+                          10,
+                          12,
+                        ],
+                        true,
+                      );
+                    </script>
+                  </div>
+
+                  <div class="dash-board-con mb20">
+                    <div class="card-title">
+                      <p class="color-navy">Your top video in this period</p>
+                    </div>
+
+                    <div class="card-filter">
+                      <p>Average view durating</p>
+                      <p>views</p>
+                    </div>
+
+                    <div class="card-item-wrap">
+                      <div class="card-item-con">
+                        <a href="">
+                          <div class="card-item">
+                            <div class="card-content">
+                              <h5 class="no color-navy font-weight600">1</h5>
+                              <div class="img-con">
+                                <img src="../../assets/img/talk-char1.png" alt="" />
+                              </div>
+                              <div class="title-con">
+                                <h6 class="title big font-weight600 color-navy">
+                                  The Planet Song Learn the planets | Space song for children |
+                                </h6>
+
+                                <h6 class="date color-dark-blue font-weight600">Apr 12, 2020</h6>
+                              </div>
+                            </div>
+
+                            <div class="card-desc">
+                              <div class="durating">
+                                <p class="color-dark-blue hidden block-sm">Average view durating</p>
+
+                                <p class="d-flex y-center">
+                                  1:03
+                                  <span class="ml7 color-dark-blue percent"> (43.7%) </span>
+                                </p>
+                              </div>
+
+                              <div class="views-number">
+                                <p class="hidden block-sm">views</p>
+                                <p>61,176</p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="card-item-con">
+                        <a href="">
+                          <div class="card-item">
+                            <div class="card-content">
+                              <h5 class="no color-navy font-weight600">1</h5>
+                              <div class="img-con">
+                                <img src="../../assets/img/talk-char2.png" alt="" />
+                              </div>
+                              <div class="title-con">
+                                <h6 class="title big font-weight600 color-navy">
+                                  The Planet Song Learn the planets | Space song for children |
+                                </h6>
+
+                                <h6 class="date color-dark-blue font-weight600">Apr 12, 2020</h6>
+                              </div>
+                            </div>
+
+                            <div class="card-desc">
+                              <div class="durating">
+                                <p class="color-dark-blue hidden block-sm">Average view durating</p>
+
+                                <p class="d-flex y-center">
+                                  1:03
+                                  <span class="ml7 color-dark-blue percent"> (43.7%) </span>
+                                </p>
+                              </div>
+
+                              <div class="views-number">
+                                <p class="hidden block-sm">views</p>
+                                <p>61,176</p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="card-item-con">
+                        <a href="">
+                          <div class="card-item">
+                            <div class="card-content">
+                              <h5 class="no color-navy font-weight600">1</h5>
+                              <div class="img-con">
+                                <img src="../../assets/img/talk-char3.png" alt="" />
+                              </div>
+                              <div class="title-con">
+                                <h6 class="title big font-weight600 color-navy">
+                                  The Planet Song Learn the planets | Space song for children |
+                                </h6>
+
+                                <h6 class="date color-dark-blue font-weight600">Apr 12, 2020</h6>
+                              </div>
+                            </div>
+
+                            <div class="card-desc">
+                              <div class="durating">
+                                <p class="color-dark-blue hidden block-sm">Average view durating</p>
+
+                                <p class="d-flex y-center">
+                                  1:03
+                                  <span class="ml7 color-dark-blue percent"> (43.7%) </span>
+                                </p>
+                              </div>
+
+                              <div class="views-number">
+                                <p class="hidden block-sm">views</p>
+                                <p>61,176</p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="card-item-con">
+                        <a href="">
+                          <div class="card-item">
+                            <div class="card-content">
+                              <h5 class="no color-navy font-weight600">1</h5>
+                              <div class="img-con">
+                                <img src="../../assets/img/talk-char4.png" alt="" />
+                              </div>
+                              <div class="title-con">
+                                <h6 class="title big font-weight600 color-navy">
+                                  The Planet Song Learn the planets | Space song for children |
+                                </h6>
+
+                                <h6 class="date color-dark-blue font-weight600">Apr 12, 2020</h6>
+                              </div>
+                            </div>
+
+                            <div class="card-desc">
+                              <div class="durating">
+                                <p class="color-dark-blue hidden block-sm">Average view durating</p>
+
+                                <p class="d-flex y-center">
+                                  1:03
+                                  <span class="ml7 color-dark-blue percent"> (43.7%) </span>
+                                </p>
+                              </div>
+
+                              <div class="views-number">
+                                <p class="hidden block-sm">views</p>
+                                <p>61,176</p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="card-item-con">
+                        <a href="">
+                          <div class="card-item">
+                            <div class="card-content">
+                              <h5 class="no color-navy font-weight600">1</h5>
+                              <div class="img-con">
+                                <img src="../../assets/img/talk-char5.png" alt="" />
+                              </div>
+                              <div class="title-con">
+                                <h6 class="title big font-weight600 color-navy">
+                                  The Planet Song Learn the planets | Space song for children |
+                                </h6>
+
+                                <h6 class="date color-dark-blue font-weight600">Apr 12, 2020</h6>
+                              </div>
+                            </div>
+
+                            <div class="card-desc">
+                              <div class="durating">
+                                <p class="color-dark-blue hidden block-sm">Average view durating</p>
+
+                                <p class="d-flex y-center">
+                                  1:03
+                                  <span class="ml7 color-dark-blue percent"> (43.7%) </span>
+                                </p>
+                              </div>
+
+                              <div class="views-number">
+                                <p class="hidden block-sm">views</p>
+                                <p>61,176</p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dash-board-con">
+                    <div class="tc mb50">
+                      <p class="h3-desc color-navy">
+                        해당 크리에이터으 비디오에 대한 국가별 시청 시간 비율
+                      </p>
+                    </div>
+
+                    <div class="">
+                      <div id="chartDou" class="dou-grap"></div>
+                      <div class="wrap"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <script>
+            $(document).ready(function () {
+              $('footer').load('../componets/footer.html');
+            });
+          </script>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  $.fn.setCustomizedSelectbox = function () {
+    var $selectbox = $(this),
+      $optionbox = $selectbox.children('ul.selectbox-options'),
+      $options = $optionbox.children('li');
+    var isOpened = false;
+
+    function _onToggleOptionBox(event) {
+      event.stopPropagation();
+
+      var target = event.target;
+
+      if ($.inArray(target, $options) !== -1) {
+        if (isOpened) return toggleOptionItem(target);
+        isOpened = true;
+      } else {
+        if (!isOpened) return;
+        isOpened = false;
+      }
+
+      $optionbox.toggleClass('opened');
+    }
+
+    function _onCloseOptionBox(event) {
+      event.stopPropagation();
+
+      var $this = $(this),
+        $target = $(event.target);
+
+      if (($.inArray(event.target, $options) !== -1 || $target.is($this)) && isOpened) {
+        $optionbox.toggleClass('opened');
+        isOpened = false;
+      }
+    }
+
+    function toggleOptionItem(selected) {
+      var $selectedItem = $(selected),
+        value = $selectedItem.data();
+      value = (value && value.value) || null;
+
+      console.log(value);
+      // 선택된 아이템의 값을 이곳에서 처리하면 됩니다.
+      // form 에 적용한다면 hidden input box 를 만들어서 value 를 업데이트 하거나,
+      // 페이지 이동이 필요하면 이곳에서 href relocation 을 처리하면 됩니다. :)
+
+      if (!$selectedItem.hasClass('selected')) {
+        $options.removeClass('selected');
+        $selectedItem.addClass('selected');
+        $selectedItem.trigger('onSorterSelected');
+      }
+
+      $selectbox.trigger('click');
+
+      return;
+    }
+
+    $selectbox.on('click', _onToggleOptionBox);
+  };
+</script>
+
+<script>
+  $('#selectbox').setCustomizedSelectbox();
+</script>
+
+<script>
+  var myChart = echarts.init(document.getElementById('chartDou'));
+  var data = [
+    { value: 50 / 100, name: 'USA 50%' },
+    { value: 20 / 100, name: 'Canada 20%' },
+    { value: 10 / 100, name: 'Mexico 20%' },
+    { value: 20 / 100, name: 'Spain 10%' },
+  ];
+  var option = {
+    color: ['#8D7CF6', '#D2A2FF', '#E88AF1', '#FFEEB7', '#0174CD'],
+    series: [
+      {
+        type: 'pie',
+        radius: ['50%', '70%'],
+        center: ['50%', '50%'],
+        data,
+      },
+    ],
+  };
+  myChart.setOption(option);
+</script>
