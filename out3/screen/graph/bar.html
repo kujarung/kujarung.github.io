@@ -12,10 +12,17 @@
       }
 
       #barGraph {
+        background: linear-gradient(
+          180deg,
+          rgba(253, 253, 255, 0.3) 50%,
+          rgba(195, 218, 241, 0.3) 172.54%
+        );
+        box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+          inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
         position: relative;
       }
 
-      .y-axis {
+      #yAxis {
         position: absolute;
         width: 40px;
         height: calc(100% - 50px);
@@ -27,11 +34,11 @@
         justify-content: space-between;
       }
 
-      .y-axis .axis {
+      #yAxis .axis {
         text-align: right;
       }
 
-      .y-axis .axis p {
+      #yAxis .axis p {
         line-height: 25px;
       }
 
@@ -55,7 +62,7 @@
         margin-bottom: 12px;
       }
 
-      .data {
+      #date {
         height: 30px;
         width: calc(100% - 50px);
         margin-left: auto;
@@ -66,7 +73,7 @@
         align-items: center;
       }
 
-      .data .day {
+      #date .day {
         text-align: center;
         width: 24px;
       }
@@ -79,7 +86,17 @@
         position: relative;
       }
 
-      .graph-content {
+      .bar-inner {
+        width: 24px;
+        height: 20px;
+        border-radius: 12px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: red;
+      }
+
+      #graphContent {
         position: absolute;
         top: 0;
         width: calc(100% - 50px);
@@ -91,53 +108,90 @@
         align-items: flex-end;
         justify-content: space-between;
       }
+
+      .max-day:after {
+        content: '';
+        position: absolute;
+        background-image: url('../../assets/img/max-groom.png');
+        width: 38px;
+        height: 28px;
+
+        z-index: 10;
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: 0;
+        top: -20px;
+      }
+
+      .bar-con {
+        background: linear-gradient(
+          180deg,
+          rgba(253, 253, 255, 0.3) 50%,
+          rgba(195, 218, 241, 0.3) 172.54%
+        );
+        box-shadow: 0px 6px 30px rgba(204, 204, 204, 0.441761),
+          inset 0px -3px 8px rgba(255, 255, 255, 0.818482), inset 0px -6px 15px #ffffff;
+        backdrop-filter: blur(19.028px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 14px;
+        padding: 30px;
+      }
     </style>
-    <div id="barGraph">
-      <div class="y-axis">
-        <div class="axis">
-          <p>40</p>
-        </div>
+    <div class="bar-con">
+      <div id="barGraph">
+        <div id="yAxis">
+          <div class="axis">
+            <p>40</p>
+          </div>
 
-        <div class="axis">
-          <p>30</p>
-        </div>
+          <div class="axis">
+            <p>30</p>
+          </div>
 
-        <div class="axis">
-          <p>20</p>
-        </div>
+          <div class="axis">
+            <p>20</p>
+          </div>
 
-        <div class="axis">
-          <p>10</p>
-        </div>
+          <div class="axis">
+            <p>10</p>
+          </div>
 
-        <div class="axis">
-          <p>0</p>
+          <div class="axis">
+            <p>0</p>
+          </div>
         </div>
+        <div class="line-con">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div id="date"></div>
+        <div id="graphContent"></div>
+        <div class="bottom-legend"></div>
       </div>
-      <div class="line-con">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <div class="data"></div>
-      <div class="graph-content"></div>
-      <div class="bottom-legend"></div>
     </div>
 
     <script>
       window.onload = function () {
-        var date = document.getElementsByClassName('data')[0];
-        var graphContent = document.getElementsByClassName('graph-content')[0];
+        var date = document.getElementById('date');
+        var graphContent = document.getElementById('graphContent');
 
         for (var i = 0; i < 31; i++) {
           var appendDay = document.createElement('div');
           var appendBar = document.createElement('div');
+          var barInner = document.createElement('div');
           var text = document.createTextNode(i);
           appendDay.appendChild(text);
           appendDay.classList.add('day');
           appendBar.classList.add('bar-line');
+          barInner.classList.add('bar-inner');
+          if (i === 10) {
+            appendBar.classList.add('max-day');
+          }
+          appendBar.append(barInner);
           date.append(appendDay);
           graphContent.append(appendBar);
         }
@@ -176,7 +230,6 @@
         },
       };
 
-      console.log(graph);
       graph.init();
     </script>
   </body>
