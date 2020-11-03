@@ -15,7 +15,7 @@
         position: relative;
       }
 
-      .y-axis {
+      #yAxis {
         position: absolute;
         width: 40px;
         height: calc(100% - 50px);
@@ -27,11 +27,11 @@
         justify-content: space-between;
       }
 
-      .y-axis .axis {
+      #yAxis .axis {
         text-align: right;
       }
 
-      .y-axis .axis p {
+      #yAxis .axis p {
         line-height: 25px;
       }
 
@@ -55,7 +55,7 @@
         margin-bottom: 12px;
       }
 
-      .data {
+      #xAxis {
         height: 30px;
         width: calc(100% - 50px);
         margin-left: auto;
@@ -64,9 +64,10 @@
         display: -ms-flexbox;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 10px;
       }
 
-      .data .day {
+      #xAxis .day {
         text-align: center;
         width: 24px;
       }
@@ -77,9 +78,20 @@
         border-radius: 12px;
         height: 70px;
         position: relative;
+        bottom: 1px;
       }
 
-      .graph-content {
+      .bar-line .inner {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+
+        background: #5fc9df;
+        border-radius: 12px;
+      }
+
+      #graphContent {
         position: absolute;
         top: 0;
         width: calc(100% - 50px);
@@ -91,57 +103,50 @@
         align-items: flex-end;
         justify-content: space-between;
       }
+
+      #bottomDesc {
+        width: 100%;
+        text-align: center;
+      }
     </style>
-    <div id="barGraph">
-      <div class="y-axis">
-        <div class="axis">
-          <p>40</p>
-        </div>
+    <div class="bar-con">
+      <div id="barGraph">
+        <div id="yAxis">
+          <div class="axis">
+            <p>40</p>
+          </div>
 
-        <div class="axis">
-          <p>30</p>
-        </div>
+          <div class="axis">
+            <p>30</p>
+          </div>
 
-        <div class="axis">
-          <p>20</p>
-        </div>
+          <div class="axis">
+            <p>20</p>
+          </div>
 
-        <div class="axis">
-          <p>10</p>
-        </div>
+          <div class="axis">
+            <p>10</p>
+          </div>
 
-        <div class="axis">
-          <p>0</p>
+          <div class="axis">
+            <p>0</p>
+          </div>
         </div>
+        <div class="line-con">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div id="graphContent"></div>
+        <div id="xAxis"></div>
+        <div id="bottomDesc">날짜(일) - 어제날짜부터 최근 한달을 표시한 (UTC기준)</div>
       </div>
-      <div class="line-con">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <div class="data"></div>
-      <div class="graph-content"></div>
-      <div class="bottom-legend"></div>
     </div>
 
     <script>
-      window.onload = function () {
-        var date = document.getElementsByClassName('data')[0];
-        var graphContent = document.getElementsByClassName('graph-content')[0];
-
-        for (var i = 0; i < 31; i++) {
-          var appendDay = document.createElement('div');
-          var appendBar = document.createElement('div');
-          var text = document.createTextNode(i);
-          appendDay.appendChild(text);
-          appendDay.classList.add('day');
-          appendBar.classList.add('bar-line');
-          date.append(appendDay);
-          graphContent.append(appendBar);
-        }
-      };
+      window.onload = function () {};
 
       var maxValue = 40;
       var graph = {
@@ -151,7 +156,9 @@
         month: 0,
         type: '',
         tolerance: 0,
-        init: function (width, height, maxValue, month, type, tolerance) {
+        maxDate: 30,
+        // 그래프 크기 세팅
+        setLayout: function (width, height, maxValue, month, type, tolerance) {
           this.width = width ? width : 1100;
           this.height = height ? height : 300;
           this.maxValue = maxValue ? maxValue : 400;
@@ -162,8 +169,24 @@
           document.getElementById('barGraph').style.height = this.height + 'px';
         },
 
-        dataSetting: function (data) {},
+        dataSetting: function (data1, data2) {
+          var graphContent = document.getElementById('graphContent');
 
+          for (var i = 0; i < data1.length; i++) {
+            var appendBar = document.createElement('div');
+            var appendBarInner = document.createElement('div');
+
+            appendBar.classList.add('bar-line');
+            if (data2) {
+              appendBarInner.classList.add('inner');
+            }
+
+            appendBar.append(appendBarInner);
+            graphContent.append(appendBar);
+          }
+        },
+
+        // 월 날짜 계산
         getLastDateNum: function (year, month) {
           var dayList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
           var dayNum = dayList[month * 1 - 1];
@@ -173,11 +196,23 @@
               dayNum = 29;
             }
           }
+
+          return dayNum;
         },
+
+        setVerticalXis: function () {
+          var date = document.getElementById('xAxis');
+          var appendDay = document.createElement('div');
+          var text = document.createTextNode(i);
+          appendDay.appendChild(text);
+          appendDay.classList.add('day');
+          date.append(appendDay);
+        },
+
+        setHorizalXis: function (month) {},
       };
 
-      console.log(graph);
-      graph.init();
+      graph.setLayout();
     </script>
   </body>
 </html>
