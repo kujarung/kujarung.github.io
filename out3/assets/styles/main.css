@@ -318,6 +318,10 @@ footer .menu > li.sns img {
 }
 
 @media (max-width: 992px) {
+  .two-left-txt {
+    left: 50px;
+  }
+
   .menu {
     margin-left: 30px;
   }
@@ -327,9 +331,7 @@ footer .menu > li.sns img {
   .menu > li > a {
     font-size: 14px;
   }
-}
 
-@media (max-width: 760px) {
   .main-txt {
     height: 41px;
     background-repeat: no-repeat;

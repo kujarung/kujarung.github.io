@@ -134,6 +134,7 @@
 }
 
 .yAxis {
+  padding-left: 20px;
   position: absolute;
   width: 30px;
   height: calc(100% - 50px);
@@ -227,9 +228,9 @@
 .graphContent {
   position: absolute;
   top: 0;
-  width: calc(100% - 50px);
+  width: calc(100% - 80px);
   height: calc(100% - 62px);
-  padding-left: 50px;
+  padding-left: 80px;
 
   display: flex;
 
