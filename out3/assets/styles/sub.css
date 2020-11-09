@@ -712,7 +712,7 @@ table.table-style2 tbody tr td {
   color: #57628c;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .sub-header {
     height: 120px;
   }
@@ -800,10 +800,6 @@ table.table-style2 tbody tr td {
   .detail-title h5.date {
     font-size: 10px;
     line-height: 12px;
-  }
-
-  .has-lnb-con .lnb {
-    display: none;
   }
 
   .has-lnb-con .right-content {
@@ -1164,5 +1160,9 @@ table.table-style2 tbody tr td {
 
   .barGraph {
     width: 1100px;
+  }
+
+  .has-lnb-con .lnb {
+    display: none;
   }
 }

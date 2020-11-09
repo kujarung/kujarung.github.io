@@ -8,20 +8,21 @@
 }
 
 .mw-1520 {
-  max-width: 1520px;
+  width: 1520px;
 }
 
 .mw-1370 {
-  max-width: 1370px;
+  width: 1370px;
 }
 
 .mw-720 {
-  max-width: 720px;
+  width: 720px;
 }
 
 .mw-660 {
-  max-width: 660px;
+  width: 660px;
 }
+
 .m-auto {
   margin: 0 auto;
 }
@@ -74,7 +75,7 @@
 }
 
 .has-lnb-con .right-content {
-  width: calc(100% - 300px);
+  width: 1040px;
 }
 
 .lnb-menu {
@@ -290,4 +291,22 @@
 
 #graphContent2 .bar-line {
   background: #c69af0;
+}
+
+@media (max-width: 767px) {
+  .mw-1520 {
+    width: auto;
+  }
+
+  .mw-1370 {
+    width: auto;
+  }
+
+  .mw-720 {
+    width: auto;
+  }
+
+  .mw-660 {
+    width: auto;
+  }
 }

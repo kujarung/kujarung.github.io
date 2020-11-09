@@ -378,7 +378,7 @@ ul.selectbox-options li.selected {
   align-items: center;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   button.btn-store {
     justify-content: flex-start;
     width: 140px;
