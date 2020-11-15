@@ -15,7 +15,6 @@ header .inner-header {
   display: -ms-flexbox;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
 .left-menu,
@@ -311,6 +310,10 @@ footer .menu > li.sns img {
 }
 
 @media (max-width: 1520px) {
+  .two-left-txt {
+    right: 10px;
+  }
+
   header {
     padding-left: 10px;
     padding-right: 10px;
