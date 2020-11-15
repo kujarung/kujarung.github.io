@@ -84,90 +84,313 @@
                     <li data-value="item9">Contact us</li>
                   </ul>
                 </div>
+
                 <div class="dash-board-wrap">
-                  <div class="dash-board-con mb20">
-                    <div id="selectbox3" class="custom-selectbox mb10 width180 ml-auto">
-                      <ul class="selectbox-options">
-                        <li class="selected" data-value="item1">Last 1 month</li>
-                        <li data-value="item2">Last 2 month</li>
-                      </ul>
-                    </div>
-
-                    <div id="barGraph" class="mb90 pos-rel barGraph">
-                      <div class="yAxis" id="yAxis">
-                        <div class="left-axis">크리에이터 시청시간 (분)</div>
-                        <div class="axis">
-                          <p>40</p>
-                        </div>
-
-                        <div class="axis">
-                          <p>30</p>
-                        </div>
-
-                        <div class="axis">
-                          <p>20</p>
-                        </div>
-
-                        <div class="axis">
-                          <p>10</p>
-                        </div>
-
-                        <div class="axis">
-                          <p>0</p>
-                        </div>
-                      </div>
-                      <div class="line-con">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                      </div>
-                      <div class="graphContent" id="graphContent"></div>
-                      <div class="xAxis" id="xAxis"></div>
-                      <div id="bottomDesc">
-                        날짜(일) - 어제날짜부터 최근 한달을 표시한 (UTC기준)
+                  <div class="dash-out-box">
+                    <div class="m-select-menu">
+                      <div id="selectbox3" class="custom-selectbox mb10 width180 ml-auto">
+                        <ul class="selectbox-options">
+                          <li class="selected" data-value="item1">Last 1 month</li>
+                          <li data-value="item2">Last 2 month</li>
+                        </ul>
                       </div>
                     </div>
+                    <div class="dash-board-con grap mb20">
+                      <div
+                        id="selectbox3"
+                        class="custom-selectbox mb10 width180 ml-auto hidden show-block"
+                      >
+                        <ul class="selectbox-options">
+                          <li class="selected" data-value="item1">Last 1 month</li>
+                          <li data-value="item2">Last 2 month</li>
+                        </ul>
+                      </div>
 
-                    <div id="barGraph2" class="pos-rel barGraph">
-                      <div class="yAxis" id="yAxis2">
-                        <div class="left-axis">크리에이터 시청시간 (분)</div>
-                        <div class="axis">
-                          <p>400</p>
+                      <div id="barGraph" class="mb90 pos-rel barGraph mt80">
+                        <div class="yAxis" id="yAxis">
+                          <div class="left-axis">크리에이터 시청시간 (분)</div>
+                          <div class="axis">
+                            <p>40</p>
+                          </div>
+
+                          <div class="axis">
+                            <p>30</p>
+                          </div>
+
+                          <div class="axis">
+                            <p>20</p>
+                          </div>
+
+                          <div class="axis">
+                            <p>10</p>
+                          </div>
+
+                          <div class="axis">
+                            <p>0</p>
+                          </div>
                         </div>
-
-                        <div class="axis">
-                          <p>300</p>
+                        <div class="line-con">
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
                         </div>
-
-                        <div class="axis">
-                          <p>200</p>
-                        </div>
-
-                        <div class="axis">
-                          <p>100</p>
-                        </div>
-
-                        <div class="axis">
-                          <p>0</p>
+                        <div class="graphContent" id="graphContent"></div>
+                        <div class="xAxis" id="xAxis"></div>
+                        <div id="bottomDesc">
+                          날짜(일) - 어제날짜부터 최근 한달을 표시한 (UTC기준)
                         </div>
                       </div>
-                      <div class="line-con">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
+
+                      <div id="barGraph2" class="pos-rel barGraph">
+                        <div class="yAxis" id="yAxis2">
+                          <div class="left-axis">크리에이터 시청시간 (분)</div>
+                          <div class="axis">
+                            <p>400</p>
+                          </div>
+
+                          <div class="axis">
+                            <p>300</p>
+                          </div>
+
+                          <div class="axis">
+                            <p>200</p>
+                          </div>
+
+                          <div class="axis">
+                            <p>100</p>
+                          </div>
+
+                          <div class="axis">
+                            <p>0</p>
+                          </div>
+                        </div>
+                        <div class="line-con">
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
+                          <div class="line"></div>
+                        </div>
+                        <div class="graphContent" id="graphContent2"></div>
+                        <div class="xAxis" id="xAxis2"></div>
+                        <div id="bottomDesc">
+                          날짜(일) - 어제날짜부터 최근 한달을 표시한 (UTC기준)
+                        </div>
                       </div>
-                      <div class="graphContent" id="graphContent2"></div>
-                      <div class="xAxis" id="xAxis2"></div>
-                      <div id="bottomDesc">
-                        날짜(일) - 어제날짜부터 최근 한달을 표시한 (UTC기준)
+
+                      <div class="grap-label">
+                        <div class="one">
+                          <p>MIN</p>
+                        </div>
+                        <div class="two">
+                          <p>Total(sec)</p>
+                        </div>
                       </div>
+                      <script>
+                        var maxValue = 40;
+                        var graph = {
+                          width: 0,
+                          height: 0,
+                          maxValue: 0,
+                          month: 0,
+                          type: '',
+                          tolerance: 0,
+                          maxDate: 30,
+                          // 그래프 크기 세팅
+                          setLayout: function (
+                            canvas,
+                            width,
+                            height,
+                            maxValue,
+                            month,
+                            type,
+                            tolerance,
+                          ) {
+                            this.width = width ? width : 1100;
+                            this.height = height ? height : 300;
+                            this.maxValue = maxValue ? maxValue : 400;
+                            this.month = month ? month : 1;
+                            this.tolerance = tolerance ? tolerance : 100;
+
+                            document.getElementById(canvas).style.height = this.height + 'px';
+                          },
+
+                          dataSetting: function (canvas, data1, data2, showmax) {
+                            var graphContent = document.getElementById(canvas);
+
+                            for (var i = 0; i < data1.length; i++) {
+                              var appendBar = document.createElement('div');
+                              var appendBarInner = document.createElement('div');
+
+                              appendBar.classList.add('bar-line');
+                              appendBar.style.height = data1[i] * 10 + 'px';
+
+                              var maxDay = document.createElement('div');
+                              var maxDay2 = document.createElement('div');
+                              var text = document.createTextNode('250');
+                              var text2 = document.createTextNode('110');
+                              maxDay.classList.add('max-day');
+                              maxDay2.classList.add('max-day');
+                              if (data2) {
+                                appendBarInner.classList.add('inner');
+                                appendBarInner.style.height = data2[i] * 5 + 'px';
+
+                                if (showmax && i === 28) {
+                                  maxDay2.appendChild(text2);
+                                  appendBarInner.append(maxDay2);
+                                }
+                              }
+
+                              if (showmax && i === 28) {
+                                maxDay.appendChild(text);
+                                appendBar.append(maxDay);
+                              }
+
+                              appendBar.append(appendBarInner);
+                              graphContent.append(appendBar);
+                            }
+                          },
+
+                          // 월 날짜 계산
+                          getLastDateNum: function (month, year) {
+                            var dayList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                            var dayNum = dayList[month * 1 - 1];
+                            // 윤년 여부
+                            if (month == 2) {
+                              if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                                dayNum = 29;
+                              }
+                            }
+
+                            return dayNum;
+                          },
+
+                          setVerticalXis: function (month, year, xAxis) {
+                            var maxDay = this.getLastDateNum(month, year);
+                            for (var i = 1; i < maxDay; i++) {
+                              var date = document.getElementById(xAxis);
+                              var appendDay = document.createElement('div');
+                              var text = document.createTextNode(i);
+                              appendDay.appendChild(text);
+                              appendDay.classList.add('day');
+                              date.append(appendDay);
+                            }
+                          },
+                        };
+                        window.onload = function () {
+                          graph.setLayout('barGraph');
+                          graph.setLayout('barGraph2');
+                          graph.setVerticalXis(3, 2019, 'xAxis');
+                          graph.setVerticalXis(3, 2019, 'xAxis2');
+
+                          graph.dataSetting('graphContent', [
+                            1,
+                            5,
+                            2,
+                            3,
+                            1,
+                            4,
+                            6,
+                            8,
+                            9,
+                            1,
+                            2,
+                            4,
+                            5,
+                            6,
+                            3,
+                            2,
+                            2,
+                            1,
+                            6,
+                            7,
+                            5,
+                            3,
+                            3,
+                            1,
+                            2,
+                            3,
+                            5,
+                            3,
+                            20,
+                            12,
+                          ]);
+                        };
+
+                        graph.dataSetting(
+                          'graphContent2',
+                          [
+                            1,
+                            5,
+                            2,
+                            3,
+                            1,
+                            4,
+                            6,
+                            8,
+                            9,
+                            1,
+                            2,
+                            4,
+                            5,
+                            6,
+                            3,
+                            2,
+                            2,
+                            1,
+                            6,
+                            7,
+                            5,
+                            3,
+                            3,
+                            1,
+                            2,
+                            3,
+                            5,
+                            3,
+                            20,
+                            12,
+                          ],
+                          [
+                            1,
+                            5,
+                            2,
+                            3,
+                            1,
+                            4,
+                            6,
+                            8,
+                            9,
+                            1,
+                            2,
+                            4,
+                            5,
+                            6,
+                            3,
+                            2,
+                            2,
+                            1,
+                            6,
+                            7,
+                            5,
+                            3,
+                            3,
+                            1,
+                            2,
+                            3,
+                            5,
+                            3,
+                            20,
+                            12,
+                          ],
+                          true,
+                        );
+                      </script>
                     </div>
 
-                    <div class="grap-label">
+                    <div class="grap-label m-show">
                       <div class="one">
                         <p>MIN</p>
                       </div>
@@ -175,203 +398,6 @@
                         <p>Total(sec)</p>
                       </div>
                     </div>
-                    <script>
-                      var maxValue = 40;
-                      var graph = {
-                        width: 0,
-                        height: 0,
-                        maxValue: 0,
-                        month: 0,
-                        type: '',
-                        tolerance: 0,
-                        maxDate: 30,
-                        // 그래프 크기 세팅
-                        setLayout: function (
-                          canvas,
-                          width,
-                          height,
-                          maxValue,
-                          month,
-                          type,
-                          tolerance,
-                        ) {
-                          this.width = width ? width : 1100;
-                          this.height = height ? height : 300;
-                          this.maxValue = maxValue ? maxValue : 400;
-                          this.month = month ? month : 1;
-                          this.tolerance = tolerance ? tolerance : 100;
-
-                          document.getElementById(canvas).style.height = this.height + 'px';
-                        },
-
-                        dataSetting: function (canvas, data1, data2, showmax) {
-                          var graphContent = document.getElementById(canvas);
-
-                          for (var i = 0; i < data1.length; i++) {
-                            var appendBar = document.createElement('div');
-                            var appendBarInner = document.createElement('div');
-
-                            appendBar.classList.add('bar-line');
-                            appendBar.style.height = data1[i] * 10 + 'px';
-
-                            var maxDay = document.createElement('div');
-                            var text = document.createTextNode('308');
-                            maxDay.classList.add('max-day');
-                            if (data2) {
-                              appendBarInner.classList.add('inner');
-                              appendBarInner.style.height = data2[i] * 5 + 'px';
-
-                              if (showmax && i === 29) {
-                                appendBarInner.append(maxDay);
-                              }
-                            }
-
-                            if (showmax && i === 29) {
-                              maxDay.appendChild(text);
-                              appendBar.append(maxDay);
-                            }
-
-                            appendBar.append(appendBarInner);
-                            graphContent.append(appendBar);
-                          }
-                        },
-
-                        // 월 날짜 계산
-                        getLastDateNum: function (month, year) {
-                          var dayList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-                          var dayNum = dayList[month * 1 - 1];
-                          // 윤년 여부
-                          if (month == 2) {
-                            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-                              dayNum = 29;
-                            }
-                          }
-
-                          return dayNum;
-                        },
-
-                        setVerticalXis: function (month, year, xAxis) {
-                          var maxDay = this.getLastDateNum(month, year);
-                          console.log(maxDay);
-                          for (var i = 1; i < maxDay; i++) {
-                            var date = document.getElementById(xAxis);
-                            var appendDay = document.createElement('div');
-                            var text = document.createTextNode(i);
-                            appendDay.appendChild(text);
-                            appendDay.classList.add('day');
-                            date.append(appendDay);
-                          }
-                        },
-                      };
-                      window.onload = function () {
-                        graph.setLayout('barGraph');
-                        graph.setLayout('barGraph2');
-                        graph.setVerticalXis(3, 2019, 'xAxis');
-                        graph.setVerticalXis(3, 2019, 'xAxis2');
-
-                        graph.dataSetting('graphContent', [
-                          1,
-                          5,
-                          2,
-                          3,
-                          1,
-                          4,
-                          6,
-                          8,
-                          9,
-                          1,
-                          2,
-                          4,
-                          5,
-                          6,
-                          3,
-                          2,
-                          2,
-                          1,
-                          6,
-                          7,
-                          5,
-                          3,
-                          3,
-                          1,
-                          2,
-                          3,
-                          5,
-                          3,
-                          10,
-                          12,
-                        ]);
-                      };
-
-                      graph.dataSetting(
-                        'graphContent2',
-                        [
-                          1,
-                          5,
-                          2,
-                          3,
-                          1,
-                          4,
-                          6,
-                          8,
-                          9,
-                          1,
-                          2,
-                          4,
-                          5,
-                          6,
-                          3,
-                          2,
-                          2,
-                          1,
-                          6,
-                          7,
-                          5,
-                          3,
-                          3,
-                          1,
-                          2,
-                          3,
-                          5,
-                          3,
-                          10,
-                          12,
-                        ],
-                        [
-                          1,
-                          5,
-                          2,
-                          3,
-                          1,
-                          4,
-                          6,
-                          8,
-                          9,
-                          1,
-                          2,
-                          4,
-                          5,
-                          6,
-                          3,
-                          2,
-                          2,
-                          1,
-                          6,
-                          7,
-                          5,
-                          3,
-                          3,
-                          1,
-                          2,
-                          3,
-                          5,
-                          3,
-                          10,
-                          12,
-                        ],
-                        true,
-                      );
-                    </script>
                   </div>
 
                   <div class="dash-board-con mb20">
@@ -568,15 +594,15 @@
                   </div>
 
                   <div class="dash-board-con">
-                    <div class="tc mb50">
+                    <div class="tc mb30">
                       <p class="h3-desc color-navy font-weight600">
                         해당 크리에이터으 비디오에 대한 국가별 시청 시간 비율
                       </p>
                     </div>
 
-                    <div class="">
+                    <div class="dou-wrap">
+                      <div class="circle-inner"></div>
                       <div id="chartDou" class="dou-grap"></div>
-                      <div class="wrap"></div>
                     </div>
                   </div>
                 </div>
@@ -666,19 +692,64 @@
 <script>
   var myChart = echarts.init(document.getElementById('chartDou'));
   var data = [
-    { value: 50 / 100, name: 'USA 50%' },
-    { value: 20 / 100, name: 'Canada 20%' },
+    { value: 40 / 100, name: 'USA 50%' },
+    { value: 10 / 100, name: 'Canada 20%' },
     { value: 10 / 100, name: 'Mexico 20%' },
-    { value: 20 / 100, name: 'Spain 10%' },
+    { value: 10 / 100, name: 'korea 10%' },
+    { value: 10 / 100, name: 'etc 10%' },
+    { value: 10 / 100, name: 'japan 10%' },
   ];
+
   var option = {
-    color: ['#8D7CF6', '#D2A2FF', '#E88AF1', '#FFEEB7', '#0174CD'],
+    color: [
+      new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+        { offset: 0, color: '#A091FF' },
+        { offset: 1, color: '#7B79FE' },
+      ]),
+
+      new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+        { offset: 0, color: '#D2A2FF' },
+        { offset: 1, color: '#A675FF' },
+      ]),
+
+      new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+        { offset: 0, color: '#EC92F5' },
+        { offset: 1, color: '#E86FF4' },
+      ]),
+
+      new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+        { offset: 0, color: '#FF5860' },
+        { offset: 1, color: '#F89498' },
+      ]),
+
+      new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+        { offset: 0, color: '#FEDE78' },
+        { offset: 1, color: '#FFF2C9' },
+      ]),
+      new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+        { offset: 0, color: '#0369B9' },
+        { offset: 1, color: '#3796E0' },
+      ]),
+    ],
     series: [
       {
         type: 'pie',
-        radius: ['50%', '70%'],
+        radius: ['42%', '70%'],
         center: ['50%', '50%'],
         data,
+        itemStyle: {
+          normal: {
+            label: {
+              show: true,
+              fontSize: window.innerWidth > 767 ? 16 : 10,
+              color: '#2D3556',
+            },
+            labelLine: {
+              show: false,
+              length: 10,
+            },
+          },
+        },
       },
     ],
   };

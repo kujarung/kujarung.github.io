@@ -131,6 +131,7 @@
 
 .dash-board-con {
   overflow-x: auto;
+  position: relative;
 }
 
 .yAxis {
@@ -248,13 +249,15 @@
   font-weight: 600;
   z-index: 11;
 
-  width: 38px;
+  width: 42px;
   height: 28px;
 
   position: absolute;
 
-  right: 5px;
-  top: 0px;
+  right: -35px;
+  top: -10px;
+
+  padding-left: 2px;
 }
 
 .max-day:after {
@@ -290,4 +293,8 @@
 
 #graphContent2 .bar-line {
   background: #c69af0;
+}
+
+.m-mt10 {
+  margin-top: -10px;
 }
