@@ -18,8 +18,10 @@
     <div id="root">
       <header>
         <script>
-          $(document).ready(function () {
+          $(function () {
             $('header').load('../componets/header.html');
+            $('.lnb').load('../componets/lnb.html');
+            $('footer').load('../componets/footer.html');
           });
         </script>
       </header>
@@ -38,36 +40,7 @@
         <div class="content blog">
           <div class="mw-1370 pr15 pl15 m-auto">
             <div class="has-lnb-con">
-              <div class="lnb">
-                <div class="lnb-menu">
-                  <ul>
-                    <li class="active"><a href="">FAQ</a></li>
-                  </ul>
-                </div>
-                <div class="lnb-menu">
-                  <ul>
-                    <li><a href="">General</a></li>
-                    <li><a href="">Subscriptions</a></li>
-                    <li><a href="">Partnership</a></li>
-                    <li><a href="">Features</a></li>
-                  </ul>
-                </div>
-                <div class="lnb-menu">
-                  <ul>
-                    <li><a href="">Privacy</a></li>
-                    <li><a href="">Legal</a></li>
-                    <li><a href="">Terms of service</a></li>
-                  </ul>
-                </div>
-                <div class="lnb-menu mb20">
-                  <ul>
-                    <li><a href="">Contact us</a></li>
-                  </ul>
-                </div>
-                <div class="btn-logout">
-                  <p>Log out</p>
-                </div>
-              </div>
+              <div class="lnb"></div>
               <div class="right-content">
                 <div id="selectbox" class="custom-selectbox mb10 ml-auto hidden block-sm">
                   <ul class="selectbox-options">
@@ -142,13 +115,7 @@
           </div>
         </div>
 
-        <footer>
-          <script>
-            $(document).ready(function () {
-              $('footer').load('../componets/footer.html');
-            });
-          </script>
-        </footer>
+        <footer></footer>
       </div>
     </div>
   </body>

@@ -33,8 +33,12 @@ header .inner-header {
   height: 100%;
 }
 
-.logo a img {
+footer .logo a img {
   height: 41px;
+}
+
+.logo a img {
+  height: 71px;
 }
 
 .menu {
@@ -126,7 +130,7 @@ header .inner-header {
 
 /* main one */
 .main-section.one {
-  height: 900px;
+  height: 1100px;
   background-image: url('../img/web-main1.png');
   z-index: 2;
   display: flex;
@@ -452,7 +456,7 @@ footer .menu > li.sns img {
     height: 200px;
     background-image: url('../img/m-main5.png');
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   footer.main {

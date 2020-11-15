@@ -1,0 +1,46 @@
+<div class="lnb-menu">
+  <ul>
+    <li><a href="../dashboard/dashboard-graph.html">Dashboard</a></li>
+    <li><a href="../myinfo/myinfo.html">My Videos</a></li>
+    <li><a href="../myinfo/myinfo-detail.html">My Info</a></li>
+    <li><a href="../dashboard/new-vedio.html">New Video</a></li>
+  </ul>
+</div>
+<div class="lnb-menu">
+  <ul>
+    <li><a href="../post/post-list.html">Posting List</a></li>
+    <li><a href="../post/add-post.html">New Posting</a></li>
+  </ul>
+</div>
+<div class="lnb-menu mb20">
+  <ul>
+    <li><a href="../main/main.html">Rest API</a></li>
+  </ul>
+</div>
+<div class="btn-logout">
+  <p>Log out</p>
+</div>
+
+<script>
+  function findCurrentPath(url) {
+    var splitUrl = url.split('/');
+    var splitLength = url.split('/').length - 1;
+    var currentUrlPath = splitUrl[splitLength];
+    return currentUrlPath;
+  }
+
+  $(function () {
+    var url = window.location.href;
+    var findPath = findCurrentPath(url);
+    var aNode = document.querySelectorAll('.lnb-menu li');
+
+    console.log(aNode);
+    aNode.forEach(function (node) {
+      var currentPath = findCurrentPath(node.childNodes[0].href);
+      if (findPath === currentPath) {
+        console.log(node);
+        node.classList.add('active');
+      }
+    });
+  });
+</script>

@@ -326,6 +326,14 @@ ul.selectbox-options {
   border-radius: 16px;
 }
 
+ul.selectbox-options.height44 {
+  height: 44px;
+}
+
+ul.selectbox-options.height44 li {
+  height: 44px;
+}
+
 ul.selectbox-options li {
   list-style: none;
 }
@@ -383,7 +391,7 @@ ul.selectbox-options li.selected {
     justify-content: flex-start;
     width: 140px;
     height: 38px;
-    border-radius: 10px;
+    border-radius: 8px;
   }
 
   button.btn-store img {
@@ -417,7 +425,7 @@ ul.selectbox-options li.selected {
   input[type='text'].search-input {
     width: 240px;
     height: 38px;
-    border-radius: 10px;
+    border-radius: 8px;
     padding-left: 15px;
 
     font-size: 12px;
@@ -429,7 +437,7 @@ ul.selectbox-options li.selected {
     height: 38px;
     font-size: 12px;
     line-height: 15px;
-    border-radius: 10px;
+    border-radius: 8px;
   }
 
   input[type='submit'].btn-style-submit {
@@ -437,7 +445,7 @@ ul.selectbox-options li.selected {
     height: 38px;
     font-size: 14px;
     line-height: 17px;
-    border-radius: 10px;
+    border-radius: 8px;
   }
 
   .custom-selectbox {
@@ -446,7 +454,7 @@ ul.selectbox-options li.selected {
   }
   ul.selectbox-options {
     height: 38px;
-    border-radius: 10px;
+    border-radius: 8px;
   }
 
   ul.selectbox-options li {
@@ -459,7 +467,7 @@ ul.selectbox-options li.selected {
   input[type='text'].btn-style3,
   input[type='email'].btn-style3 {
     height: 38px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 12px;
   }
 
@@ -468,10 +476,24 @@ ul.selectbox-options li.selected {
 
     font-size: 14px;
 
-    border-radius: 10px;
+    border-radius: 8px;
   }
 
   textarea.btn-style-textarea {
     padding: 15px;
+  }
+
+  button.btn-store.type2 {
+    border-radius: 8px;
+  }
+
+  button.btn-store.type2 h6 {
+    font-size: 10px;
+    color: #725ac2;
+  }
+
+  button.btn-store.type2 p.h3-desc {
+    font-size: 12px;
+    color: #725ac2;
   }
 }

@@ -766,6 +766,17 @@ table.table-style2 tbody tr td {
   display: none;
 }
 
+.dash-out-box {
+  position: relative;
+}
+
+.m-select-menu {
+  display: block;
+  top: 20px;
+  position: absolute;
+  right: 20px;
+}
+
 @media (max-width: 767px) {
   .sub-header {
     background-image: url('../img/sub-bg.png');
@@ -1228,19 +1239,8 @@ table.table-style2 tbody tr td {
     background-size: auto 240px;
   }
 
-  .m-select-menu {
-    display: block;
-    top: 20px;
-    position: absolute;
-    right: 0px;
-  }
-
   .grap-label {
     display: none;
-  }
-
-  .dash-out-box {
-    position: relative;
   }
 
   .m-show {
