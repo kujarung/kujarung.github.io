@@ -190,6 +190,8 @@ input[type='email'].btn-style3 {
   line-height: 24px;
   font-weight: 600;
   padding-bottom: 3px;
+
+  padding-right: 10px;
 }
 
 .waring.textarea {
