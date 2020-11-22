@@ -392,6 +392,12 @@
           }
         });
       });
+
+      $('.lnb-menu li a').on('click', function (event) {
+        $('.lnb-menu li').removeClass('active');
+        $(this).parent().addClass('active');
+        return false;
+      });
     };
   </script>
 </html>
