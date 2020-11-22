@@ -700,20 +700,20 @@
               formatter: '{b|{b}}  {per|{d}%}  ',
               rich: {
                 b: {
-                  fontSize: 16,
+                  fontSize: window.innerWidth > 768 ? 16 : 12,
                   color: '#2D3556',
                   fontWeight: 'bold',
                 },
 
                 per: {
                   color: '#57628C',
-                  fontSize: 14,
+                  fontSize: window.innerWidth > 768 ? 14 : 10,
                 },
               },
             },
             labelLine: {
               show: false,
-              length: 10,
+              length: window.innerWidth > 768 ? 10 : 0,
             },
           },
         },

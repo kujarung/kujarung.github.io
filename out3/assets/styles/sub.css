@@ -1371,13 +1371,13 @@ table.table-style2 tbody tr td {
 
   .dou-grap {
     width: 100%;
-    height: 200px;
+    height: 150px;
   }
 
   .circle-inner {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     background-color: white;
     border-radius: 50%;
     z-index: -2;
@@ -1396,10 +1396,10 @@ table.table-style2 tbody tr td {
 
     border-radius: 14px;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    left: calc(50% - 30px);
-    top: calc(50% - 30px);
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
   }
 
   .dash-board-con .h3-desc {
