@@ -1430,4 +1430,13 @@ table.table-style2 tbody tr td {
     padding-left: 23px;
     background-size: 10px;
   }
+
+  .heart-icon {
+    width: 15px;
+    background-size: 15px;
+  }
+
+  .heart-icon.active {
+    background-image: url('../img/heart.png');
+  }
 }
