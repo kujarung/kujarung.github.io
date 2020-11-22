@@ -22,6 +22,7 @@ header .inner-header {
   display: flex;
   display: -ms-flexbox;
   align-items: center;
+  position: relative;
 }
 
 .logo.footer {

@@ -91,6 +91,10 @@
   margin-left: -96px;
 }
 
+.m-list-wrap {
+  display: none;
+}
+
 .card-con .card-item {
   width: 33.3333%;
   padding-left: 96px;
@@ -100,7 +104,6 @@
 
 .card-img-con {
   height: 420px;
-  background-color: #e3e6ec;
   box-shadow: 0 10px 20px 0 rgba(204, 204, 204, 0.24), inset 0 -3px 2px 0 rgba(255, 255, 255, 0.82),
     inset 0 -6px 15px 0 #ffffff;
   border-radius: 32px;
@@ -202,14 +205,99 @@
 
 .left-heart {
   padding-left: 28px;
-  background-image: url('../img/heart.png');
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: left top;
+  position: relative;
+}
+
+footer .language-menu.active {
+  top: -80px;
+  transition: 0;
+}
+
+.language-menu-con {
+  width: 100px;
+  height: 48px;
+  position: relative;
+}
+
+.language-menu.active {
+  height: 129px;
+  transition: 0.3s;
+}
+
+.language-menu {
+  width: 100px;
+  height: 48px;
+  border: 2px solid #ffffff;
+  border-radius: 14px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: left 16px center;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.language-menu > li.KOR {
+  background-image: url('../img/kor-icon.png');
+}
+
+.language-menu > li.ENG {
+  background-image: url('../img/usa-icon.png');
+}
+
+.language-menu > li.SPAN {
+  background-image: url('../img/spain-icon.png');
+}
+
+.language-menu > li {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: none;
+  font-size: 14px;
+  font-family: 'Bungee', cursive;
+  box-sizing: border-box;
+
+  padding-left: 42px;
+  background-repeat: no-repeat;
+
+  background-size: 20px;
+  background-position: left 16px center;
+  cursor: pointer;
+}
+
+.language-menu.active > li {
+  display: flex;
+  height: 43px;
+}
+
+.language-menu > li.active {
+  display: flex;
+}
+
+.heart-icon {
+  background-image: url('../img/empty-heart.png');
+  position: absolute;
+  width: 24px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: left center;
+  left: 0;
+  cursor: pointer;
+}
+
+.heart-icon.active {
+  background-image: url('../img/heart.png');
 }
 
 .left-heart.empty {
-  background-image: url('../img/empty-heart.png');
   background-size: 16px;
   background-position: left center;
 }
@@ -1027,6 +1115,10 @@ table.table-style2 tbody tr td {
     margin-bottom: 10px;
   }
 
+  .m-list-wrap {
+    display: block;
+  }
+
   .m-list-wrap .m-list-con:last-child {
     margin-bottom: 20px;
   }
@@ -1318,5 +1410,24 @@ table.table-style2 tbody tr td {
   }
   .has-lnb-con .lnb {
     display: none;
+  }
+
+  .language-menu-con {
+    width: 60px;
+    height: 29px;
+  }
+
+  .language-menu {
+    width: 65px;
+    height: 29px;
+    box-sizing: border-box;
+  }
+
+  .language-menu > li {
+    font-size: 12px;
+    line-height: 14px;
+    background-position: left 10px center;
+    padding-left: 23px;
+    background-size: 10px;
   }
 }

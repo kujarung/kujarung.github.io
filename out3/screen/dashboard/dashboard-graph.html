@@ -649,12 +649,12 @@
 <script>
   var myChart = echarts.init(document.getElementById('chartDou'));
   var data = [
-    { value: 40 / 100, name: 'USA 50%' },
-    { value: 10 / 100, name: 'Canada 20%' },
-    { value: 10 / 100, name: 'Mexico 20%' },
-    { value: 10 / 100, name: 'korea 10%' },
-    { value: 10 / 100, name: 'etc 10%' },
-    { value: 10 / 100, name: 'japan 10%' },
+    { value: 40 / 100, name: 'USA' },
+    { value: 10 / 100, name: 'Canada' },
+    { value: 10 / 100, name: 'Mexico' },
+    { value: 10 / 100, name: 'korea' },
+    { value: 10 / 100, name: 'etc' },
+    { value: 10 / 100, name: 'japan' },
   ];
 
   var option = {
@@ -697,9 +697,19 @@
         itemStyle: {
           normal: {
             label: {
-              show: true,
-              fontSize: window.innerWidth > 767 ? 16 : 10,
-              color: '#2D3556',
+              formatter: '{b|{b}}  {per|{d}%}  ',
+              rich: {
+                b: {
+                  fontSize: 16,
+                  color: '#2D3556',
+                  fontWeight: 'bold',
+                },
+
+                per: {
+                  color: '#57628C',
+                  fontSize: 14,
+                },
+              },
             },
             labelLine: {
               show: false,

@@ -38,8 +38,8 @@
         <img src="../../assets/img/Path.png" alt="insta" />
       </a>
     </li>
-    <li>
-      <input type="button" class="btn-style2 bungee-font" value="ENG" />
+    <li class="language-menu-con">
+      <ul class="language-menu"></ul>
     </li>
   </ul>
 </div>
@@ -79,7 +79,13 @@
       </div>
     </h1>
   </div>
-  <div class="">
-    <input type="button" class="btn-style2 bungee-font" value="ENG" />
+  <div class="language-menu-con">
+    <ul class="language-menu"></ul>
   </div>
 </div>
+
+<script>
+  var allowLanguage = ['ENG', 'KOR', 'SPAN'];
+
+  $('footer .language-menu').on('click', targetClickEvent);
+</script>

@@ -1,3 +1,5 @@
+<script src="../../assets/js/index.js"></script>
+
 <div class="inner-header mw-1520 m-auto">
   <div class="left-menu">
     <h1 class="logo">
@@ -19,8 +21,8 @@
   </div>
 
   <ul class="btn-menu">
-    <li class="mr15">
-      <input type="button" class="btn-style2 bungee-font" value="ENG" />
+    <li class="mr15 language-menu-con">
+      <ul class="language-menu"></ul>
     </li>
     <li>
       <input
@@ -53,8 +55,8 @@
   </div>
 
   <ul class="btn-menu">
-    <li class="mr15">
-      <input type="button" class="btn-style2 bungee-font" value="ENG" />
+    <li class="mr15 language-menu-con">
+      <ul class="language-menu"></ul>
     </li>
     <li><input type="button" class="btn-style1 bungee-font" value="creator" /></li>
   </ul>
@@ -64,6 +66,10 @@
   var activeMenu = $('.m-active-menu');
   var root = $('#root');
   var dim = '<div class="dim"></div>';
+
+  $('header .language-menu').on('click', targetClickEvent);
+  orderItem();
+
   $('#menuIcon').on('click', function () {
     if (activeMenu.hasClass('active')) {
       activeMenu.removeClass('active');
