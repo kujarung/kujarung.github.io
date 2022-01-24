@@ -1,11 +1,15 @@
 /* font cdn을 통해서 가져 오기 */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
-
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* 모든 태그의 기본 margin, padding 속정을 제거하여 준다. */
 * {
     margin:0px;
     padding:0px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'RIDIBatang', sans-serif;
     line-height: 1.1;
 }
 
@@ -759,17 +763,17 @@ h2 {
 }
 
 h5 {
-    font-size: 13px;
-    line-height: 12px;
+    font-size: 24px;
+    line-height: 42px;
     font-weight: 700;
-    padding-bottom: 8px;
-    margin-bottom: 9px;
-    border-bottom: solid 1px #c8c8c8;
+    margin-bottom: 20px;
 }
 
 /* 아래 여백 설정 */
 .exp-wrap .exp-con {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #919191;
+    padding-bottom: 20px;
 }
 
 /* 마지막 요소 아래 여백 제거 */
@@ -781,7 +785,9 @@ h5 {
 /* 그걸 방지하게 해주는 것이 overflow:hidden 혹은 overflow:auto; 속성을 부모에게 주어 자식의 높이를 알게 해주는 방법이다. */
 .exp-title-con {
     overflow:hidden;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e6dddd;
 }
 
 /* 폰트 설정 및 왼쪽에 배치 되었기 떄문에 float을 주어 왼쪽에 배치 하였다.*/
